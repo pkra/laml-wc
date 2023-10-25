@@ -1,0 +1,395 @@
+body {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
+  -webkit-appearance: button;
+}
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+dd,
+dl,
+dt {
+  margin: 0;
+}
+table,
+td,
+th,
+tr {
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+}
+blockquote {
+  margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::after,
+  ::before {
+    -webkit-animation-delay: -1s !important;
+    animation-delay: -1s !important;
+    -webkit-animation-duration: 1s !important;
+    animation-duration: 1s !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 10ms !important;
+    transition-duration: 10ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-family: Times, TimesNewRoman, 'Times New Roman', Baskerville, Georgia,
+    serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header {
+  font-family: Times, TimesNewRoman, 'Times New Roman', Baskerville, Georgia,
+    serif;
+  font-weight: 400;
+  margin-top: 0;
+}
+body {
+  color: #2d2d2d;
+  font-size: 1em;
+  font-size: calc(1em + 0.1vm);
+  font-size: calc(1em + 0.1vmin);
+  line-height: 1.63em;
+}
+h1 {
+  font-size: 2.06em;
+  line-height: 1.58em;
+  margin-bottom: 0.333em;
+  padding-top: 0.455em;
+}
+h2 {
+  font-size: 1.75em;
+  line-height: 1.86em;
+  margin-bottom: 0.357em;
+  padding-top: 0.571em;
+}
+h3 {
+  font-size: 1.44em;
+  line-height: 1.13em;
+  margin-bottom: 0.913em;
+  padding-top: 0.217em;
+}
+h4 {
+  font-size: 1.19em;
+  line-height: 1.37em;
+  margin-bottom: 1em;
+  padding-top: 0.368em;
+}
+h5,
+h6 {
+  font-size: 1em;
+  line-height: 1.6em;
+  margin-bottom: 0;
+}
+em,
+i {
+  font-style: italic;
+}
+strong {
+  font-weight: bolder;
+}
+a {
+  border-bottom: dotted gray 1px;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  outline: 1px dotted #000;
+}
+p {
+  font-size: 1em;
+  line-height: 1.63em;
+  margin-bottom: 1.13em;
+  margin-top: 0;
+  padding-top: 0.5em;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+dl {
+  display: block;
+  margin-bottom: 1.13em;
+  padding-top: 0.5em;
+}
+dl::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+dt {
+  display: block;
+  float: left;
+  padding-top: 0.25em;
+}
+dd {
+  display: block;
+  padding-left: 1.66em;
+}
+dd > * {
+  padding-top: 0.25em;
+  margin-bottom: 0.565em;
+}
+@supports (display: flex) {
+  dl > div {
+    -webkit-box-align: baseline;
+    align-items: baseline;
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+  }
+  dl > div > dt {
+    white-space: nowrap;
+  }
+  dl > div > dd {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 0.5em;
+    width: 100%;
+  }
+}
+img {
+  max-width: 100%;
+}
+img + img {
+  margin-left: 0.8175rem;
+}
+:focus {
+  outline: 1px dotted #000;
+}
+pre {
+  white-space: pre;
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace;
+  font-size: 1em;
+  overflow-x: auto;
+  overflow-y: visible;
+  margin-bottom: 1.13em;
+  padding-top: 0.5em;
+}
+table {
+  margin-bottom: 1em;
+  table-layout: auto;
+}
+td,
+th {
+  text-align: left;
+  padding-right: 0.5em;
+}
+td:last-of-type,
+th:last-of-type {
+  padding-right: 0;
+}
+td + td,
+th + th {
+  padding-left: 0.5em;
+}
+thead tr td,
+thead tr th {
+  font-weight: 700;
+  padding-top: 0;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+figure + figure {
+  margin-top: 1.13em;
+}
+figcaption {
+  margin-bottom: 1.13em;
+}
+cite {
+  font-style: normal;
+}
+
+body {
+  max-width: 42em;
+  margin: 0 auto;
+}
+
+a[href^='#'] {
+  cursor: pointer;
+  padding-right: 3px;
+  padding-left: 3px;
+  background-color: #efefef;
+  color: black;
+  border-bottom: 1px solid #d0d0d0;
+  /*separator for multi-references*/
+  /*NOTE #FFFFFF not ideal for a11y (e.g., nightmode)*/
+  border-right: 1px solid #ffffff;
+}
+
+a[href^='#']:hover {
+  background-color: #d0d0d0;
+  outline: 0;
+}
