@@ -1,20 +1,20 @@
 class chapter extends HTMLElement {
   connectedCallback() {
-    this.setAttribute('role','landmark doc-chapter');
+    this.setAttribute('role', 'landmark doc-chapter');
   }
 }
 customElements.define('chapter-', chapter);
 
 class name extends HTMLElement {
-    connectedCallback() {
-      this.setAttribute('role','heading');
-      let level = 1;
-      if (this.closest('chapter-')) level = 2;
-      if (this.closest('section')) level = 3;
-      this.setAttribute('aria-level', level);
-    }
+  connectedCallback() {
+    this.setAttribute('role', 'heading');
+    let level = 1;
+    if (this.closest('chapter-')) level = 2;
+    if (this.closest('section')) level = 3;
+    this.setAttribute('aria-level', level);
   }
-  customElements.define('name-', name);
+}
+customElements.define('name-', name);
 
 class statement extends HTMLElement {
   connectedCallback(name = 'Statement') {
@@ -118,7 +118,7 @@ class cite extends HTMLElement {
   connectedCallback() {
     const anchor = document.createElement('a');
     anchor.setAttribute('href', '#' + this.getAttribute('target'));
-    if ( /^\s*$/.test(this.innerHTML) ) anchor.innerHTML = this.getAttribute('target');
+    if (/^\s*$/.test(this.innerHTML)) anchor.innerHTML = this.getAttribute('target');
     else {
       anchor.innerHTML = this.innerHTML
       this.innerHTML = '';
