@@ -18,11 +18,8 @@ customElements.define('name-', name);
 
 class statement extends HTMLElement {
   connectedCallback(name = 'Statement') {
-    this.setAttribute('role','landmark');
-    if (this.firstChild && this.firstChild.tagName === "B") return;
-    const heading = document.createElement('b');
-    heading.innerHTML = name;
-    this.insertBefore(heading, this.firstChild);
+    this.setAttribute('role', 'landmark');
+    this.insertAdjacentHTML('afterbegin', `<statement-label>${name}</statement-label`)
   }
 }
 customElements.define('statement-', statement);
