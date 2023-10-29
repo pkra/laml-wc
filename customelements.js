@@ -1,6 +1,6 @@
 class chapter extends HTMLElement {
   connectedCallback() {
-    this.setAttribute('role', 'landmark doc-chapter');
+    this.setAttribute('role', 'doc-chapter');
   }
 }
 customElements.define('chapter-', chapter);
