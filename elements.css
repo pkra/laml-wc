@@ -1,0 +1,47 @@
+body {
+  max-width: 42em;
+  margin: 0 auto;
+}
+statement-,
+chapter-,
+thm-,
+lem-,
+defn-,
+exerc-,
+rem-,
+cor-,
+prop-,
+example-,
+proof-,
+name-,
+p {
+  display: block;
+  margin: 1em 0;
+}
+name-[aria-level="1"] {
+  font-size: 1.66em;
+}
+name-[aria-level="2"] {
+  font-size: 1.44em;
+}
+name-[aria-level="3"] {
+  font-size: 1.33em;
+}
+table {
+  display: block;
+  overflow: auto;
+}
+
+statement-label {
+  font-weight: bolder;
+}
+statement-label::after {
+  content: ".";
+}
+
+blame-::before {
+  content: " (";
+}
+blame-::after {
+  content: ") ";
+}
