@@ -132,7 +132,7 @@ class proof extends statement {
     super()
   }
   connectedCallback() {
-    super.connectedCallback('Proof');
+    super.connectedCallback('Proof', false);
   }
 }
 customElements.define('proof-', proof);
