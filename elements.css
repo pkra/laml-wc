@@ -41,3 +41,20 @@ blame-::before {
 blame-::after {
   content: ") ";
 }
+
+chapter-{
+  counter-reset: section;
+  counter-increment: chapter;
+}
+
+section {
+  counter-increment: section;
+}
+
+chapter- > name-::before {
+  content: counter(chapter) ". ";
+}
+
+section > name-::before {
+  content:  counter(chapter) "." counter(section) ". ";
+}

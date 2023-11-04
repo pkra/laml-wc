@@ -15,8 +15,9 @@ class name extends HTMLElement {
   connectedCallback() {
     this.setAttribute('role', 'heading');
     let level = 1;
-    if (this.closest('chapter-')) level = 2;
-    if (this.closest('section')) level = 3;
+    let parentTagName = this.parentNode.tagName;
+    if (parentTagName === 'chapter-') level = 2;
+    if (parentTagName === 'section') level = 3;
     this.setAttribute('aria-level', level);
   }
 }
@@ -27,7 +28,7 @@ class statement extends HTMLElement {
     super()
   }
   connectedCallback(name = 'Statement', selector) {
-    if (selector !== false) selector = 'sec-'; // use `false` if you don't want a counter
+    if (selector !== false) selector = 'section'; // use `false` if you don't want a counter
     this.setAttribute('role', 'landmark'); // TODO:
     let resetElement = this.closest(selector); // selector determines where we reset
     let counter = '';
