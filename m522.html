@@ -299,7 +299,7 @@
     <p>In principal it is possible that this notion is completely moot in the sense that maybe every set of real numbers is meager according to this definition. The Baire category theorem says that this is not the case. In fact, we will soon see that meager sets are rather paltry as the name implies.</p>
 
     <thm- id="thm-baire">
-      <name->Baire category theorem</name->
+      <blame->Baire category theorem</blame->
       <p>The set of all real numbers $\RR$ is nonmeager. In fact, if $I$ is a positive-length interval then $I$ is nonmeager.</p>
     </thm->
 
@@ -393,7 +393,7 @@
     </thm->
 
     <proof->
-    <name->Proof of conditions (a) and (b) only</name->
+    <blame->Proof of conditions (a) and (b) only</blame->
 
       <p>For condition&nbsp;(a), let $I$ be an interval. It is clear that $m(I)\leq\ell(I)$, since $I$ itself is an interval covering $I$. For the other direction, we will show that $I\subset\bigcup I_n$ implies $\sum\ell(I_n)\geq\ell(I)$. Then taking the infemum over all such coverings this allows us to conclude that $m(I)\geq\ell(I)$.</p>
 
@@ -515,7 +515,7 @@
     <p>In the next few results, we essentially show that the cardinals are well-ordered by $\leq$. Note that reflexivity holds because the identity function is an injection from $A$ into itself, and transitivity holds because the composition of two injections is an injection. The following result establishes antisymmetry.</p>
 
     <thm- id="thm-csb">
-      <name->Cantor--Schröder--Bernstein</name->
+      <blame->Cantor--Schröder--Bernstein</blame->
       <p>If there are injections $i\colon A\to B$ and $j\colon B\to A$ then there is a bijection $f\colon A\to B$.</p>
     </thm->
 
@@ -775,7 +775,7 @@
     <p>Meager sets are now defined in the same way as before: $X\subset A^{\lt \omega}$ is <dfn>meager</dfn> if it is the union of countably many nowhere dense sets. Our proof of the Baire category theorem for the real numbers naturally extends to arbitrary complete metric spaces.</p>
 
     <thm->
-      <name->Baire category theorem</name->
+      <blame->Baire category theorem</blame->
       <p>If $X$ is a complete metric space then $X$ is not meager. Moreover if $O$ is a nonempty open subset of $X$ then $O$ is not meager.\qed</p>
     </thm->
 
@@ -1459,7 +1459,7 @@
     </prop->
 
     <proof->
-      <name->Proof of <ref- target="lem:null-slalom"></ref-></name->
+      <blame->Proof of <ref- target="lem:null-slalom"></ref-></blame->
 
       <p>We must define $\phi\colon\omega^\omega\to\Null$ and $\psi\colon\Null\to SL$ such that for all $f\in\omega^\omega$ and null sets $A\subset2^\omega$ we have $\phi(f)\subset A$ implies $f\in^*\psi(A)$.</p>
 
@@ -1536,7 +1536,7 @@
     </prop->
 
     <proof->
-      <name->Proof of <ref- target="lem:slalom-meager"></ref-></name->
+      <blame->Proof of <ref- target="lem:slalom-meager"></ref-></blame->
 
       <p>We must define $\phi\colon\Meager\to\omega^\omega$ and $\psi\colon SL\to\Meager$ such that whenever $\phi(A)\in^*S$ we have $A\subset\psi(S)$.</p>
 
@@ -1916,7 +1916,7 @@
     <p>We are now prepared to prove <ref- target="thm:ma-addn"></ref->.</p>
 
     <proof->
-      <name->Proof of <ref- target="thm:ma-addn"></ref-></name->
+      <blame->Proof of <ref- target="thm:ma-addn"></ref-></blame->
 
       <p>Given a family $\mathcal F$ of fewer than continuum many null sets, we wish to show that $\bigcup\mathcal F$ is again null. For this, it is sufficient to show that for any $\epsilon\gt 0$ we have $\bigcup\mathcal F$ is contained in an open set of measure $\leq\epsilon$.</p>
 
@@ -2328,7 +2328,7 @@
     </proof->
 
     <proof->
-      <name->Proof of <ref- target="thm:ccc-preserve"></ref-></name->
+      <blame->Proof of <ref- target="thm:ccc-preserve"></ref-></blame->
 
       <p>Let $\kappa$ be a cardinal in $V$, and first assume that $\kappa$ is a successor cardinal $\aleph_{\alpha+1}$. Suppose towards a contradiction that in $V[G]$ there is a cardinal $\gamma\lt \kappa$ and an onto function $f\colon\gamma\to\kappa$. By the previous lemma, in $V$ there is a function $F\colon\gamma\to\mathcal P(\kappa)$ such that $F(a)$ is countable for all $a\in\gamma$ and $\bigcup F(a)=\kappa$. But now in $V$ we can use $F$ together with a bijection between $\gamma$ and $\gamma\times\omega$ to obtain an onto function $F'\colon\gamma\to\kappa$, contradicting that $\kappa$ is a cardinal in $V$.</p>
 
@@ -2348,7 +2348,7 @@
       <p>A family $\mathcal F$ of sets is called a <dfn>delta system</dfn> if there exists a set $A$ such that for every $F,F'\in\mathcal G_0$ we have $F\cap F'=A$. The set $A$ is called the <dfn>root</dfn> of the delta system.</p>
 
     <lem- id="lem:delta-system">
-      <name->Delta system lemma</name->
+      <blame->Delta system lemma</blame->
 
       <p>Let $\kappa$ be any cardinal, and let $\mathcal F$ be an uncountable family of finite subsets of $\kappa$. Then there exists an uncountable subset $\mathcal F_0\subset F$ which forms a delta system.</p>
     </lem->
@@ -2363,7 +2363,7 @@
     </proof->
 
     <proof->
-      <name->Proof of <ref- target="prop:cohen-ccc"></ref-></name->
+      <blame->Proof of <ref- target="prop:cohen-ccc"></ref-></blame->
       <p>It suffices to show that any uncountable $\mathcal G\subset\Fn(\kappa,\omega)$ contains two compatible elements. In fact we will show that it contains uncountably many pairwise compatible elements. For this we first consider the corresponding family of domains $\mathcal F=\set{\dom(f)\mid f\in\mathcal G}$. Then $\mathcal F$ is an uncountable family of finite subsets of $\kappa$. Thus by <ref- target="lem:delta-system"></ref->, we can find an uncountable subset $\mathcal F_0\subset\mathcal F$ which forms a delta system with some root $A$.</p>
 
       <p>Now, let $\mathcal G_0\subset\mathcal G$ be the subset of $\mathcal G$ consisting of functions $g$ such that $\dom(g)\in\mathcal F_0$. These functions may disagree on $A$, but they can never disagree elsewhere. Since there are only countably many possibilities for $g\restriction A$, by the pigeon-hole principle we can replace $\mathcal G_0$ with an uncountable subset of it such that $g\restriction A=$ some fixed function $g_0$ for all $g$. It follows from this that every pair of elements of $\mathcal G_0$ is compatible.</p>
@@ -2414,7 +2414,7 @@
     </proof->
 
     <proof->
-      <name->Proof of <ref- target="thm:force-ch"></ref-></name->
+      <blame->Proof of <ref- target="thm:force-ch"></ref-></blame->
       <p>By <ref- target="lem:forcing-closed-preserves"></ref->, the notions of $\omega^\omega$ and $\aleph_1$ are identical in $V$ and $V[G]$. Thus in the rest of this argument we need not distinguish in which model they are computed.</p>
 
       <p>To begin, it is clear that $g=\bigcup G$ is a new function from $\omega_1\to\omega$. Now for each $f\in\omega^\omega$ consider the set</p>
@@ -2858,7 +2858,7 @@
       <p>We omit the proof [temporarily]. [We also need the definition of $p\hat{\times}q$, see Kunen V.4.30.]</p>
 
     <proof->
-      <name->Proof of <ref- target="thm:random-null"></ref-></name->
+      <blame->Proof of <ref- target="thm:random-null"></ref-></blame->
       <p>The proofs are analogous to the proofs of the two equalities in <ref- target="thm:cohen-meager"></ref->. To show that $\cov(\Null)=\kappa$, assume to the contrary that $\cov(\Null)\lt\kappa$. Then there exists a cardinal $\lambda\lt\kappa$ and a family $\mathcal F$ of null sets such that $|\mathcal F|=\lambda$ and $\bigcup F=2^\omega$.</p>
 
       <p>Since every null set is contained in a null $G_\delta$ set, we can suppose that every element of $\mathcal F$ is a $G_\delta$ set. Thus every $A\in\mathcal F$ has a code, which is a countable collection binary sequences on a finite subset of $\kappa$. Using a now-familiar nice name argument, we can find a set $I\subset\kappa$ with $|I|=\lambda$ such that if $\PP_1=\Nonnull(2^I)$ and $G_1$ is as above, then the codes for all elements of $\mathcal F$ appear in $V[G_1]$.</p>
