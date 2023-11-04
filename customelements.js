@@ -1,4 +1,7 @@
 class chapter extends HTMLElement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     this.setAttribute('role', 'doc-chapter');
   }
@@ -6,6 +9,9 @@ class chapter extends HTMLElement {
 customElements.define('chapter-', chapter);
 
 class name extends HTMLElement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     this.setAttribute('role', 'heading');
     let level = 1;
@@ -17,6 +23,9 @@ class name extends HTMLElement {
 customElements.define('name-', name);
 
 class statement extends HTMLElement {
+  constructor() {
+    super()
+  }
   connectedCallback(name = 'Statement') {
     this.setAttribute('role', 'landmark');
     this.insertAdjacentHTML('afterbegin', `<statement-label>${name}</statement-label`)
@@ -25,6 +34,9 @@ class statement extends HTMLElement {
 customElements.define('statement-', statement);
 
 class theorem extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Theorem');
   }
@@ -32,6 +44,9 @@ class theorem extends statement {
 customElements.define('thm-', theorem);
 
 class lemma extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Lemma');
   }
@@ -39,6 +54,9 @@ class lemma extends statement {
 customElements.define('lem-', lemma);
 
 class definition extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Definition');
   }
@@ -46,6 +64,9 @@ class definition extends statement {
 customElements.define('defn-', definition);
 
 class remark extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Remark');
   }
@@ -53,6 +74,9 @@ class remark extends statement {
 customElements.define('rem-', remark);
 
 class exercise extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Exercise');
   }
@@ -60,6 +84,9 @@ class exercise extends statement {
 customElements.define('exerc-', exercise);
 
 class notes extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Notes');
   }
@@ -67,6 +94,9 @@ class notes extends statement {
 customElements.define('notes-', notes);
 
 class example extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Example');
   }
@@ -74,6 +104,9 @@ class example extends statement {
 customElements.define('example-', example);
 
 class proposition extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Proposition');
   }
@@ -81,6 +114,9 @@ class proposition extends statement {
 customElements.define('prop-', proposition);
 
 class corollary extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Corollary');
   }
@@ -88,6 +124,9 @@ class corollary extends statement {
 customElements.define('cor-', corollary);
 
 class proof extends statement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     super.connectedCallback('Proof');
   }
@@ -95,12 +134,18 @@ class proof extends statement {
 customElements.define('proof-', proof);
 
 class bibliography extends HTMLElement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     this.appendChild(style);
   }
 }
 
 class bibitem extends HTMLElement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     const anchor = document.createElement('a');
     anchor.setAttribute('href', this.getAttribute('href'));
@@ -112,6 +157,9 @@ class bibitem extends HTMLElement {
 customElements.define('bi-', bibitem);
 
 class cite extends HTMLElement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     const anchor = document.createElement('a');
     anchor.setAttribute('href', '#' + this.getAttribute('target'));
@@ -127,6 +175,9 @@ class cite extends HTMLElement {
 customElements.define('cite-', cite);
 
 class crossreference extends HTMLElement {
+  constructor() {
+    super()
+  }
   connectedCallback() {
     const anchor = document.createElement('a');
     const targetId = this.getAttribute('target');
