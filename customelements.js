@@ -179,14 +179,18 @@ class crossreference extends HTMLElement {
     super()
   }
   connectedCallback() {
-    const anchor = document.createElement('a');
     const targetId = this.getAttribute('target');
-    anchor.setAttribute('href', '#' + targetId);
+    let anchorHtml = '';
     const target = document.getElementById(targetId);
-    if (target && target.querySelector('name-')) anchor.innerHTML = target.querySelector('name-').innerHTML;
-    else anchor.innerHTML = targetId;
-    this.innerHTML = '';
-    this.appendChild(anchor);
+    // if we have a label, use that
+    if (target?.querySelector('statement-label')) {
+      anchorHtml = target.querySelector('statement-label').innerHTML;
+    }
+    else if (target?.querySelector('blame-')) { // only otherwise, use author-provided blame- / title [not both, it'll be too long]
+      anchorHtml = target.querySelector('blame-')?.innerHTML;
+    }
+    else anchorHtml = `<mark>${targetId}$</mark>`; // if all else fails
+    this.innerHTML = `<a href="#${targetId}">${anchorHtml}</a>`;
   }
 }
 customElements.define('ref-', crossreference);
