@@ -26,9 +26,13 @@ class statement extends HTMLElement {
   constructor() {
     super()
   }
-  connectedCallback(name = 'Statement') {
-    this.setAttribute('role', 'landmark');
-    this.insertAdjacentHTML('afterbegin', `<statement-label>${name}</statement-label`)
+  connectedCallback(name = 'Statement', selector) {
+    if (selector !== false) selector = 'sec-'; // use `false` if you don't want a counter
+    this.setAttribute('role', 'landmark'); // TODO:
+    let resetElement = this.closest(selector); // selector determines where we reset
+    let counter = '';
+    if (resetElement) counter = ` ${(1 + [...resetElement.querySelectorAll(this.tagName)]?.indexOf(this))}`; // numeric counters only (for now)
+    this.insertAdjacentHTML('afterbegin', `<statement-label>${name}${counter}</statement-label`)
   }
 }
 customElements.define('statement-', statement);
