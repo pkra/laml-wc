@@ -36,6 +36,20 @@
       display: block;
       overflow: auto;
     }
+
+    statement-label {
+      font-weight: bolder;
+    }
+    statement-label::after {
+      content: '.';
+    }
+
+    blame-::before{
+      content: ' ('
+    }
+    blame-::after{
+      content: ') '
+    }
   </style>
   <script src="customelements.js"></script>
   <!-- TODO decide what to do about metadata -->
