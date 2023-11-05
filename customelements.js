@@ -33,7 +33,7 @@ class statement extends HTMLElement {
     let resetElement = this.closest(selector); // selector determines where we reset
     let counter = '';
     if (resetElement) counter = ` ${(1 + [...resetElement.querySelectorAll(this.tagName)]?.indexOf(this))}`; // numeric counters only (for now)
-    this.insertAdjacentHTML('afterbegin', `<statement-label>${name}${counter}</statement-label`)
+    this.insertAdjacentHTML('afterbegin', `<statement-label>${name}${counter}</statement-label>`)
   }
 }
 customElements.define('statement-', statement);
