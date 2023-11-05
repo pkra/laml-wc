@@ -188,6 +188,31 @@ blockquote {
     scroll-behavior: auto !important;
   }
 }
+
+/* end reset */
+
+/* elements */
+
+@font-face {
+  font-display: swap;
+  font-family: "STIXTwoText";
+  src: url("./STIXTwoText[wght].woff2") format("woff2");
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "STIXTwoText";
+  font-style: italic;
+  src: url("./STIXTwoText-Italic[wght].woff2") format("woff2");
+  font-weight: 1 999;
+}
+
+* {
+  font-family: "STIXTwoText", "Times New Roman", TimesNewRoman, Times,
+    Baskerville, Georgia, serif;
+}
+
 html {
   font-family: Times, TimesNewRoman, 'Times New Roman', Baskerville, Georgia,
     serif;
@@ -371,6 +396,8 @@ figcaption {
 cite {
   font-style: normal;
 }
+
+/* end element styles */
 
 body {
   max-width: 42em;
