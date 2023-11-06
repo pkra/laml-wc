@@ -28,7 +28,7 @@ class statement extends HTMLElement {
     super()
   }
   connectedCallback(name = 'Statement', selector) {
-    if (selector !== false) selector = 'section'; // use `false` if you don't want a counter
+    if (selector !== false) selector = 'section'; // use `false` if you don't want a counter TODO: was used for proof- but no longer used there cf. #6
     this.setAttribute('role', 'landmark'); // TODO:
     let resetElement = this.closest(selector); // selector determines where we reset
     let counter = '';
@@ -128,12 +128,16 @@ class corollary extends statement {
 }
 customElements.define('cor-', corollary);
 
-class proof extends statement {
+class proof extends HTMLElement {
   constructor() {
     super()
   }
   connectedCallback() {
-    super.connectedCallback('Proof', false);
+    if (this.firstElementChild?.tagName !== 'PROOF-LABEL') {
+      this.insertAdjacentHTML('afterbegin', `<proof-label>Proof.<proof-label>`);
+    }
+    const proofLabel = this.firstElementChild
+    if (proofLabel.nextElementSibling.tagName === 'P') proofLabel.nextElementSibling.prepend(proofLabel) // move proof-label into first paragraph
   }
 }
 customElements.define('proof-', proof);

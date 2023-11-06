@@ -58,3 +58,10 @@ chapter- > name-::before {
 section > name-::before {
   content:  counter(chapter) "." counter(section) ". ";
 }
+
+proof-label {
+  font-weight: bolder;
+}
+proof-label::after{
+  content: ' '
+}
