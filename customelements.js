@@ -136,8 +136,6 @@ class proof extends HTMLElement {
     if (this.firstElementChild?.tagName !== 'PROOF-LABEL') {
       this.insertAdjacentHTML('afterbegin', `<proof-label>Proof.</proof-label>`);
     }
-    const proofLabel = this.firstElementChild
-    if (proofLabel.nextElementSibling.tagName === 'P') proofLabel.nextElementSibling.prepend(proofLabel) // move proof-label into first paragraph
   }
 }
 customElements.define('proof-', proof);

@@ -59,7 +59,12 @@ chapter- > name-::before {
 }
 
 section > name-::before {
-  content:  counter(chapter) "." counter(section) ". ";
+}
+
+proof- > *:last-child::after {
+  content: "qed";
+  font-weight: bold;
+  float: right;
 }
 
 proof-label {
@@ -68,4 +73,16 @@ proof-label {
 proof-label::after {
   content: " ";
 }
+
+/* print-oriented styles */
+
+@media print {
+
+  statement-label,
+  statement-label + p,
+  proof-label, 
+  proof-label+p {
+    /* too hacky? We lose margins but reduce HTML shenanigans */
+    display: inline;
+  }
 }
