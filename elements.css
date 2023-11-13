@@ -56,9 +56,13 @@ section {
 
 chapter- > name-::before {
   content: counter(chapter) ". ";
+  /* amsbook makes it centered; indents section/subsection */
 }
 
 section > name-::before {
+  content: counter(chapter) "." counter(section) ". ";
+  /* in article, lacks period and adds space (how much?) after*/
+  /* in amsbook, indented*/
 }
 
 proof- > *:last-child::after {
