@@ -45,7 +45,7 @@ blame-::after {
   content: ") ";
 }
 
-chapter-{
+chapter- {
   counter-reset: section;
   counter-increment: chapter;
 }
@@ -65,6 +65,7 @@ section > name-::before {
 proof-label {
   font-weight: bolder;
 }
-proof-label::after{
-  content: ' '
+proof-label::after {
+  content: " ";
+}
 }
