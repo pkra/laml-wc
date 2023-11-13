@@ -77,6 +77,36 @@ proof-label::after {
 /* print-oriented styles */
 
 @media print {
+  @page {
+    size: A4;
+    marks: crop cross;
+    bleed: 6mm;
+    margin: 20mm;
+
+    }
+    @top-left {
+      content: "Category, measure, and forcing, Math 522 lecture notes, Fall, 2014";
+    }
+    @bottom-center {
+      content: counter(page);
+    }
+  }
+
+  html {
+    font-size: 8pt;
+  }
+
+  p {
+    /* what's TeX like here? */
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  * + p {
+    /* does this rule (and indent) match TeX? E.g., lists don't  */
+    text-indent: 1rem;
+  }
 
   statement-label,
   statement-label + p,
