@@ -714,18 +714,18 @@ the continuum has uncountable cofinality
   <p>The Cantor middle thirds set $C$ has a natural description in terms of ternary expansions. If $a\in[0,1]$ then $a$ lies in the Cantor set if and only if it has a ternary expansion that does not contain the digit $1$. Thus there is a simple bijection $2^\omega\to C$ given by replacing the $1$'s in $x$ with $2$'s:</p>
 
   <eqn->
-f(x)=0.(2x(0))(2x(1))(2x(2))\cdots
-</eqn->
+    f(x)=0.(2x(0))(2x(1))(2x(2))\cdots
+  </eqn->
 
-<p>The map is continuous: if $f(x)\in(a,b)$ then there exists $n$ such that if we round $f(x)$ down at its $n$th digit then it is still $\gt a$ and if we round it up at its $n$th digit then it is still $\lt b$. It follows that if $s=x\restriction n$, then we have $f(V_s)\gt a$. Finally recall that a continuous bijection between compact spaces is always ahomeomorphism.</p>
+  <p>The map is continuous: if $f(x)\in(a,b)$ then there exists $n$ such that if we round $f(x)$ down at its $n$th digit then it is still $\gt a$ and if we round it up at its $n$th digit then it is still $\lt b$. It follows that if $s=x\restriction n$, then we have $f(V_s)\gt a$. Finally recall that a continuous bijection between compact spaces is always ahomeomorphism.</p>
 
-<p>For the Baire space, it is common to use the values of $x\in(\omega\smallsetminus\{0\})^\omega$ as the entries in a continued fraction:</p>
+  <p>For the Baire space, it is common to use the values of $x\in(\omega\smallsetminus\{0\})^\omega$ as the entries in a continued fraction:</p>
 
   <eqn->
-f(x)=x(0)+\cfrac{1}{x(1)+\cfrac{1}{x(2)+\cdots}}
-</eqn->
+    f(x)=x(0)+\cfrac{1}{x(1)+\cfrac{1}{x(2)+\cdots}}
+  </eqn->
 
-<p>With some elementary number theory, it is possible to verify that this map is a bijection onto the set of irrational numbers, and even a homeomorphism.</p>
+  <p>With some elementary number theory, it is possible to verify that this map is a bijection onto the set of irrational numbers, and even a homeomorphism.</p>
 </proof->
 
 <p>This result also implies that $2^\omega$ admits a complete metric, because the Cantor set is a closed and hence complete subspace of $\RR$. In fact, any sequence space $A^\omega$ is completely metrizable. For an example of a complete metric, given $x,y\in A^\omega$ such that $x\neq y$, let $n$ be the least natural number such that $x(n)\neq y(n)$ and set $d(x,y)=1/n$.</p>
@@ -1267,7 +1267,7 @@ The conclusions of the two lemmas are summarized in <ref- target="fig:ideal"></r
   <p>In <ref- target="lem:covn-nonm"></ref->, where we showed that $\cov(\Null)\leq\non(\Meager)$, we could have used the following morphism from the $\not\ni$ relation on $\Meager\times2^\omega$ to the $\in$ relation on $2^\omega\times\Null$. Again we let $A$ be a fixed null comeager set.</p>
 
   <eqn->
-\begin{cases} \phi(x)=x-A^c\\\psi(x)=x+A\end{cases}
+    \begin{cases} \phi(x)=x-A^c\\\psi(x)=x+A\end{cases}
   </eqn->
 
   <p>To check that it is a morphism, $\phi(x)\not\ni y$ implies $x-y\in A$, which in turn implies that $x\in y+A=\psi(y)$, as required. Recall that the function $\psi(x)=x+A$ featured prominently in our original proof: for each $X\notin\Meager$ we formed the family of translates $\{x+A\mid x\in X\}$.</p>
@@ -1729,8 +1729,8 @@ The conclusions of the two lemmas are summarized in <ref- target="fig:ideal"></r
   <p>Now suppose towards a contradiction that $\cov(\Meager)\lt \mathfrak c$, and fix a family $\mathcal F$ of pairs $(y,P)$ as above. We will apply MA to the partial order $\PP=2^{\lt \omega}$ to obtain a suitably generic filter $G$. Our goal will be to ensure that $G$ matches (that is, doesn't strongly differ from) all of the $(y,P)$ pairs, which will be a contradiction. To this end, consider the subsets</p>
 
   <eqn->
-D_{y,P,n}=\set{s\in2^{\lt \omega}\mid \text{there is $I\in P$ such that $I\gt n$ and $s\restriction I=y\restriction I$}}
- </eqn->
+    D_{y,P,n}=\set{s\in2^{\lt \omega}\mid \text{there is $I\in P$ such that $I\gt n$ and $s\restriction I=y\restriction I$}}
+  </eqn->
 
   <p>Then for any $y$, $P$, and $n$ the set $D_{y,P,n}$ is dense: given any $s$ we can find an interval $I$ of $P$ beyond both $n$ and $\dom(s)$, and extend $s$ to a sequence $t$ which agrees with $y$ on $I$.</p>
 
@@ -1894,7 +1894,7 @@ kunen, III.3 for amoeba
   <p>Let $\PP$ be a partial order in $V$ and $G\subset\PP$ be a filter. If $\tau$ is a $\PP$-name, then the <dfn>evaluation</dfn> of $\tau$ via $G$, denoted $\tau_G$, is defined recursively by</p>
 
   <eqn->
-\tau_G=\set{\sigma_G\mid (\exists p)\;(\sigma,p)\in\tau\text{ and }p\in G}\text{.}
+    \tau_G=\set{\sigma_G\mid (\exists p)\;(\sigma,p)\in\tau\text{ and }p\in G}\text{.}
   </eqn->
 
   <p>We then define the forcing extension of $V$ corresponding to $G$ by</p>
