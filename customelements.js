@@ -23,22 +23,22 @@ class name extends HTMLElement {
 }
 customElements.define('name-', name);
 
-class statement extends HTMLElement {
+class enunciation extends HTMLElement {
   constructor() {
     super()
   }
-  connectedCallback(name = 'Statement', selector) {
+  connectedCallback(name = 'enunciation', selector) {
     if (selector !== false) selector = 'section'; // use `false` if you don't want a counter TODO: was used for proof- but no longer used there cf. #6
     this.setAttribute('role', 'landmark'); // TODO:
     let resetElement = this.closest(selector); // selector determines where we reset
     let counter = '';
     if (resetElement) counter = ` ${(1 + [...resetElement.querySelectorAll(this.tagName)]?.indexOf(this))}`; // numeric counters only (for now)
-    this.insertAdjacentHTML('afterbegin', `<statement-label>${name}${counter}</statement-label>`)
+    this.insertAdjacentHTML('afterbegin', `<enunciation-label>${name}${counter}</enunciation-label>`)
   }
 }
-customElements.define('statement-', statement);
+customElements.define('enunciation-', enunciation);
 
-class theorem extends statement {
+class theorem extends enunciation {
   constructor() {
     super()
   }
@@ -48,7 +48,7 @@ class theorem extends statement {
 }
 customElements.define('thm-', theorem);
 
-class lemma extends statement {
+class lemma extends enunciation {
   constructor() {
     super()
   }
@@ -58,7 +58,7 @@ class lemma extends statement {
 }
 customElements.define('lem-', lemma);
 
-class definition extends statement {
+class definition extends enunciation {
   constructor() {
     super()
   }
@@ -68,7 +68,7 @@ class definition extends statement {
 }
 customElements.define('defn-', definition);
 
-class remark extends statement {
+class remark extends enunciation {
   constructor() {
     super()
   }
@@ -78,7 +78,7 @@ class remark extends statement {
 }
 customElements.define('rem-', remark);
 
-class exercise extends statement {
+class exercise extends enunciation {
   constructor() {
     super()
   }
@@ -88,7 +88,7 @@ class exercise extends statement {
 }
 customElements.define('exerc-', exercise);
 
-class notes extends statement {
+class notes extends enunciation {
   constructor() {
     super()
   }
@@ -98,7 +98,7 @@ class notes extends statement {
 }
 customElements.define('notes-', notes);
 
-class example extends statement {
+class example extends enunciation {
   constructor() {
     super()
   }
@@ -108,7 +108,7 @@ class example extends statement {
 }
 customElements.define('example-', example);
 
-class proposition extends statement {
+class proposition extends enunciation {
   constructor() {
     super()
   }
@@ -118,7 +118,7 @@ class proposition extends statement {
 }
 customElements.define('prop-', proposition);
 
-class corollary extends statement {
+class corollary extends enunciation {
   constructor() {
     super()
   }
@@ -190,8 +190,8 @@ class crossreference extends HTMLElement {
     let anchorHtml = '';
     const target = document.getElementById(targetId);
     // if we have a label, use that
-    if (target?.querySelector('statement-label')) {
-      anchorHtml = target.querySelector('statement-label').innerHTML;
+    if (target?.querySelector('enunciation-label')) {
+      anchorHtml = target.querySelector('enunciation-label').innerHTML;
     }
     else if (target?.querySelector('blame-')) { // only otherwise, use author-provided blame- / title [not both, it'll be too long]
       anchorHtml = target.querySelector('blame-')?.innerHTML;

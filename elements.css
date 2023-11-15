@@ -1,4 +1,4 @@
-statement-,
+enunciation-,
 chapter-,
 thm-,
 lem-,
@@ -31,10 +31,10 @@ table {
   overflow: auto;
 }
 
-statement-label {
+enunciation-label {
   font-weight: bolder;
 }
-statement-label::after {
+enunciation-label::after {
   content: ".";
 }
 
@@ -112,8 +112,8 @@ proof-label::after {
     text-indent: 1rem;
   }
 
-  statement-label,
-  statement-label + p,
+  enunciation-label,
+  enunciation-label + p,
   proof-label, 
   proof-label+p {
     /* too hacky? We lose margins but reduce HTML shenanigans */
