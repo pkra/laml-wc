@@ -62,11 +62,9 @@
   </script> -->
 </head>
 <body>
-
     <preamble->
-
-      <eqn- hidden>
-    $\newcommand{\set}[1]{\left\{\,#1\,\right\}}
+    <eqn- hidden>
+      $\newcommand{\set}[1]{\left\{\,#1\,\right\}}
       \newcommand{\NN}{\mathbb N}
       \newcommand{\PP}{\mathbb P}
       \newcommand{\QQ}{\mathbb Q}
@@ -89,8 +87,7 @@
       \DeclareMathOperator{\Con}{Con}
       \DeclareMathOperator{\Fn}{Fn}
       \DeclareMathOperator{\Nonnull}{Nonnull}$
-      </eqn->
-
+    </eqn->
     </preamble->
 
     <chapter->
@@ -117,20 +114,18 @@
 
     <chapter->
     <h->Category and measure</h->
+    
     <section>
     <h->The real number system</h->
 
     <defn->
-
       <p>The <dfn>real number system</dfn> is a complete ordered field. That is, it is a set <dfn>$\RR$</dfn> together with distinguished elements $0,1$, operations $+,\times$ and an ordering $\lt $ satisfying the following rules.
       </p>
-
       <ul>
         <li>It is a <dfn>field</dfn>: it satisfies the associative, commutative, and distributive laws, $0$ is the additive identity and $1$ is the multiplicative identity;</li>
         <li>It is an <dfn>ordered</dfn> field: $\lt $ is a strict total order, $a\lt b$ implies $a+c\lt b+c$, and if $c$ is positive then $a\lt b$ implies $ac\lt bc$;</li>
         <li>It is <dfn>complete</dfn>: if $A\subset\RR$ has an upper bound, then it has a least upper bound (supremum).</li>
       </ul>
-
     </defn->
 
     <rem->
@@ -146,7 +141,6 @@
     <p>The key insight is to realize that each real number $r$ has a <em>cut</em> in the rational numbers associated with it: the set of rational numbers that are strictly less than $r$. This association should be bijective: If the least upper bound property is true, then any such cut gives rise to a real number as the supremum of the cut. And if two real numbers are different, then they should give rise to different cuts.</p>
 
     <p>So all we have to do to define real numbers was to define cuts. To avoid circularity, we should axiomatize cuts without referring to real numbers at all. A <dfn>cut</dfn> in the rational numbers is a subset $r\subset\QQ$ satisfying three properties:</p>
-
     <ul>
       <li>nontriviality: $r\neq\emptyset$ and $r\neq\QQ$</li>
       <li>downward closure: if $q\in r$ and $q'\lt q$ then $q'\in r$</li>
@@ -257,14 +251,12 @@
     <p>The terminology "nowhere dense" may sound strange at first, but it is justified by the following fact.</p>
 
     <prop- id="prop-nwd-equiv">
-      <p>Let $A$ be a set of real numbers. The following are equivalent.</p>
-
+      <p>Let $A$ be a set of real numbers. The following are equivalent:</p>
       <ol>
         <li>$A$ is nowhere dense;</li>
         <li>$\cl(A)$ (the topological closure of $A$) has no interior;</li>
         <li>for every nonempty open set $O$, we have that $A$ is not dense in $O$.</li>
       </ol>
-
     </prop->
 
     <p>The proof is requested in <ref- target="exerc-nwd-equiv"></ref->.</p>
@@ -282,9 +274,9 @@
         J'\subset (I\smallsetminus A)\smallsetminus B=I\smallsetminus (A\cup B)
       </eqn->
 
-    <p>This establishes that $A\cup B$ is again nowhere dense.</p>
+      <p>This establishes that $A\cup B$ is again nowhere dense.</p>
 
-    <p>Preservation to closures is immediate from condition (b) of <ref- target="prop-nwd-equiv"></ref->, but we can also give a direct argument. Let $A$ be nowhere dense and let $I$ be a given positive-length interval. Since $A$ is nowhere dense there is a positive-length interval $J$ such that $J\subset\RR\smallsetminus A$. Removing endpoints if necessary, we may suppose that $J$ is open. It follows that $J\subset\RR\smallsetminus\cl(A)$ (recall that since $\cl(A)$ is the intersection of all closed sets containing $A$, we have that $\RR\smallsetminus\cl(A)$ is the union of all open sets disjoint from $A$). This shows that $\cl(A)$ is nowhere dense.</p>
+      <p>Preservation to closures is immediate from condition (b) of <ref- target="prop-nwd-equiv"></ref->, but we can also give a direct argument. Let $A$ be nowhere dense and let $I$ be a given positive-length interval. Since $A$ is nowhere dense there is a positive-length interval $J$ such that $J\subset\RR\smallsetminus A$. Removing endpoints if necessary, we may suppose that $J$ is open. It follows that $J\subset\RR\smallsetminus\cl(A)$ (recall that since $\cl(A)$ is the intersection of all closed sets containing $A$, we have that $\RR\smallsetminus\cl(A)$ is the union of all open sets disjoint from $A$). This shows that $\cl(A)$ is nowhere dense.</p>
     </proof->
 
     <rem->
@@ -321,7 +313,6 @@
     <p>We remark that the meager property is not necessarily preserved to the closure. In fact $\cl(A)$ is meager if and only if $A$ is nowhere dense.</p>
 
     <p>As a consequence of the Baire category theorem, for any set $A$ it is possible to assign $A$ one of three distinct "sizes":</p>
-
     <ul>
       <li>$A$ is meager (small)</li>
       <li>$A$ is comeager (large)</li>
@@ -354,7 +345,6 @@
     <h->Lebesgue measure theory</h->
 
     <p>Classical measure theory aims to try to extend the length function on intervals to be defined on more complicated sets. For example, if a given set is a finite or even countable union of intervals, then it is appropriate to take the sum of the lengths of the components. But what about more unwieldy sets like the Cantor set? This was known as the <dfn>measure problem</dfn>: to construct a measurement function $m$, defined on sets of real numbers and valued in $[0,\infty]$, satisfying:</p>
-
     <ol>
       <li>$m$ agrees with length: if $I$ is an interval then $m(I)=\ell(I)$</li>
       <li>translation invariance: $m(x+A)=m(A)$ for all sets $A$ and real numbers $x$</li>
@@ -364,9 +354,9 @@
     <p>Perhaps surprisingly, the conditions (a)--(c) are mutually contradictory and so no such measurement function $m$ exists! Here is Vitali's simple example of a contradiction arising from these requirements. Regard $\QQ$ as an additive subgroup of $\RR$ and consider the cosets of $\QQ$, that is, sets of the form $x+\QQ$. Let $A\subset[0,1]$ be a set of coset representatives, that is, $A$ contains exactly one element from each of the cosets. (It is always possible to choose a coset representative in $[0,1]$ because $\QQ$ is dense.)</p>
 
     <p>Then the translations $q+A$ for $q\in\QQ$ form a countable sequence of pairwise disjoint sets that cover all of $\RR$. In fact, if we let $S=\QQ\cap[-1,1]$ then the translations $q+A$ for $q\in S$ already cover all of $[0,1]$. We can then infer from (a) and (c) that $m[\bigcup_{q\in S}(q+A)]$ lies between $1$ and $4$. But on the other hand, by (b) and (c) we have that</p>
-
-      <eqn->
-    m\left(\bigcup_{q\in S}(q+A)\right)=\sum_{q\in S}m(q+A)=\sum_{q\in S}m(A)
+    
+    <eqn->
+      m\left(\bigcup_{q\in S}(q+A)\right)=\sum_{q\in S}m(q+A)=\sum_{q\in S}m(A)
     </eqn->
 
     <p>This is a contradiction because an infinite sum of a single constant value $m(A)$ can be equal only to either $0$ or $\infty$, and so cannot lie between $1$ and $4$.</p>
@@ -379,7 +369,7 @@
 
     <p>Let us naïvely begin to construct a measure $m$ that is at least defined on reasonable sets. First, condition (a) implies we should let $m(I)=\ell(I)$ for any interval $I$. Next, if $A=\bigcup I_n$ is a union of disjoint intervals $I_n$, then condition (c) implies we should let $m(A)=\sum\ell(I_n)$. Third, if $A=\bigcap A_n$ is an intersection of sets where $m$ is defined and finite, then it is natural to define $m(A)=\inf m(A_n)$. We now observe that all three of the above simple cases fit into the rule given by the following key formula:</p>
 
-    <eqn- id="eq:measure>
+    <eqn- id="eq:measure">
       m(A)=\inf\set{\sum\ell(I_n)\mid A\subset\bigcup I_n}
     </eqn->
 
@@ -404,7 +394,6 @@
         \geq b-a
         = \ell(I)\text{.}
       </eqn->
-
 
       <p>If $I$ is not necessarily closed and the $I_n$ are not necessarily open, then we look instead at $I'=\cl(I)$ and $I_n'=(I_n)^\circ$. Then the $I_n'$ cover all but a countable subset of $I'$, so for any $\epsilon$ we can find additional open intervals $J_n$ with $\ell(J_n)\leq\epsilon/2^n$ covering these missing points. Now the previous argument shows that $\sum\ell(I_n)+\sum\ell(J_n)\geq\ell(I)$. Using the geometric series formula we obtain $\sum\ell(I_n)+\epsilon\geq\ell(I)$. Letting $\epsilon\to0$ we have the desired result.</p>
 
@@ -498,7 +487,6 @@
 
     <defn->
       <p>Let $A$ be a set (or class).</p>
-
       <ul>
         <li>A <dfn>partial ordering</dfn> of $A$ is a binary relation $\leq$ satisfying: (reflexive) $a\leq a$; (antisymmetric) $a\leq b\leq a\implies a=b$; (transitive) $a\leq b\leq c\implies a\leq c$.</li>
         <li>A <dfn>total ordering</dfn> of $A$ is a partial ordering such that for all $a,a'$ either $a\leq a'$ or $a'\leq a$.</li>
@@ -899,9 +887,9 @@
     <section>
     <h->Ideals and their cardinals</h->
 
-      <p>Let $X$ be any one of the three spaces $\RR$, $2^\omega$, or $\omega^\omega$. An <dfn>ideal</dfn> on $X$ is a subset $\mathcal I\subset\mathcal P(X)$ which is closed under subsets and (finite) unions. We think of an ideal as any collection of sets that captures some quality of smallness in subsets of $X$. Of course, the whole space $X$ should not be small, so we are only interested in <dfn>proper</dfn> ideals, i.e.\ those do not contain $X$.</p>
+    <p>Let $X$ be any one of the three spaces $\RR$, $2^\omega$, or $\omega^\omega$. An <dfn>ideal</dfn> on $X$ is a subset $\mathcal I\subset\mathcal P(X)$ which is closed under subsets and (finite) unions. We think of an ideal as any collection of sets that captures some quality of smallness in subsets of $X$. Of course, the whole space $X$ should not be small, so we are only interested in <dfn>proper</dfn> ideals, i.e.\ those do not contain $X$.</p>
 
-      <p>An ideal $\mathcal I$ is called a <dfn>$\sigma$-ideal</dfn> if it is additionally closed under countable unions. In the past several sections, we have discussed three key notions of smallness and each one is a $\sigma$-ideal.</p>
+    <p>An ideal $\mathcal I$ is called a <dfn>$\sigma$-ideal</dfn> if it is additionally closed under countable unions. In the past several sections, we have discussed three key notions of smallness and each one is a $\sigma$-ideal.</p>
 
       <ul>
         <li>$\Meager$ is the ideal of meager subsets of $\RR$.</li>
@@ -1185,59 +1173,52 @@
 
     <section>
     <h->Ideals and duality</h->
-      <p>At this point one might have observed that many of the proofs of inequalities between cardinal characteristics have come in pairs. This phenomenon is easy to spot in <ref- target="lem:b-nonm"></ref-> <ref- target="lem:covn-nonm"></ref->, but if one examines the proof it is even present in <ref- target="lem:diamond"></ref->. It turns out that there is a category-theoretic duality lurking behind all of these pairings. (Here we mean <em>category</em> as in objects and morphisms, not as in Baire's theorem.)
-      </p>
+    
+    <p>At this point one might have observed that many of the proofs of inequalities between cardinal characteristics have come in pairs. This phenomenon is easy to spot in <ref- target="lem:b-nonm"></ref-> <ref- target="lem:covn-nonm"></ref->, but if one examines the proof it is even present in <ref- target="lem:diamond"></ref->. It turns out that there is a category-theoretic duality lurking behind all of these pairings. (Here we mean <em>category</em> as in objects and morphisms, not as in Baire's theorem.)</p>
+    
     <defn->
-
       <p>Let $R$ be a relation and $R\subset A\times B$ (that is, the domain of $R$ is $A$ and the codomain of $R$ is $B$).</p>
-      
       <ul>
         <li>A subfamily $\mathcal F\subset B$ is an <dfn>$R$-dominating family</dfn> if for every $a\in A$ there exists $b\in\mathcal F$ such that $a\mathrel{R}b$.</li>
         <li>The <dfn>dominating number</dfn> $\mathfrak d(R)$ of $R$ is the minimum cardinality of an $R$-dominating family.</li>
       </ul>
-
     </defn->
 
-      <p>It is clear that the dominating number $\mathfrak d$ is the dominating number of the relation $\leq^*$. But it is also easy to check that the unbounding number $\mathfrak b$ can be expressed as the dominating number of the relation $\not\geq^*$. Moreover, if $\mathcal I$ is an ideal then all four of the cardinal characteristics of $\mathcal I$ can be expressed as dominating numbers.</p>
+    <p>It is clear that the dominating number $\mathfrak d$ is the dominating number of the relation $\leq^*$. But it is also easy to check that the unbounding number $\mathfrak b$ can be expressed as the dominating number of the relation $\not\geq^*$. Moreover, if $\mathcal I$ is an ideal then all four of the cardinal characteristics of $\mathcal I$ can be expressed as dominating numbers.</p>
 
     <prop->
-
       <p>Let $\mathcal I$ be an ideal on $X$. Then we have:</p>
-
       <ul>
         <li>$\cof(\mathcal I)$ is the dominating number of the subset relation $\subset$ on $\mathcal I$ (meaning $\mathcal I\times\mathcal I)$.</li>
         <li>$\cov(\mathcal I)$ is the dominating number of the $\in$ relation on $X\times\mathcal I$.</li>
         <li>$\non(\mathcal I)$ is the dominating number of the $\not\ni$ relation on $\mathcal I\times X$.</li>
         <li>$\add(\mathcal I)$ is the dominating number of the relation $\not\supset$ on $\mathcal I$.</li>
       </ul>
-
     </prop->
 
     <proof->
-
       <p>It is straightforward to see the characterizations of $\cof(\mathcal I)$ and $\cov(\mathcal I)$. The characterizations of $\non(\mathcal I)$ and $\add(\mathcal I)$ both use the downward closure property: $A$ lies in $\mathcal I$ if and only if $A$ is a subset of an element of $\mathcal I$.</p>
     </proof->
 
-      <p>It is worth observing that the four cardinals come in two dual pairs. Here, if $R$ is a relation, then the <dfn>dual</dfn> of $R$ is its negated transpose $\hat{R}$. That is, the dual of $R$ satisfies $a\mathrel{\hat{R}}b$ iff $\neg(b\mathrel Ra)$. Thus we see that $\add(\mathcal I)$ and $\cof(\mathcal I)$ arise from dual relations, as do $\non(\mathcal I)$ and $\cov(\mathcal I)$. Before we can exploit this duality, we need to describe the morphisms on the category of binary relations.</p>
+    <p>It is worth observing that the four cardinals come in two dual pairs. Here, if $R$ is a relation, then the <dfn>dual</dfn> of $R$ is its negated transpose $\hat{R}$. That is, the dual of $R$ satisfies $a\mathrel{\hat{R}}b$ iff $\neg(b\mathrel Ra)$. Thus we see that $\add(\mathcal I)$ and $\cof(\mathcal I)$ arise from dual relations, as do $\non(\mathcal I)$ and $\cov(\mathcal I)$. Before we can exploit this duality, we need to describe the morphisms on the category of binary relations.</p>
 
-    <defn->
-
+  <defn->
       <p>Let $R$ and $S$ be relations, and to avoid excessive notation, write $\dom(R)$ and $\cod(R)$ for the demain and codomain of $R$, and similarly for $S$. A <dfn>morphism</dfn> from $R$ to $S$ is a pair of maps</p>
 
       <eqn->
-    \begin{cases} \psi\colon\cod(R)\to\cod(S)\\\phi\colon\dom(S)\to\dom(R)\end{cases}
+        \begin{cases} \psi\colon\cod(R)\to\cod(S)\\\phi\colon\dom(S)\to\dom(R)\end{cases}
       </eqn->
 
       <p>such that the following holds</p>
 
       <eqn->
-    \phi(c)\mathrel{R}d\implies c\mathrel{S}\psi(d)
+        \phi(c)\mathrel{R}d\implies c\mathrel{S}\psi(d)
       </eqn->
 
       <p>for all $c\in\dom(S)$ and $d\in\cod(R)$.</p>
     </defn->
 
-      <p>The definition in a sense implies that the following diagram ``commutes.'' Of course, the $R$ and $S$ edges symbolize relations, not functions, so this is only a partial analogy.</p>
+    <p>The definition in a sense implies that the following diagram ``commutes.'' Of course, the $R$ and $S$ edges symbolize relations, not functions, so this is only a partial analogy.</p>
     <!-- <center>
     <tikzpicture>
       \node (domr) {$\dom(R)$};
@@ -1256,7 +1237,7 @@
     \mathsf{dom}(\mathcal{R}) &amp; \underset{\varphi}{\longleftarrow} &amp; \mathsf{dom}(\mathcal{S}) \\
     \end{array}
 
-      <p>In any case, the definition of a morphism is custom-designed to give us the following two key properties.</p>
+    <p>In any case, the definition of a morphism is custom-designed to give us the following two key properties.</p>
 
     <prop- id="prop:morphism">
       <ul>
@@ -1266,19 +1247,18 @@
     </prop->
 
     <proof->
-
       <p>For the first statement, it is enough to show that if $\mathcal F$ is an $R$-dominating family, then the image $\psi(\mathcal F)$ is an $S$-dominating family. Indeed, the image $\psi(\mathcal F)$ has the same or smaller cardinality than $\mathcal F$. To check this we simply chase the diagram: since $\mathcal F$ is $R$-dominating, for any $d\in\dom(S)$ there exists $f\in\mathcal F$ such that $\phi(d)\mathrel{R}f$. Since $(\phi,\psi)$ is a morphism, it follows that $d\mathrel{S}\psi(f)$. This confirms that $\psi(\mathcal F)$ is an $S$-dominating family.</p>
 
       <p>For the second statement, just take the contrapositive of the morphism property, $\phi(c)\mathrel R d\implies c\mathrel S\psi(d)$, to arrive at the property required of a morphism from $\hat S$ to $\hat R$.</p>
     </proof->
 
-      <p>For each of the inequalities between cardinal characteristics that we have seen, it is possible to extract a morphism hiding in the proof.</p>
+    <p>For each of the inequalities between cardinal characteristics that we have seen, it is possible to extract a morphism hiding in the proof.</p>
 
     <example->
       <p>In <ref- target="lem:diamond"></ref->, where we showed that $\cov(\mathcal I)\leq\cof(\mathcal I)$, we could have used the morphism from $\subset$ relation on $\mathcal I$ to the $\in$ relation on $X\times\mathcal I$ given by the maps</p>
 
       <eqn->
-    \begin{cases} \phi(x)=\{x\}\\\psi(B)=B\end{cases}
+        \begin{cases} \phi(x)=\{x\}\\\psi(B)=B\end{cases}
       </eqn->
 
       <p>Indeed, it is trivial to see that $\phi(x)\subset B\implies x\in\psi(B)$. The fact that $\psi$ can be taken to be the identity reflects the fact that if $\mathcal F$ is a basis for $\mathcal I$ then the very same $\mathcal F$ is also a covering family.</p>
@@ -1301,7 +1281,6 @@
     <p>Beyond these two examples, we see that each arrow in Cichoń's diagram (<ref- target="thm:cichon"></ref->) is potentially dual to the arrow that is positioned diametrically opposite to it. Assuming there is a morphism behind the proof of one of the inequalities, then the other inequality follows automatically from <ref- target="prop:morphism"></ref->.</p>
 
     <rem->
-
       <p>True inequalities between cardinal characteristics are not always witnessed by morphisms. For example, it is true that $\cov(\Meager)\leq\non(\mathcal{SN})$, but it is consistent that the dual inequality fails. [ref]</p>
     </rem->
 
@@ -1314,34 +1293,31 @@
     </exerc->
 
     <notes->
-
       <p>The category-theoretic presentation of relations, morphisms, and duality follows Section&nbsp;4 of Blass.</p>
     </notes->
 
-
     </section>
-    <section><h->Category and difference sets</h->
+    
+    <section>
+    <h->Category and difference sets</h->
 
     <p>In this section we will prove two of the four inequalities remaining in <ref- target="thm:cichon"></ref->. We prove $\mathfrak d\leq\cof(\Meager)$ and $\add(\Meager)\leq\mathfrak b$ (actually thanks to duality only one proof is needed). Recall that $\mathfrak d$ is the dominating number of the $\leq^*$ relation on $\omega^\omega$, while $\cof(\Meager)$ is the dominating number of the $\subset$ relation on meager sets. Although the two relations don't seem directly comparable, we now introduce some technology to understand their relationship more clearly. An <dfn>interval partition</dfn> is a partition $P=(I_n)$ of $\omega$ into finite nonempty intervals $I_n$. We always assume that the $I_n$ is adjacent to $I_{n+1}$, and hence also that they are enumerated in increasing order.</p>
 
     <defn->
-
       <p>If $x,y\in2^\omega$ and $P$ is an interval partition, we say $x$ <dfn>strongly differs</dfn> from $y$ on $P$ if for all but finitely many $n$ we have $x\restriction I_n\neq y\restriction I_n$.</p>
     </defn->
 
-      <p>If $x\in2^\omega$ is fixed and $P$ is an interval partition, we define the set $\Diff_P(x)$ to be the set of all $y\in2^\omega$ such that $y$ strongly differs from $x$ on $P$.</p>
+    <p>If $x\in2^\omega$ is fixed and $P$ is an interval partition, we define the set $\Diff_P(x)$ to be the set of all $y\in2^\omega$ such that $y$ strongly differs from $x$ on $P$.</p>
 
     <prop- id="prop:meager-diff">
-
       <p>A subset $A\subset2^\omega$ is meager if and only if there is some $x\in2^\omega$ and interval partition $P$ such that $A\subset\Diff_P(x)$.</p>
     </prop->
 
     <proof->
-
       <p>First suppose that $A\subset\Diff_P(x)$, we will show $A$ is meager. For this, let</p>
 
       <eqn->
-    A_N=\set{y\in2^\omega\mid(\forall n\geq N)\;y\restriction I_n\neq x\restriction I_n}\text{.}
+        A_N=\set{y\in2^\omega\mid(\forall n\geq N)\;y\restriction I_n\neq x\restriction I_n}\text{.}
       </eqn->
 
       <p>Thus $A\subset\bigcup A_n$, and it is clear that $A_N$ contains no interior. Moreover $A_N$ is a countable intersection of boolean combinations of basic open sets, and hence $A_N$ is closed. Thus we have shown that $A$ is meager.</p>
@@ -1355,22 +1331,19 @@
       <p>To see that $A\subset\Diff_P(x)$, observe that whenever $y\restriction I_n=x\restriction I_n$ we have $y\notin A_n$. In other words, whenever $y\in A_n$ we have that $y$ differs from $x$ on $I_n$. Since the $A_n$ are increasing, any $a\in A$ lies in all but finitely many of the $A_n$. Thus we can conclude that any $a\in A$ strongly differs from $x$ on $P$.</p>
     </proof->
 
-      <p>The result implies that the collection of sets $\Diff_P(x)$ forms a basis for the meager ideal on Cantor space. This basis is particularly useful because it is easy to see when one set of the form $\Diff_P(x)$ is a subset of another.</p>
+    <p>The result implies that the collection of sets $\Diff_P(x)$ forms a basis for the meager ideal on Cantor space. This basis is particularly useful because it is easy to see when one set of the form $\Diff_P(x)$ is a subset of another.</p>
 
     <prop- id="prop:engulf">
-
       <p>If $P=(I_n)$ and $Q=(J_m)$ are interval partitions, then we have $\Diff_P(x)\subset\Diff_Q(y)$ if and only if for all but finitely many $J_m$ there exists $I_n$ such that $I_n\subset J_m$ and $x\restriction I_n=y\restriction I_n$.</p>
     </prop->
 
     <p>The proof is elementary (though slightly technical), and we leave it for <ref- target="exerc:engulf"></ref->. <ref- target="prop:engulf"></ref-> provides characterization of $\cof(\Meager)$ as the dominating number of a simple combinatorial relation on pairs $(P,x)$. The cardinals $\mathfrak b$ and $\mathfrak d$ can be characterized by a similar combinatorial relation just on interval partitions. First, if $P=(I_n)$ and $Q=(J_m)$ are interval partitions, we write $P\prec Q$ if for all but finitely many $J_m$ there exists $I_m$ such that $I_n\subset J_m$.</p>
 
     <prop->
-
       <p>There is a morphism from $\prec$ to $\leq^*$, and there is a morphism from $\leq^*$ to $\prec$. Hence $\mathfrak d$ is equal to the dominating number of the $\prec$ relation on interval partitions, and $\mathfrak b$ is the dominating number of the $\not\succ$ relation on interval partitions.</p>
     </prop->
 
     <proof->
-
       <p>We first construct a morphism from $\prec$ to $\leq^*$. Given any interval partition $P$ we define the element $\psi(P)\in\omega^\omega$ by $\psi(P)(n)=$ the right endpoint of the interval after the one containing $n$. Moreover for any function $f\in\omega^\omega$ define an interval partition $\phi(f)$ consisting of intervals $[a,b]$ such that $\max\{f(n)\mid n\lt a\}\leq b$.</p>
 
       <p>Now, if $\phi(f)\prec P=(I_m)$, we must verify that $f\leq^*\psi(P)$. Indeed, given any $n$ we may find $I_m$ such that $n\in I_m$. Then if $n$ is large enough, since $\phi(f)\prec P$ we know there exists an interval $J\in\phi(f)$ such that $J\subset I_{n+1}$. Then by definition of $\phi$ we have $f(n)\leq\max J$. And by definition of $\psi$ we have $\max J\leq\psi(P)(n)$. Hence $f(n)\leq\psi(P)(n)$, as desired.</p>
@@ -1379,30 +1352,26 @@
     </proof->
 
     <lem->
-
       <p>We have $\add(\Meager)\leq\mathfrak b$ and $\mathfrak d\leq\cof(\Meager)$.</p>
     </lem->
 
     <proof->
-
       <p>We prove the second inequality by finding a morphism from the $\subset$ relation on $\Meager$ to the $\prec$ relation on interval partitions. We therefore obtain the first inequality as a consequence of duality. For this it is enough to consider the $\subset$ relation just on the basis of meager sets of the form $A=\Diff_Q(y)$. We let:</p>
 
       <eqn->
-    \begin{cases} \phi(P)=\Diff_P(0)\\\psi(\Diff_Q(y))=Q\text{.}\end{cases}
+        \begin{cases} \phi(P)=\Diff_P(0)\\\psi(\Diff_Q(y))=Q\text{.}\end{cases}
       </eqn->
 
       <p>Then by <ref- target="prop:engulf"></ref->, $\Diff_P(0)\subset\Diff_Q(y)$ in particular implies that $P\prec Q$, and hence $\phi(P)\subset A\implies P\prec\psi(A)$, as desired.</p>
     </proof->
 
-      <p>We conclude this section with a further result that gives much more information about the relationship between $\add(\Meager)$ and the other cardinals.</p>
+    <p>We conclude this section with a further result that gives much more information about the relationship between $\add(\Meager)$ and the other cardinals.</p>
 
     <thm->
-
       <p>We have $\add(\Meager)=\min\{\mathfrak b,\cov(\Meager)\}$.</p>
     </thm->
 
     <proof->
-
       <p>We have already shown that $\add(\Meager)\leq\mathfrak b$ and $\add(\Meager)\leq\cov(\Meager)$. Hence it remains only to show that $\add(\Meager)\geq\min\{\mathfrak b,\cov(\Meager)\}$. For this we must show that if $\mathcal F$ is a family of meager subsets of $\omega^\omega$ such that $|\mathcal F|\lt \min\{\mathfrak b,\cov(\Meager)\}$ then $\bigcup\mathcal F$ is meager. Without loss of generality, we can suppose that $\mathcal F$ consists of closed nowhere dense sets.</p>
 
       <p>We begin by finding a countable dense subset $Q\subset\omega^\omega$ disjoint from $\bigcup\mathcal F$. Indeed, since $|\mathcal F|\lt \cov(\Meager)$ we have that $\bigcup\mathcal F\neq\omega^\omega$. In fact for any basic open set $V_s$ we must have that $\bigcup\mathcal F$ does not cover $I$, since otherwise we could use <ref- target="exerc:homeo"></ref-> to find a countable family of translates of $\bigcup(\mathcal F)$ which covers all oof $\omega^\omega$. This shows $\bigcup\mathcal F$ is co-dense, and therefore we can find $Q$ as required.</p>
@@ -1410,23 +1379,21 @@
       <p>Now enumerate $Q=(q_n)_{n\in\NN}$. Then for each $F\in\mathcal F$ and $n\in\NN$, since $F$ is nowhere dense, we can find a finite initial segment $q_n\restriction g_F(n)$ such that $V_{q_n\restriction g_F(n)}$ is disjoint from $F$. Since $|\mathcal F|\lt \mathfrak b$, the family of functions $\set{g_F\mid F\in\mathcal F}$ is bounded by a single function $h\in\omega^\omega$. Finally we use this $h$ to define the set:</p>
 
       <eqn->
-    R=\bigcap_N\bigcup_{n\geq N}V_{q_n\restriction h(n)}\text{.}
+        R=\bigcap_N\bigcup_{n\geq N}V_{q_n\restriction h(n)}\text{.}
       </eqn->
 
       <p>Then $R$ is a countable intersection of dense open sets, and hence it is comeager. Moreover since for all $F\in\mathcal F$ we have $g_F\leq^*h$, we have that $R$ is disjoint from $\bigcup\mathcal F$. We can thus conclude that $\bigcup\mathcal F$ is meager, as desired.</p>
     </proof->
 
     <rem->
-
       <p>Although the last result does not apparently involve a morphism, it is true that an analogous argument shows the dual fact that $\add(\Meager)=\max\{\mathfrak d,\non(\Meager)\}$. This three-term duality is also part of an abstract morphism-like framework, which we omit. [ref]</p>
     </rem->
 
     <exerc- id="exerc:engulf">
-      Prove <ref- target="prop:engulf"></ref->.
+      <p>Prove <ref- target="prop:engulf"></ref->.</p>
     </exerc->
 
     <exerc- id="exerc:homeo">
-
       <p>Let $n\in\NN$ and $s,s'\in\omega^n$. Show that there exists a homeomorphism $\phi\colon\omega^\omega\to\omega^\omega$ such that $s\subset x$ iff $s'\subset\phi(x)$.</p>
     </exerc->
     <!--
@@ -1440,19 +1407,17 @@
     <section>
     <h->Bartoszyński's theorem</h->
 
-      <p>In this section we complete the proof of the two inequalities remaining in Cichoń's diagram: $\add(\Null)\leq\add(\Meager)$ and $\cof(\Meager)\leq\cof(\Null)$. By duality, the two inequalities are really one that was discovered independently by Bartoszyński and Raisonnier--Stern. The proof we give is mostly due to Bartoszyński, and is markedly more difficult than our previous results. In fact I will need your help proving two of the preparatory facts (see the exercises).</p>
+    <p>In this section we complete the proof of the two inequalities remaining in Cichoń's diagram: $\add(\Null)\leq\add(\Meager)$ and $\cof(\Meager)\leq\cof(\Null)$. By duality, the two inequalities are really one that was discovered independently by Bartoszyński and Raisonnier--Stern. The proof we give is mostly due to Bartoszyński, and is markedly more difficult than our previous results. In fact I will need your help proving two of the preparatory facts (see the exercises).</p>
 
-      <p>We begin by introducing a new relation that sits between $\cof(\Null)$ and $\cof(\Meager)$. A <dfn>slalom</dfn> is a sequence $S=(I_n)$ of subsets $I_n\subset\omega$ such that $|I_n|\leq2^n$. We write $SL$ for the set of slaloms. An element $f\in\omega^\omega$ is said to <dfn>ski through</dfn> $S$, which we denote by $f\in^*S$, if for almost every $n$ we have $f(n)\in I_n$.</p>
+    <p>We begin by introducing a new relation that sits between $\cof(\Null)$ and $\cof(\Meager)$. A <dfn>slalom</dfn> is a sequence $S=(I_n)$ of subsets $I_n\subset\omega$ such that $|I_n|\leq2^n$. We write $SL$ for the set of slaloms. An element $f\in\omega^\omega$ is said to <dfn>ski through</dfn> $S$, which we denote by $f\in^*S$, if for almost every $n$ we have $f(n)\in I_n$.</p>
 
     <lem- id="lem:null-slalom">
-
       <p>There is a morphism from the $\subset$ relation on null subsets of $2^\omega$ to the $\in^*$ relation on $\omega^\omega\times SL$.</p>
     </lem->
 
     <p>Before the proof, we will need the following fact about null sets, which we leave for <ref- target="exerc:self-supporting"></ref->.</p>
 
     <prop- id="prop:self-supporting">
-
       <p>If $A\subset2^\omega$ is a null set, then there exists a closed subset $K\subset2^\omega\smallsetminus A$ with the property that whenever $V_s\cap K\neq\emptyset$ we have $V_s\cap K$ is nonnull.</p>
     </prop->
 
@@ -1464,7 +1429,7 @@
       <p>To define $\phi$, we start with a sequence of open subsets $E_{n,i}\subset2^\omega$ such that $m(E_{n,i})=2^{-n}$, and given $f\in\omega^\omega$ we let</p>
 
       <eqn->
-    \phi(f)=\bigcap_N\bigcup_{n\geq N} E_{n,f(n)}\text{.}
+        \phi(f)=\bigcap_N\bigcup_{n\geq N} E_{n,f(n)}\text{.}
       </eqn->
 
       <p>Then it is clear that $\phi(f)$ is a null set. For technical reasons later on, we will need to assume that the sets $E_{n,i}$ are mutually independent events (the measure of the intersection is the product of the measures). It is not difficult to write down such $E_{n,i}$ explicitly.</p>
@@ -1474,7 +1439,7 @@
       <p>As a first approximation to this, whenever $V_s\cap K\neq\emptyset$ we begin by letting</p>
 
       <eqn->
-    I_n(s)=\set{i\in\omega\mid V_s\cap K\cap E_{n,i}=\emptyset}
+        I_n(s)=\set{i\in\omega\mid V_s\cap K\cap E_{n,i}=\emptyset}
       </eqn->
 
       <p>and otherwise we simply let $I_n(s)=\emptyset$. We now have two issues to deal with:</p>
@@ -1487,14 +1452,14 @@
       <p>Tackling the second issue first, we will show that the sets $|I_n(s)|$ are not too large. More specifically we claim that the sum $\sum2^{-n}|I_n(s)|$ converges. Indeed, by the independence of the sets $E_{n,i}$ we have</p>
 
       <eqn->
-    m(V_s\cap K)\leq\prod_{n\in\NN,i\in I_n(s)}m((E_{n,i})^c)
-      =\prod_{n\in\NN}(1-2^{-n})^{|I_n(s)|}\text{.}
+        m(V_s\cap K)\leq\prod_{n\in\NN,i\in I_n(s)}m((E_{n,i})^c)
+        =\prod_{n\in\NN}(1-2^{-n})^{|I_n(s)|}\text{.}
       </eqn->
 
       <p>By our choice of $K$, the left-hand side is positive. Hence the right-hand side is positive too and taking a logarithm we obtain</p>
 
       <eqn->
-    \sum-\log(1-2^{-n})|I_n(s)|\lt \infty
+        \sum-\log(1-2^{-n})|I_n(s)|\lt \infty
       </eqn->
 
       <p>From the Taylor series expansion we always have $-\log(1-x)\gt x$, and the claim now follows.</p>
@@ -1502,7 +1467,7 @@
       <p>To deal with the first issue we construct a single slalom $I_n$ such that for all $s$ we eventually have $I_n(s)\subset I_n$. To do this fix an enumeration $s_1,s_2,\ldots$ of the elements of $2^{\lt \omega}$. By the convergence shown in the previous paragraph we can find $k(s_j)$ such that for all $n\geq k(s_j)$ we have $2^{-n}|I_n(s_j)|\leq1/2^j$. We then let $I_n=\bigcup\set{I_n(s_j)\mid n\geq k(s_j)}$. Then clearly</p>
 
       <eqn->
-    |I_n|\leq\sum_{k(s_j)\leq n}|I_n(s_j)|\leq\sum_{j}2^n/2^j\leq2^n\text{.}
+        |I_n|\leq\sum_{k(s_j)\leq n}|I_n(s_j)|\leq\sum_{j}2^n/2^j\leq2^n\text{.}
       </eqn->
 
       <p>Thus $\psi(A)=(I_n)$ is a slalom, and this completes the construction of $\psi$.</p>
@@ -1511,26 +1476,21 @@
     </proof->
 
     <rem->
-
       <p>Although we don't need it, there is also a morphism the other way, that is, from $\in^*$ to the $\subset$ relation on $\Null$. Thus the ski-through relation on slaloms can be used to give a complete combinatorial characterization of both $\add(\Null)$ and $\cof(\Null)$.</p>
     </rem->
 
     <lem- id="lem:slalom-meager">
-
       <p>There is a morphism from the $\in^*$ relation on $\omega^\omega\times SL$ to the $\subset$ relation on meager subsets of $2^\omega$.</p>
     </lem->
 
     <p>This time we will need a topological fact before the proof, and once again we leave it for <ref- target="exerc:pi-base-meager"></ref->.</p>
 
     <prop- id="prop:pi-base-meager">
-
       <p>Given $n\in\NN$ and an open subset $O\subset2^\omega$, there is a countable family $\mathcal U_n$ of open subsets of $O$ with the properties:</p>
-
       <ul>
         <li> Whenever $U_1,\ldots,U_{2^n}\in\mathcal U_n$ we have $U_1\cap\cdots\cap U_{2^n}\neq\emptyset$;</li>
         <li>Every nowhere dense set is disjoint from some set in $\mathcal U_n$.</li>
       </ul>
-
     </prop->
 
     <proof->
@@ -1541,7 +1501,7 @@
       <p>To construct $\psi$, first let $s_1,s_2,\ldots$ be an enumeration of $2^{\lt \omega}$, and for each $n$ apply <ref- target="prop:pi-base-meager"></ref-> to $\mathcal O=V_{s_n}$ to obtain a family $\mathcal U_n=\{U_{n,i}\}$. Now if $S=(I_n)$ is a slalom we let</p>
 
       <eqn->
-    \psi(S)=2^\omega\smallsetminus\bigcap_N\bigcup_{n\geq N}\bigcap_{i\in I_n}U_{n,i}\text{.}
+        \psi(S)=2^\omega\smallsetminus\bigcap_N\bigcup_{n\geq N}\bigcap_{i\in I_n}U_{n,i}\text{.}
       </eqn->
 
       <p>Then by the first property of the $\mathcal U_n$, for all $n$ we have that $\bigcap_{i\in I_n}U_{n,i}$ is a nonempty subset of $V_{s_n}$. It follows that each set $\bigcup_{n\geq N}\bigcap_{i\in I_n}U_{n,i}$ is dense and open, and hence that $\psi(S)$ is meager.</p>
@@ -1552,20 +1512,17 @@
     </proof->
 
     <cor->
-
       <p>We have $\add(\Null)\leq\add(\Meager)$ and $\cof(\Meager)\leq\cof(\Null)$.</p>
     </cor->
 
     <p>This concludes the proof of Bartoszyński's theorem, as well as <ref- target="thm:cichon"></ref->.</p>
 
     <exerc- id="exerc:self-supporting">
-      Prove <ref- target="prop:self-supporting"></ref->. [Hint: First show that there exists a closed subset $C\subset2^\omega\smallsetminus A$ which is nonnull. Let $D$ be the union of all basic open sets $V_s$ such that $m(V_s\cap C)=0$, and show that $m(D)=0$. Finally let $K=C\smallsetminus D$, and show that $K$ has the desired properties.]
+      <p>Prove <ref- target="prop:self-supporting"></ref->. [Hint: First show that there exists a closed subset $C\subset2^\omega\smallsetminus A$ which is nonnull. Let $D$ be the union of all basic open sets $V_s$ such that $m(V_s\cap C)=0$, and show that $m(D)=0$. Finally let $K=C\smallsetminus D$, and show that $K$ has the desired properties.]</p>
     </exerc->
 
     <exerc- id="exerc:pi-base-meager">
-      
       <p>Prove <ref- target="prop:pi-base-meager"></ref->. [Hint: Wlog $O=2^\omega$ itself, and wlog we can replace $2^n$ with $n$. Let $\mathcal U_1$ be an open basis, and show that $\mathcal U_1$ is as desired. If $\mathcal U_n$ has been defined, enumerate it as $V_1,V_2,\ldots$. For each $V_i$ consider all the clopen sets $V$ with the property:</p>
-
       <ul>
         <li> for all $J\subset i$, if $\bigcap_{j\in J}V_j\neq\emptyset$ then we have $V\cap\bigcap_{j\in\ J}V_j\neq\emptyset$.</li>
       </ul>
@@ -1574,7 +1531,6 @@
     </exerc->
 
     <notes->
-
       <p>The presentation of the proof of Bartoszyński's theorem was largely taken from Sections 522K--522P of Fremlin, <cite>Measure theory</cite>. A similar proof can also be found in Bartoszyński's handbook article, <dfn>Invariants of measure and category</dfn>.</p>
     </notes->
 
@@ -1597,88 +1553,80 @@
     <section id="sec:idea-forcing">
     <h->The idea of forcing</h->
 
-      <p>In this part, we will assume familiarity with the notions of statement, theory, and model. As a reminder, a <dfn>formula</dfn> is simply a mathematical assertion that can be expressed using the ordinary logical symbols (and, or, not, quantifiers, variables) and non-logical symbols (in our case, $\in$, $\cup$, $\mathcal P$, etc). A <dfn>sentence</dfn> is a formula in which every variable is quantified, and a <dfn>theory</dfn> is a collection of sentences. If $T$ is a theory, then a <dfn>model</dfn> of $T$ is a set, together with interpretations of the non-logical symbols of $T$, in which all the sentences in $T$ hold true.</p>
+    <p>In this part, we will assume familiarity with the notions of statement, theory, and model. As a reminder, a <dfn>formula</dfn> is simply a mathematical assertion that can be expressed using the ordinary logical symbols (and, or, not, quantifiers, variables) and non-logical symbols (in our case, $\in$, $\cup$, $\mathcal P$, etc). A <dfn>sentence</dfn> is a formula in which every variable is quantified, and a <dfn>theory</dfn> is a collection of sentences. If $T$ is a theory, then a <dfn>model</dfn> of $T$ is a set, together with interpretations of the non-logical symbols of $T$, in which all the sentences in $T$ hold true.</p>
 
-      <p>We are interested in the theory <dfn>ZFC</dfn>, which consists of the standard axioms for set theory, that govern how the $\in$ relation behaves. G\"odel's incompleteness theorem implies that for some sentences $\phi$, the models of ZFC do not all agree about whether $\phi$ is true or false. A <dfn>theorem</dfn> is a sentence that holds true in every model of ZFC. A sentence is <dfn>independent</dfn> of ZFC if it holds true in some models, and false in others. One example that we have mentioned already is CH, the sentence which says that $\mathfrak c=\aleph_1$.</p>
+    <p>We are interested in the theory <dfn>ZFC</dfn>, which consists of the standard axioms for set theory, that govern how the $\in$ relation behaves. G\"odel's incompleteness theorem implies that for some sentences $\phi$, the models of ZFC do not all agree about whether $\phi$ is true or false. A <dfn>theorem</dfn> is a sentence that holds true in every model of ZFC. A sentence is <dfn>independent</dfn> of ZFC if it holds true in some models, and false in others. One example that we have mentioned already is CH, the sentence which says that $\mathfrak c=\aleph_1$.</p>
 
     <!-- % In the following (and rest of the chapter) should we use cantor space instead? -->
 
-      <p>Forcing is a method of adding new sets to a given model $V$ of ZFC, to obtain a larger model $W$ of ZFC. By carefully choosing <dfn>how</dfn> we add the new sets, we may be able to <dfn>force</dfn> a given statement to hold true in $W$. For example if $\mathcal F\subset\omega^\omega$, it is possible to add a new element $g\in\omega^\omega$ that is a bound for $\mathcal F$, even if $\mathcal F$ was unbounded to begin with. This is a powerful move, and when iterated it can have an effect on the value of the cardinal $\mathfrak b$.</p>
+    <p>Forcing is a method of adding new sets to a given model $V$ of ZFC, to obtain a larger model $W$ of ZFC. By carefully choosing <dfn>how</dfn> we add the new sets, we may be able to <dfn>force</dfn> a given statement to hold true in $W$. For example if $\mathcal F\subset\omega^\omega$, it is possible to add a new element $g\in\omega^\omega$ that is a bound for $\mathcal F$, even if $\mathcal F$ was unbounded to begin with. This is a powerful move, and when iterated it can have an effect on the value of the cardinal $\mathfrak b$.</p>
 
-      <p>But forcing cannot do just anything. For a very simple example, if $A\neq\emptyset$, then $A$ will remain nonempty after forcing. There is some element $a\in A$ and this element will remain in $A$ forever. More generally, we will see that a wide variety of statements are <dfn>absolute</dfn>, meaning that their truth value cannot be changed by forcing. The Riemann hypothesis is an example of such a statement.</p>
+    <p>But forcing cannot do just anything. For a very simple example, if $A\neq\emptyset$, then $A$ will remain nonempty after forcing. There is some element $a\in A$ and this element will remain in $A$ forever. More generally, we will see that a wide variety of statements are <dfn>absolute</dfn>, meaning that their truth value cannot be changed by forcing. The Riemann hypothesis is an example of such a statement.</p>
 
-      <p>The concept of absoluteness highlights the distinction between ordinals and cardinals. Recall that an ordinal is a set which is transitive and well-ordered by the $\in$ relation. Both of these properties are absolute, and therefore forcing can never add or change ordinals. On the other hand, $\aleph_1$ is defined to be the least ordinal that cannot be mapped injectively into $\omega$. So $\aleph_1$ is equal to some ordinal $\alpha$, but this ordinal value can be raised by a forcing which adds a new injection from $\alpha$ to $\omega$.</p>
+    <p>The concept of absoluteness highlights the distinction between ordinals and cardinals. Recall that an ordinal is a set which is transitive and well-ordered by the $\in$ relation. Both of these properties are absolute, and therefore forcing can never add or change ordinals. On the other hand, $\aleph_1$ is defined to be the least ordinal that cannot be mapped injectively into $\omega$. So $\aleph_1$ is equal to some ordinal $\alpha$, but this ordinal value can be raised by a forcing which adds a new injection from $\alpha$ to $\omega$.</p>
 
-      <p>The situtation is even more fluid with an indirectly-defined cardinal such as $\mathfrak c$. Recall that $\mathfrak c$ is the unique cardinal number $\aleph_\alpha$ that is in bijection with $2^\omega$. This value can be raised by a forcing which adds at least $\aleph_{\alpha+1}$ many new subsets of $\omega$. The value can also be shrunk by a forcing which adds a new bijection between $\aleph_1$ and the old $\aleph_\alpha$ (while still preserving $\aleph_1$). Roughly speaking, this is how we will establish the independence of the continuum hypothesis.</p>
+    <p>The situtation is even more fluid with an indirectly-defined cardinal such as $\mathfrak c$. Recall that $\mathfrak c$ is the unique cardinal number $\aleph_\alpha$ that is in bijection with $2^\omega$. This value can be raised by a forcing which adds at least $\aleph_{\alpha+1}$ many new subsets of $\omega$. The value can also be shrunk by a forcing which adds a new bijection between $\aleph_1$ and the old $\aleph_\alpha$ (while still preserving $\aleph_1$). Roughly speaking, this is how we will establish the independence of the continuum hypothesis.</p>
 
-      <p>For the rest of this section we introduce the basic combinatorial objects used in forcing. The main object is very simple: a <dfn>forcing notion</dfn> is simply a partial order $\PP$ with a maximum element $\mathbb1$ (also written $\mathbb1_\PP$). When we force with $\PP$, we add a new subset of $\PP$ to the universe. We think of the elements of $\PP$ as imposing conditions on the new set to be added. If $p,q\in\PP$ we say that $p$ is <dfn>stronger</dfn> than $q$ if $p\leq q$; lower elements hold more information.</p>
+    <p>For the rest of this section we introduce the basic combinatorial objects used in forcing. The main object is very simple: a <dfn>forcing notion</dfn> is simply a partial order $\PP$ with a maximum element $\mathbb1$ (also written $\mathbb1_\PP$). When we force with $\PP$, we add a new subset of $\PP$ to the universe. We think of the elements of $\PP$ as imposing conditions on the new set to be added. If $p,q\in\PP$ we say that $p$ is <dfn>stronger</dfn> than $q$ if $p\leq q$; lower elements hold more information.</p>
 
-      <p>When we force with $\PP$, the partial order $\PP$ can give fine control over the new subset that we add.</p>
+    <p>When we force with $\PP$, the partial order $\PP$ can give fine control over the new subset that we add.</p>
 
     <defn->
-
       <p>A subset $G\subset\PP$ is a <dfn>filter</dfn> if it satisfies the two properties:</p>
-
       <ul>
         <li>upwards closed: if $p\in G$ and $p\leq q$ then $q\in G$.</li>
         <li>downwards directed: if $p,q\in G$ then there exists $r\in G$ such that $r\leq p,q$.</li>
       </ul>
 
     </defn->
-
-      <p>Elements $p,q$ are said to be <dfn>compatible</dfn> if there exists $r$ such that $r\leq p,q$. Thus a filter is simply a set of pairwise compatible elements, closed upwards for convenience.</p>
+    
+    <p>Elements $p,q$ are said to be <dfn>compatible</dfn> if there exists $r$ such that $r\leq p,q$. Thus a filter is simply a set of pairwise compatible elements, closed upwards for convenience.</p>
 
     <example->
-
       <p>Let $T\subset\omega^{\lt \omega}$ be a tree. Then $T$ can be made into a notion of forcing by turning it upside-down, that is, setting $s\leq t$ if and only if $s\supset t$. Since $T$ is a tree, this partial ordering has a maximal element $\mathbb1=$ the empty sequence.</p>
 
       <p>In an upside-down tree such as $T$, the only way for two elements $s,t$ to be compatible is to actually be <dfn>comparable</dfn>, that is, $s\subset t$ or $t\subset s$. Thus if $G\subset T$ is a filter, then the elements of $G$ actually form a path through $T$.</p>
     </example->
 
-      <p>We encourage the reader to note the distinction between the two words comparable and compatible: pairwise comparable sets form a chain while pairwise compatible sets form a filter. Compatibility is what is needed in direct limit constructions. In a tree, the two concepts end up the same.</p>
+    <p>We encourage the reader to note the distinction between the two words comparable and compatible: pairwise comparable sets form a chain while pairwise compatible sets form a filter. Compatibility is what is needed in direct limit constructions. In a tree, the two concepts end up the same.</p>
 
     <defn->
-
       <p>A subset $D\subset\PP$ is <dfn>dense</dfn> if for all $p\in\PP$ there exists $q\in D$ such that $q\leq p$.</p>
     </defn->
 
-      <p>The use of the word ``dense'' here may seem in conflict  with the use of the word in topology, but the two can be connected. If $\PP$ is a partial order then it has a topology with a basis consisting of the downward cones $V_p=\set{q\in\PP\mid q\leq p}$. A subset $D\subset\PP$ is dense if and only if it is dense in this topology.</p>
+    <p>The use of the word ``dense'' here may seem in conflict  with the use of the word in topology, but the two can be connected. If $\PP$ is a partial order then it has a topology with a basis consisting of the downward cones $V_p=\set{q\in\PP\mid q\leq p}$. A subset $D\subset\PP$ is dense if and only if it is dense in this topology.</p>
 
-      <p>We think of the dense subsets of $\PP$ as omnipresent---almost every element of $\PP$ lies below some element of $D$. When we force with $\PP$ we add a filter $G$ that is <dfn>generic</dfn> in the sense that it meets these dense subsets of $\PP$. The more dense sets that we demand that $G$ meets, the stronger a condition this imposes on $G$.</p>
+    <p>We think of the dense subsets of $\PP$ as omnipresent---almost every element of $\PP$ lies below some element of $D$. When we force with $\PP$ we add a filter $G$ that is <dfn>generic</dfn> in the sense that it meets these dense subsets of $\PP$. The more dense sets that we demand that $G$ meets, the stronger a condition this imposes on $G$.</p>
 
-      <p>For example, if just countably many dense sets are given, then we will see in the next section that there is always a filter that meets them all. On the other extreme, we could say that a filter is fully generic if <!-- TODO: fully generic is dfn?  --> it meets <em>every</em> dense set of $\PP$, but the next result shows that this is too strong.</p>
+    <p>For example, if just countably many dense sets are given, then we will see in the next section that there is always a filter that meets them all. On the other extreme, we could say that a filter is fully generic if <!-- TODO: fully generic is dfn?  --> it meets <em>every</em> dense set of $\PP$, but the next result shows that this is too strong.</p>
 
     <prop- id="prop:generic-new">
-
       <p>Suppose that for every $p\in\PP$, there exist incompatible elements $q,r\leq p$. Then $\PP$ does not have a fully generic filter.</p>
     </prop->
 
     <proof->
-
       <p>It is enough to show that if $G\subset\PP$ is a filter then its complement $D=\PP\smallsetminus G$ is dense. For this, let $p\in\PP$ be arbitrary and by the hypothesis on $\PP$ let $q,r$ be incompatible elements such that $q,r\leq p$. Since $G$ is a filter, it cannot contain both $q$ and $r$. Thus $D$ contains at least one of them, and this shows $D$ is dense.</p>
     </proof->
 
-      <p>A partial order $\PP$ satisfying the hypothesis of the proposition is called <dfn>atomless</dfn>. The condition ensures that forcing with $\PP$ is nontrivial. Once we acknowledge that fully generic filters do not exist in the given universe of set theory, we arrive at the following definition.</p>
+    <p>A partial order $\PP$ satisfying the hypothesis of the proposition is called <dfn>atomless</dfn>. The condition ensures that forcing with $\PP$ is nontrivial. Once we acknowledge that fully generic filters do not exist in the given universe of set theory, we arrive at the following definition.</p>
 
     <defn->
-
       <p>If $V$ is a model of set theory and $\PP\in V$, we say that $G$ is <dfn>$V$-generic</dfn> if for every $D\in V$ such that $D\subset\PP$ is dense, we have $G\cap D\neq\emptyset$.</p>
     </defn->
 
-      <p>When we make forcing rigorous, we will show that under appropriate hypotheses, a $V$-generic filter $G$ can be found outside of $V$. We will then let $W=V[G]$ be the smallest model containing both $V$ and $G$, and call this the forcing extension with respect to the notion $\PP$.</p>
+    <p>When we make forcing rigorous, we will show that under appropriate hypotheses, a $V$-generic filter $G$ can be found outside of $V$. We will then let $W=V[G]$ be the smallest model containing both $V$ and $G$, and call this the forcing extension with respect to the notion $\PP$.</p>
 
     <example->
-
       <p>Returning to the example of the forcing notion $\PP=\omega^{\lt \omega}$ with the upside-down ordering, we have already said that a filter $G\subset\PP$ is actually a path through $\omega^{\lt \omega}$. If $G$ is $V$-generic, then much more can be said of this path. First of all, consider the sets</p>
 
       <eqn->
-    D_n=\set{t\in\omega^{\lt \omega}\mid \dom(t)\geq n}\text{.}
+        D_n=\set{t\in\omega^{\lt \omega}\mid \dom(t)\geq n}\text{.}
       </eqn->
 
       <p>Clearly $D_n$ is dense, since any $s\in\omega^{\lt \omega}$ can be extended to an element with length at least $n$ (recall we are using the upside-down ordering). It follows that $G$ meets $D_n$ for all $n$, and hence that $G$ is an infinite path. Second, if $G$ is $V$-generic then we have already seen that $G\notin V$. Thus the union $g=\bigcup G$ is an element of $\omega^{\lt \omega}$ that wasn't there before, that is, $g$ is a new element of the Baire space! We can do the same with $2^{\lt \omega}$ and Cantor space.</p>
     </example->
 
-      <p>This example brings us back to our discussion of forcing CH to be false in a forcing extension. We have just seen how to add one new element to $\omega^\omega$; if we were to repeat the process we can add many new elements to $\omega^\omega$.</p>
+    <p>This example brings us back to our discussion of forcing CH to be false in a forcing extension. We have just seen how to add one new element to $\omega^\omega$; if we were to repeat the process we can add many new elements to $\omega^\omega$.</p>
     <!--
     % Marker for basic logic and models
     % Kunen, IV.1 for forcing defs
@@ -1689,82 +1637,71 @@
     <section>
     <h->Martin's axiom</h->
 
-      <p>We will make the ideas of the previous section more rigorous shortly. But before going into the technical details of this, we will introduce the combinatorics of forcing using forcing itself as a black box. Specifically, we will appeal to a statement called Martin's axiom, which roughly speaking says that the current universe of set theory $V$ already contains many highly generic filters $G$. The consistency of MA is itself proved using forcing, but we shall take this for granted for now. This will allow us to explore the effects of forcing using a number of partial orders without ever leaving $V$.</p>
+    <p>We will make the ideas of the previous section more rigorous shortly. But before going into the technical details of this, we will introduce the combinatorics of forcing using forcing itself as a black box. Specifically, we will appeal to a statement called Martin's axiom, which roughly speaking says that the current universe of set theory $V$ already contains many highly generic filters $G$. The consistency of MA is itself proved using forcing, but we shall take this for granted for now. This will allow us to explore the effects of forcing using a number of partial orders without ever leaving $V$.</p>
 
-      <p>There is unfortunately one major limitation on the variety of partial orders we will be able to explore using Martin's axiom. A subset $A\subset\PP$ is said to be an <dfn>antichain</dfn> if for all $p,q\in A$ we have $p$ and $q$ are not compatible. Thus if $A$ is an antichain, a filter $G$ can only choose at most <dfn>one</dfn> of the elements of $A$.</p>
+    <p>There is unfortunately one major limitation on the variety of partial orders we will be able to explore using Martin's axiom. A subset $A\subset\PP$ is said to be an <dfn>antichain</dfn> if for all $p,q\in A$ we have $p$ and $q$ are not compatible. Thus if $A$ is an antichain, a filter $G$ can only choose at most <dfn>one</dfn> of the elements of $A$.</p>
 
     <defn->
-
       <p>A partial order $\PP$ is said to be <dfn>ccc</dfn> (or satisfy the <dfn>countable chain condition</dfn> if every antichain $A\subset\PP$ is countable.</p>
     </defn->
 
-      <p>In some sense the ccc imposes a limitation on the number of different filters that may be added when forcing with $\PP$. The partial order $\omega^{\lt \omega}$ considered in the previous section is obviously ccc because it is countable. However, there are many examples of ccc partial orders which are not countable.</p>
+    <p>In some sense the ccc imposes a limitation on the number of different filters that may be added when forcing with $\PP$. The partial order $\omega^{\lt \omega}$ considered in the previous section is obviously ccc because it is countable. However, there are many examples of ccc partial orders which are not countable.</p>
 
     <example- id="ex:cohen-ccc">
-
       <p>Consider the partial order $\PP$ consisting of all nonempty open subsets of $\RR$, with the ordering $A\leq B$ iff $A\subset B$. Then $\PP$ is ccc: indeed, two sets are incompatible in this ordering if and only if they are disjoint. Thus an antichain is a family of pairwise disjoint open sets, and since $\RR$ is separable, such a family must be countable.</p>
     </example->
 
     <example->
-
       <p>Consider the partial order $\PP=\omega_1^{\lt \omega}$ with the usual upside-down tree ordering. Then this $\PP$ is not ccc. Indeed, the set of sequences $s\in\PP$ of length $1$ is an uncountable antichain in $\PP$.</p>
     </example->
 
     <defn->
-
       <p><dfn>Martin's axiom</dfn> (or just <dfn>MA</dfn>) is the statement: For every ccc partial order $\PP$ and every family $\mathcal F$ of fewer than continuum many dense subsets of $\PP$ there exists an $\mathcal F$-generic filter $G\subset\PP$.</p>
     </defn->
 
-      <p>We sometimes consider the refinements of MA defined as follows. The axiom MA$_\kappa$ is the same statement as MA, with $|\mathcal F|\lt \mathfrak c$ replaced by $|\mathcal F|=\kappa$.</p>
+    <p>We sometimes consider the refinements of MA defined as follows. The axiom MA$_\kappa$ is the same statement as MA, with $|\mathcal F|\lt \mathfrak c$ replaced by $|\mathcal F|=\kappa$.</p>
 
     <prop- id="prop:ma-aleph0">
-
       <p>MA$_{\aleph_0}$ is true. Thus if CH holds, then MA is true.</p>
     </prop->
 
     <proof->
-
       <p>Let $\PP$ be any partial order and let $D_0,D_1,\ldots$ be a countable family of dense subsets of $\PP$. Fix $p_0\in D_0$, and inductively let $p_{n+1}\leq p_n$ be an element of $D_{n+1}$. Then the set $\{p_n\}$ is downwards directed, and hence closing it upwards generates a filter $G$ which meets each of the $D_i$.</p>
     </proof->
 
-      <p>In fact, in this proof we did not even need $\PP$ to be ccc. The next result states that MA is also consistent with a larger continuum. For now we take this fact for granted and use it to derive several applications, as an introduction to the combinatorics of forcing.</p>
+    <p>In fact, in this proof we did not even need $\PP$ to be ccc. The next result states that MA is also consistent with a larger continuum. For now we take this fact for granted and use it to derive several applications, as an introduction to the combinatorics of forcing.</p>
 
     <thm->
-
       <p>There is a model $V$ of set theory which satisfies both MA and $\neg$CH.</p>
     </thm->
 
-      <p>We say that a set of axioms is <dfn>consistent</dfn>, or consistent with ZFC, if there is a model of ZFC which satisfying those axioms. Thus the above result can be rephrased: MA+$\neg$CH is consistent.</p>
+    <p>We say that a set of axioms is <dfn>consistent</dfn>, or consistent with ZFC, if there is a model of ZFC which satisfying those axioms. Thus the above result can be rephrased: MA+$\neg$CH is consistent.</p>
 
-      <p>The axiom MA packages a great deal of forcing into one universe $V$. When MA is true, it is as if somebody has already performed forcing with all of the ccc partial orders. In fact later we shall see that the consistency of MA can be established by repeatedly applying the forcing construction.</p>
+    <p>The axiom MA packages a great deal of forcing into one universe $V$. When MA is true, it is as if somebody has already performed forcing with all of the ccc partial orders. In fact later we shall see that the consistency of MA can be established by repeatedly applying the forcing construction.</p>
 
     <prop->
-
       <p>In the definition of MA, we cannot in general drop the condition that the family of dense sets $\mathcal F$ have size less than continuum.</p>
     </prop->
 
     <proof->
-
       <p>We again go to our favorite partial ordering $\omega^{\lt \omega}$ with the upside-down order. This time, for each $f\in\omega^\omega$ we consider the set</p>
 
       <eqn->
-    D_f=\set{s\in\omega^{\lt \omega}\mid s\not\subset f}\text{.}
+        D_f=\set{s\in\omega^{\lt \omega}\mid s\not\subset f}\text{.}
       </eqn->
 
       <p>It is easy to see that $D_f$ is dense: any sequence $s$ can be extended to a sequence $t$ that disagrees with $f$. Now if MA were to hold with respect to families of dense sets of size continuum, then there would be a filter $G$ that meets $D_f$ for <dfn>every</dfn> $f\in\omega^\omega$. It follows from this that the function $g=\bigcup G$ is an element of $\omega^\omega$ which disagrees with every $f\in\omega^\omega$, a contradiction.</p>
     </proof->
 
     <prop->
-
       <p>In the definition of MA, we cannot in general drop the condition that $\PP$ is ccc.</p>
     </prop->
 
     <proof->
-
       <p>This time we let use the partial order $\PP=\omega_1^{\lt \omega}$ with the upside-down order. We have already seen that $\PP$ is not ccc. Now for each $\alpha\in\omega_1$ we consider the set</p>
 
       <eqn->
-    D_\alpha=\set{s\in\omega_1^{\lt \omega}\mid\alpha\in\rng(s)}\text{.}
+        D_\alpha=\set{s\in\omega_1^{\lt \omega}\mid\alpha\in\rng(s)}\text{.}
       </eqn->
 
       <p>Then $D_\alpha$ is dense: any $s\in\omega_1^{\lt \omega}$ can be extended to include $\alpha$ in its range. Now if MA were to hold with respect to this partial order, then there would be a filter $G\subset\omega_1^{\lt \omega}$ that meets $D_\alpha$ for all $\alpha$. It follows from this that there is an onto function $g=\bigcup G$ from $\omega$ to $\omega_1$, a contradiction.</p>
@@ -1773,7 +1710,6 @@
       <p>We close this section with a result showing the effect of MA on properties of the continuum. Recall that the Baire category theorem states that the set of all real numbers is not meager, that is, $\cov(\Meager)$ is uncountable. It turns out that MA implies $\cov(\Meager)$ is as large is possible.</p>
 
     <thm- id="thm:ma-covm">
-
       <p>MA implies that the Baire category theorem holds for unions of length less than $\mathfrak c$, that is, $\cov(\Meager)=\mathfrak c$.</p>
     </thm->
 
@@ -1781,7 +1717,7 @@
       <p>Let $\mathcal F$ be a family of nowhere dense subsets of $\RR$ of cardinality less than continuum. We will construct $x\in\RR$ such that $x\notin\bigcup\mathcal F$. Let $\PP$ be the partial order consisting of all bounded, positive-length intervals in $\RR$, ordered by $I'\leq I$ iff $I'\subset I$. Then $\PP$ is easily seen to be ccc by the same argument as in <ref- target="ex:cohen-ccc"></ref->. For each $A\in\mathcal F$, we consider the set</p>
 
       <eqn->
-    D_A=\set{I\in\PP\mid \overline{I}\cap A=\emptyset}
+        D_A=\set{I\in\PP\mid \overline{I}\cap A=\emptyset}
       </eqn->
 
       <p>Then $D_A$ is dense for any $A$: since $A$ is nowhere dense, for any positive-length interval $I$ there is a positive length $J\subset I$ such that $J\cap A=\emptyset$. We may then shrink $J$ further to suppose that $\overline{J}\subset I$.</p>
@@ -1818,46 +1754,41 @@
     <p>We have seen the effect of MA on properties of the continuum. We now explore the effect of MA on further cardinal characteristics found in Cichoń's diagram. We begin by showing that MA makes $\mathfrak d$ large. Although this already follows from <ref- target="thm:ma-covm"></ref-> together with all we have proved about Cichoń's diagram, here we give a direct proof.</p>
 
     <thm- id="thm:ma-d">
-
       <p>Assuming MA, we have $\mathfrak d=\mathfrak c$.</p>
     </thm->
 
     <proof->
-
       <p>Suppose towards a contradiction that $\mathfrak d\lt \mathfrak c$, and fix a dominating family $\mathcal F\subset\omega^\omega$. Let $\PP$ be the partial order $\omega^{\lt \omega}$ with the upside-down ordering. For each $f\in\mathcal F$ we consider the family sets</p>
 
       <eqn->
-    D_{f,n}=\set{s\in\omega^{\lt \omega}\mid\text{there is $n'\gt n$ such that $s(n)\gt f(n)$}}\text{.}
+        D_{f,n}=\set{s\in\omega^{\lt \omega}\mid\text{there is $n'\gt n$ such that $s(n)\gt f(n)$}}\text{.}
       </eqn->
 
       <p>Observe that $D_{f,n}$ is dense for all $f$ and $n$: if $s\in\omega^{\lt \omega}$ we can easily find $n'\gt n,|s|$ and find $t\supset s$ such that $t(n')\gt f(n)$. Thus by MA we can find a filter $G$ which meets $D_{f,n}$ for all $f\in\mathcal F$ and $n\in\NN$. Letting $g=\bigcup G$, it is clear that $g$ is not dominated by $f$ for any $f\in\mathcal F$, contradicting that $\mathcal F$ is a dominating family.</p>
     </proof->
 
-      <p>The content of the above proof is that if $g$ is fully generic for $\omega^{\lt \omega}$, then in $V[g]$ none of the elements in the Baire space of $V$ dominate $g$. It falls short, however, of showing that $g$ actually dominates every element in the Baire space of $V$. With a slightly more specialized partial order, this can be achieved as well.</p>
+    <p>The content of the above proof is that if $g$ is fully generic for $\omega^{\lt \omega}$, then in $V[g]$ none of the elements in the Baire space of $V$ dominate $g$. It falls short, however, of showing that $g$ actually dominates every element in the Baire space of $V$. With a slightly more specialized partial order, this can be achieved as well.</p>
 
-      <p>Given a family $\mathcal F\subset\omega^\omega$, the <dfn>Hechler forcing</dfn> with respect to $\mathcal F$ is the partial order $\mathbb H_{\mathcal F}$ consisting of elements $(s,F)$ where $s\in\omega^{\lt \omega}$ and $F\subset\mathcal F$ is finite. We partially order $\mathbb H_{\mathcal F}$ by $(s',F')\leq(s,F)$ if the conditions hold:</p>
+    <p>Given a family $\mathcal F\subset\omega^\omega$, the <dfn>Hechler forcing</dfn> with respect to $\mathcal F$ is the partial order $\mathbb H_{\mathcal F}$ consisting of elements $(s,F)$ where $s\in\omega^{\lt \omega}$ and $F\subset\mathcal F$ is finite. We partially order $\mathbb H_{\mathcal F}$ by $(s',F')\leq(s,F)$ if the conditions hold:</p>
+    <ul>
+      <li>$s'\supset s$,</li>
+      <li>$F'\supset F$, and</li>
+      <li>$s'(n)\gt f(n)$ whenever $f\in F$ and $n\in\dom(s'\smallsetminus s)$.</li>
+    </ul>
 
-      <ul>
-        <li>$s'\supset s$,</li>
-        <li>$F'\supset F$, and</li>
-        <li>$s'(n)\gt f(n)$ whenever $f\in F$ and $n\in\dom(s'\smallsetminus s)$.</li>
-      </ul>
+    <p>If $(s,F)$ is an element of a Hechler forcing, then as usual the left coordinate $s$, called the <dfn>stem</dfn>, is a finite approximation for a new element of Baire space. The new coordinate $F$ can be thought of as a set of <em>promises</em>, which ensures that stronger conditions will dominate the elements of $F$.</p>
 
-      <p>If $(s,F)$ is an element of a Hechler forcing, then as usual the left coordinate $s$, called the <dfn>stem</dfn>, is a finite approximation for a new element of Baire space. The new coordinate $F$ can be thought of as a set of <em>promises</em>, which ensures that stronger conditions will dominate the elements of $F$.</p>
-
-      <p>Hechler forcing is always ccc, because incompatible conditions cannot have the same stem $s$, and there are only countably many possible stems $s$.</p>
+    <p>Hechler forcing is always ccc, because incompatible conditions cannot have the same stem $s$, and there are only countably many possible stems $s$.</p>
 
     <thm->
-
       <p>Assuming MA, we have $\mathfrak b=\mathfrak c$.</p>
     </thm->
 
     <proof->
-
       <p>Suppose towards a contradiction that $\mathcal F$ is an unbounded family of size $\lt \mathfrak c$, and let $\PP$ be the Hechler forcing $\mathbb H_{\mathcal F}$. We now consider two families of dense sets. First, for each $n$ we consider the set</p>
 
       <eqn->
-    D_n=\set{(s,F)\in\mathbb H_{\mathcal F}\mid n\in\dom(s)}\text{.}
+        D_n=\set{(s,F)\in\mathbb H_{\mathcal F}\mid n\in\dom(s)}\text{.}
       </eqn->
 
       <p>To see that $D_n$ is dense, let $(s,F)$ be a given element of $\mathbb H_{\mathcal F}$. If $n\notin\dom(s)$ then we extend the stem $s$ to a sequence $t$ defined by $t(i)=\max_{f\in F}f(i)+1$ for all $i\notin\dom(s)$ such that $i\leq n$. Then clearly $(t,F)\leq(s,F)$ and $(t,F)\in D_n$.</p>
@@ -1865,7 +1796,7 @@
       <p>Next, for each $f\in\mathcal F$ we consider the set</p>
 
       <eqn->
-    D_f=\set{(s,F)\in\mathbb H_{\mathcal F}\mid f\in F}\text{.}
+        D_f=\set{(s,F)\in\mathbb H_{\mathcal F}\mid f\in F}\text{.}
       </eqn->
 
       <p>Then $D_f$ is again dense, since given $(s,F)$ we have $(s,F\cup\{f\})\leq(s,F)$ (Observe that the promises $F$ are trivially satisfied since we have not lengthened the stem!)</p>
@@ -1873,7 +1804,7 @@
       <p>Now by MA we cand find a filter $G$ that meets $D_n$ for all $n\in\NN$ and  $D_f$ for all $f\in\mathcal F$. We then let</p>
 
       <eqn->
-    g=\bigcup\set{s\mid(\exists F)\;(s,F)\in G}
+        g=\bigcup\set{s\mid(\exists F)\;(s,F)\in G}
       </eqn->
 
       <p>be the element of the Baire space determined by $G$. Given $f\in\mathcal F$ and $n\in\NN$ we first find an element $(s,F)\in G\cap D_f$, and then letting $n'=\max(n,\dom(s))+1$ we find an element $(s',F')\in G\cap D_{n'}$. Since $G$ is a filter we can find $(s'',F'')\in G$ which is stronger than both. Then by the definition of the ordering on $\mathbb H_{\mathcal F}$, there is some $n''\gt n$ such that $s''(n'')\gt f(n'')$ and hence $g(n'')\gt f(n'')$. Since $f$ and $n$ were arbitrary, it follows that $f\leq^*g$ for all $f\in\mathcal F$, contradicting that $\mathcal F$ is unbounded.</p>
@@ -1882,19 +1813,16 @@
     <p>We close this section by finding the effect of MA on the cardinal $\add(\Null)$. As we will see, MA once again implies that this cardinal has its maximum value of $\mathfrak c$. By the inequalities shown in <ref- target="thm:cichon"></ref-> and especially Bartoszyński's theorem, this implies that assuming MA, <em>all</em> the cardinal characteristics in Cichoń\'s diagram have the value $\mathfrak c$. At face value, this obviates the last three results which showed that individual characteristics are equal to $\mathfrak c$. But those arguments were more direct, and moreover introduced us to several forcings which will remain important outside of the MA context.</p>
 
     <thm- id="thm:ma-addn">
-
       <p>Assuming MA, we have $\add(\Null)=\mathfrak c$. In particular, all the cardinal characteristics in Cichoń's diagram (except possibly for $\aleph_1$) have the same value.</p>
     </thm->
 
-      <p>For this proof, we once again introduce a new and special notion of forcing. The <dfn>amoeba</dfn> partial ordering $\mathbb A_\epsilon$ with parameter $\epsilon\gt 0$ consists of all open subsets $O\subset\RR$ such that $m(O)\lt \epsilon$. The ordering on $\mathbb A_\epsilon$ is defined by $O\leq O'$ iff $O\supset O'$. Thus the elements of $\mathbb A_\epsilon$ are inner approximations to an open set of measure $\leq\epsilon$.</p>
+    <p>For this proof, we once again introduce a new and special notion of forcing. The <dfn>amoeba</dfn> partial ordering $\mathbb A_\epsilon$ with parameter $\epsilon\gt 0$ consists of all open subsets $O\subset\RR$ such that $m(O)\lt \epsilon$. The ordering on $\mathbb A_\epsilon$ is defined by $O\leq O'$ iff $O\supset O'$. Thus the elements of $\mathbb A_\epsilon$ are inner approximations to an open set of measure $\leq\epsilon$.</p>
 
     <lem->
-
       <p>For any $\epsilon$, the amoeba partial ordering $\mathbb A_\epsilon$ is ccc.</p>
     </lem->
 
     <proof->
-
       <p>Given an uncountable family $\mathcal F\subset\mathbb A_\epsilon$ we must show that at least two elements $O,O'\in\mathcal F$ are compatible, that is, $m(O\cup O')\lt \epsilon$. We first give ourselves a little wiggle room as follows: since $\mathcal F$ is uncountable and there are only countably many values of $n\in\NN$, by the pigeon-hole principle we can find a fixed $n$ and an uncountable subset $\mathcal F_0\subset\mathcal F$ such that for all $O\in\mathcal F_0$ we have $m(O)\lt \epsilon-1/n$.</p>
 
       <p>Now for each $O\in\mathcal F_0$ we can find an open set $B_O\subset O$ which is a finite union of intervals with rational endpoints and such that $m(O\smallsetminus B_O)\lt1/2n$. Once again, since there are only countably many possible sets $B_O$, we can find a fixed set $B$ and an uncountable $\mathcal F_{00}\subset\mathcal F_0$ such that $B=B_O$ for every $O\in\mathcal F_{00}$.</p>
@@ -1921,7 +1849,7 @@
       <p>For this, let $\epsilon$ be given and let $\mathbb A_\epsilon$ be the corresponding amoeba forcing. For each $A\in\mathcal F$ we consider the set</p>
 
       <eqn->
-    D_A=\set{O\in\mathbb A_\epsilon\mid A\subset O}
+        D_A=\set{O\in\mathbb A_\epsilon\mid A\subset O}
       </eqn->
 
       <p>To see that $D_A$ is dense, let $O$ be a given open set with $m(O)\lt \epsilon$. Since $A$ is null we can find an open set $U$ such that $A\subset U$ and $m(U)\lt \epsilon-m(O)$. Then $m(O\cup U)\lt \epsilon$ and $A\subset O\cup U$, and so $O\cup U$ is stronger than $O$ and $O\cup U\in D_A$. (Kunen says: The amoeba $O$ reached out a pseudopod $U$ to engulf the morsel of food $A$.)</p>
@@ -1930,7 +1858,6 @@
     </proof->
 
     <exerc->
-
       <p>Suppose that $\mathcal F$ is an <dfn>almost disjoint</dfn> family of infinite subsets of $\omega$: for all $A,A'\in\mathcal F$ we have that $A\cap A'$ is finite. Show that if $|\mathcal F|\lt \mathfrak c$ then there exists a single infinite set $B$ such that $A\cap B$ is finite for all $A\in\mathcal F$. [Hint: consider the forcing $\PP$ consisting of pairs $(s,F)$ where $s$ is a finite subset of $\omega$, $F$ is a finite subset of $\mathcal F$, and $(s',F')\leq(s,F)$ iff $s'\supset s$, $F'\supset F$, and whenever $A\in F$ we have $A\cap s'\subset s$.]</p>
     </exerc->
     <!--
@@ -1944,31 +1871,29 @@
     <section>
     <h->The machinery of forcing</h->
 
-      <p>So far we have seen forcing only in the context of appeals to Martin's axiom, which gives us highly generic filters $G$ in a single model $V$ of set theory. When we actually do forcing, we wish to find a fully generic filter $G$, even though we know this must lie outside of $V$. But what does it mean that a set $G$ lies outside of the universe of sets? In fact, to find ``new'' sets $G$ we will really assume that $V$ is a countable, transitive model of ZFC. In other words $V$ is a countable set lying in some larger universe $W$, $V$ it is closed downwards under $\in$, and the structure $(V,\in)$ satisfies all of the axioms of set theory.</p>
+    <p>So far we have seen forcing only in the context of appeals to Martin's axiom, which gives us highly generic filters $G$ in a single model $V$ of set theory. When we actually do forcing, we wish to find a fully generic filter $G$, even though we know this must lie outside of $V$. But what does it mean that a set $G$ lies outside of the universe of sets? In fact, to find ``new'' sets $G$ we will really assume that $V$ is a countable, transitive model of ZFC. In other words $V$ is a countable set lying in some larger universe $W$, $V$ it is closed downwards under $\in$, and the structure $(V,\in)$ satisfies all of the axioms of set theory.</p>
 
     <p>The mild assumption that there is such a $V$ turns out to be very powerful. First of all, if $V$ is countable then given a partial order $\PP\in V$ we can easily find a filter $G\subset\PP$ that meets all the dense subsets of $\PP$ that actually lie in $V$. After all there are just countably many sets in $V$ and therefore just countably many dense subsets of $\mathbb P$ in $V$. Hence we can use the argument of <ref- target="prop:ma-aleph0"></ref-> to diagonalize and obtain a $V$-generic filter $G$.</p>
 
-      <p>Second of all, if $V$ is transitive then we can use the machinery of absoluteness to reason about the basic properties of $V$ and its forcing extensions $V[G]$. Recall that a formula $\phi$ in the language of set theory is $\Delta_0$ if all of its quantifiers are <dfn>bounded</dfn>, that is, of the form $\exists x\in y$ or else $\forall x\in y$. We will use the well-known fact that if $\phi$ is a $\Delta_0$ formula with parameters in a transitive set $A$, then $\phi$ is true if and only if $\phi$ holds in $(A,\in)$.</p>
+    <p>Second of all, if $V$ is transitive then we can use the machinery of absoluteness to reason about the basic properties of $V$ and its forcing extensions $V[G]$. Recall that a formula $\phi$ in the language of set theory is $\Delta_0$ if all of its quantifiers are <dfn>bounded</dfn>, that is, of the form $\exists x\in y$ or else $\forall x\in y$. We will use the well-known fact that if $\phi$ is a $\Delta_0$ formula with parameters in a transitive set $A$, then $\phi$ is true if and only if $\phi$ holds in $(A,\in)$.</p>
 
-      <p>So just how mild is the assumption that there is a countable transitive model of ZFC? Unfortunatley it is not a totally nontrivial one. The countability isn't the problem; recall that by the L\"owenheim--Skolem theorem if there is an infinite model of a theory $T$ then there is a countable one. Rather, the problem is assuming there is a model of ZFC at all. Indeed this is equivalent to assuming that ZFC is <dfn>consistent</dfn>, that is, ZFC does not entail any contradictions. But we know from G\"odel's incompleteness theorem that it is not possible to establish the consistency of ZFC using ZFC alone.</p>
+    <p>So just how mild is the assumption that there is a countable transitive model of ZFC? Unfortunatley it is not a totally nontrivial one. The countability isn't the problem; recall that by the L\"owenheim--Skolem theorem if there is an infinite model of a theory $T$ then there is a countable one. Rather, the problem is assuming there is a model of ZFC at all. Indeed this is equivalent to assuming that ZFC is <dfn>consistent</dfn>, that is, ZFC does not entail any contradictions. But we know from G\"odel's incompleteness theorem that it is not possible to establish the consistency of ZFC using ZFC alone.</p>
 
-      <p>It is possible to work around this technicality by supposing only that $V$ satisfies a large but finite subsystem of ZFC. By the reflection theorem, it is possible to obtain transitive set models of such a subsystem, and it is not difficult to use such a model to get a countable transitive one. However, for simplicity we will simply assume for the rest of this section that $V$ is a countable, transitive model of all of ZFC.</p>
+    <p>It is possible to work around this technicality by supposing only that $V$ satisfies a large but finite subsystem of ZFC. By the reflection theorem, it is possible to obtain transitive set models of such a subsystem, and it is not difficult to use such a model to get a countable transitive one. However, for simplicity we will simply assume for the rest of this section that $V$ is a countable, transitive model of all of ZFC.</p>
 
     <!-- generic filter existenc theorem?? -->
 
-      <p>The first problem we have to deal with when introducing forcing is that if one is working in $V$, then since $G$ is not available it is difficult to refer to elements of $V[G]$ (and hence difficult to prove facts about them). Instead we have the following notion of a name of a ``potential'' element in $V[G]$.</p>
+    <p>The first problem we have to deal with when introducing forcing is that if one is working in $V$, then since $G$ is not available it is difficult to refer to elements of $V[G]$ (and hence difficult to prove facts about them). Instead we have the following notion of a name of a ``potential'' element in $V[G]$.</p>
 
     <defn->
-
       <p>If $\PP$ is a partial order, then a set $\tau$ is called a <dfn>$\PP$-name</dfn> for an element of the forcing extension by $\mathbb P$ if $\tau$ consists of elements $(\sigma,p)$ where $\sigma$ is a *$\PP$*-name and $p\in\PP$.</p> <!-- TODO: *$\PP$* ? somethings' wrong -->
     </defn->
 
-      <p>Like sets themselves, the definition is recursive. To explain it briefly, we can think of an ordinary set $x$ as a wellfounded tree with $x$ at the root, the elements of $x$ on the first level, the elements of elements of $x$ on the second level, and so on. A $\PP$-name is similar, except the nodes of the tree are also $\PP$-names, and each node is labelled with an element of $\PP$.</p>
+    <p>Like sets themselves, the definition is recursive. To explain it briefly, we can think of an ordinary set $x$ as a wellfounded tree with $x$ at the root, the elements of $x$ on the first level, the elements of elements of $x$ on the second level, and so on. A $\PP$-name is similar, except the nodes of the tree are also $\PP$-names, and each node is labelled with an element of $\PP$.</p>
 
-      <p>What are the labels there for? In a moment we will show how to evaluate names $\tau$ to yield an element of the extension $V[G]$. When $(\sigma,p)$ is an element of $\tau$, we will think of the label $p$ as the ``probability'' that $\sigma$ will be included as an element of $\tau$. If $p$ is high in the ordering on $\PP$ then $\sigma$ is more likely to be included; if it is low then $\sigma$ is less likely to be included. Specifically, we include just those $\sigma$ whose label $p$ lies in the generic filter $G$.</p>
+    <p>What are the labels there for? In a moment we will show how to evaluate names $\tau$ to yield an element of the extension $V[G]$. When $(\sigma,p)$ is an element of $\tau$, we will think of the label $p$ as the ``probability'' that $\sigma$ will be included as an element of $\tau$. If $p$ is high in the ordering on $\PP$ then $\sigma$ is more likely to be included; if it is low then $\sigma$ is less likely to be included. Specifically, we include just those $\sigma$ whose label $p$ lies in the generic filter $G$.</p>
 
     <defn->
-
       <p>Let $\PP$ be a partial order in $V$ and $G\subset\PP$ be a filter. If $\tau$ is a $\PP$-name, then the <dfn>evaluation</dfn> of $\tau$ via $G$, denoted $\tau_G$, is defined recursively by</p>
 
       <eqn->
@@ -1978,24 +1903,21 @@
       <p>We then define the forcing extension of $V$ corresponding to $G$ by</p>
 
       <eqn->
-    V[G]=\set{\tau_G\mid\text{$\tau\in V$ and $\tau$ is a $\PP$-name}}\text{.}
+        V[G]=\set{\tau_G\mid\text{$\tau\in V$ and $\tau$ is a $\PP$-name}}\text{.}
       </eqn->
-
     </defn->
 
-      <p>The definitions of $\PP$-name and the evaluation $\tau_G$ are heavily recursive, but one should expect this from such a general set-theoretic construction. It is an amazing fact that such a short construction actually works, and it will take us some time to prove everything we need.</p>
+    <p>The definitions of $\PP$-name and the evaluation $\tau_G$ are heavily recursive, but one should expect this from such a general set-theoretic construction. It is an amazing fact that such a short construction actually works, and it will take us some time to prove everything we need.</p>
 
     <lem->
-
       <p>If $\PP$ is a partial order and $G\subset\mathbb P$ is a filter, then we have $V\subset V[G]$ and $G\in V[G]$. Moreover, if $W$ is any other transitive model of ZFC with these two properties, then $V[G]\subset W$.</p>
     </lem->
 
     <proof->
-
       <p>To prove the statements, we need only write down explicit $\PP$-names for the objects in question. First recall that we are always assuming $\PP$ has a maximum element $\mathbb 1$. Thus if $x\in V$ we can write the recursive definition</p>
 
       <eqn->
-    \check x=\set{(\check y,\mathbb 1)\mid y\in x}\text{.}
+        \check x=\set{(\check y,\mathbb 1)\mid y\in x}\text{.}
       </eqn->
 
       <p>The idea here is to take the tree of $x$ and label each node with a $\mathbb 1$. To see that $\check x_G=x$, suppose inductively that $\check y_G=y$ for all $y\in x$. Then since $\mathbb 1$ always lies in $G$, the definition implies that $\check x_G=\set{\check y_G\mid y\in x}=\set{y\mid y\in x}=x$.</p>
@@ -2003,7 +1925,7 @@
       <p>To see that $G\in V[G]$ we construct a single name</p>
 
       <eqn->
-    \Gamma=\set{(\check p,p)\mid p\in\PP}\text{.}
+        \Gamma=\set{(\check p,p)\mid p\in\PP}\text{.}
       </eqn->
 
       <p>Then by the previous paragraph, we have that $\Gamma_G=\set{p\mid p\in G}=G$, as desired.</p>
@@ -2011,44 +1933,39 @@
       <p>Finally, if $W$ is a model of ZFC which contains $V$ as a submodel and $G$ as an element, we must check that $W$ contains $\tau_G$ for all names $\tau$. For this, $W$ can simply evaluate $\tau_G$ as in its definition, and $W$ will be correct in this evaluation because the definition of $\tau_G$ is $\Delta_0$ and hence absolute to transitive models. [ref]</p>
     </proof->
 
-      <p>Names of the form $\check x$ for $x\in V$ are called <dfn>check names</dfn>. For convenience we will sometimes identify $x$ with its check name. The name $\Gamma$ is called the <dfn>canonical name for the generic</dfn>, and we observe that it does not depend on $G$ at all. Still, when a filter $G$ is given we may again identify $G$ with this name.</p>
+    <p>Names of the form $\check x$ for $x\in V$ are called <dfn>check names</dfn>. For convenience we will sometimes identify $x$ with its check name. The name $\Gamma$ is called the <dfn>canonical name for the generic</dfn>, and we observe that it does not depend on $G$ at all. Still, when a filter $G$ is given we may again identify $G$ with this name.</p>
 
-      <p>We next show that forcing doesn't enlarge $V$ very much.</p>
+    <p>We next show that forcing doesn't enlarge $V$ very much.</p>
 
     <lem->
-
       <p>If $\mathbb P$ is a partial order in the countable transitive model $V$ and $G\subset\mathbb P$ is a filter, then $V[G]$ is countable and moreover $V$ and $V[G]$ contain the same ordinals.</p>
     </lem->
 
     <proof->
-
       <p>It is clear that $V[G]$ is countable from its definition; each element of $V[G]$ is determined by a name which lies in $V$.</p>
 
       <p>For the statement about ordinals, first recall that the property of being an ordinal is absolute to transitive models. Now suppose that $\alpha$ is an ordinal of $V[G]$ and let $\tau$ be a name such that $\alpha=\tau_G$. Note that when we construct $\tau_G$ from $\tau$ we essentially throw stuff away, and so $\tau$ is in a sense more complicated than $\tau_G$. We can make this precise using the notion of a rank: for any set $x$ we can define the $\in$-rank $\rk(x)=\sup\set{\rk(y)+1\mid y\in x}$. Then it is easy to see inductively that $\rk(\tau_G)\leq\rk(\tau)$. In our case, $\tau_G=\alpha$ and the rank of an ordinal $\alpha$ is always $\alpha$. We conclude that $\alpha\leq\rk(\tau)$, and since rank is an absolute notion and $V$ is transitive, we have $\alpha\in V$.</p>
     </proof->
 
-      <p>The most important fact about the forcing extensionn $V[G]$ is that if $V$ is a model of ZFC, then so is $V[G]$. We will give just a partial proof of this fact, beginning with the following easier axioms.</p>
+    <p>The most important fact about the forcing extensionn $V[G]$ is that if $V$ is a model of ZFC, then so is $V[G]$. We will give just a partial proof of this fact, beginning with the following easier axioms.</p>
 
     <lem->
-
       <p>If $\mathbb P$ is a partial order in $V$ and $G\subset\mathbb P$ is a filter, then the extension $V[G]$ satisfies the axioms of extensionality, infinity, foundation, pairing, and union.</p>
     </lem->
 
     <proof->
-
       <p>Every set satisfies the axiom of foundation. Since $V[G]$ is tansitive and infinite, it must contain $\omega$ and therefore satisfies the axiom of infinity. To show $V[G]$ satisfies extensionality, it is enough to show that $V[G]$ is a transitive set. For this, let $\tau_G$ is an arbitrary element of $V[G]$ and $x\in\tau_G$. Then by definition of $\tau_G$, we have $x=\sigma_G$ for some $\sigma\in\dom(\tau)$. In particular, $x\in V[G]$.</p>
 
       <p>The pairing and union axioms are existence axioms, which means we must devise names for the two constructions. First suppose $\sigma_G,\tau_G\in V[G]$ and let $\rho$ denote the name $\set{(\sigma,\mathbb1),(\tau,\mathbb1)}$. Then it is immediate to see that $\rho_G=\{\sigma_G,\tau_G\}$. Next suppose $\tau_G\in V[G]$, and define the name:</p>
 
       <eqn->
-    \xi=\set{(\rho,\mathbb1)\mid(\exists\sigma)\;\rho\in\dom(\sigma)\text{ and }\sigma\in\dom(\tau)}
+        \xi=\set{(\rho,\mathbb1)\mid(\exists\sigma)\;\rho\in\dom(\sigma)\text{ and }\sigma\in\dom(\tau)}
       </eqn->
 
       <p>Then since $\xi$ includes names for all conceivable elements of elements of $\tau_G$, we have that $\bigcup\tau_G\subset\xi_G$. (To hit $\bigcup\tau_G$ exactly we can either refine this argument or appeal to the comprehension axiom after we have proved it.)</p>
     </proof->
 
     <exerc->
-
       <p>In many cases it is more convenient to use $g=\bigcup G$ instead of $G$ itself. Write down a name $\gamma$ such that $\gamma_G=g$ whenever $G$ is a filter and $g=\bigcup G$.</p>
     </exerc->
     <!--
@@ -2066,9 +1983,7 @@
       <p>For example to prove the comprehension axiom, we need to build a name for the set $\set{x\in a\mid\phi(x)}$. But from within $V$, it is not immediately clear how to tell for which elements $x$ the property $\phi(x)$ will be true in $V[G]$. We will need the following.</p>
 
     <defn->
-
       <p>Let $\PP$ be a partial order.</p>
-
       <ul>
         <li> The <dfn>forcing language</dfn> for $\PP$ consists of the usual logical symbols, $\in$, and the $\PP$-names as constant symbols.</li>
         <li>If $\phi$ is a sentence of the forcing language for $\PP$, we say $V[G]$ <dfn>satisfies</dfn> $\phi$ if, after replaceing the names $\tau$ in $\phi$ replaced by their values $\tau_G$, it is true in $V[G]$.</li>
@@ -2077,7 +1992,6 @@
     </defn->
 
     <example->
-
       <p>Anything that we know for sure about $V[G]$ will be forced by the element $\mathbb 1$. So for instance since we have proved that $V[G]$ satisfies the axiom of pairing, we can say $\mathbb 1\forces$ ``the axiom of pairing''.</p>
 
       <p>For a less trivial example, if $\mathbb P=\omega^{\lt \omega}$ we have already seen that adding a generic filter $G\subset\mathbb P$ adds a new element of Baire space $g=\bigcup G$. Moreover a simple dense set argument shows that $g$ will be surjective onto $\omega$. Thus we can say $\mathbb 1\forces$ ``$\bigcup\Gamma$ is a surjective function from $\check\omega\to\check\omega$.'' (Recall that we cannot use the symbol $G$, so we instead use $\Gamma$, which is the canonical name for $G$.)</p>
@@ -2085,36 +1999,34 @@
       <p>On the other hand, different generic filters $G$ will yield different specific values for $g(17)$. Thus $\mathbb 1$ does not force any interesting properties of $g(17)$, other than that it is some natural number. But suppose that $s\in\mathbb P$ is a finite sequence with $s(17)=230$. Then if $G$ is a generic filter, then $s\in G$ implies $g(17)=230$. In other words we have $s\forces$ ``$(\bigcup\Gamma)(\check{17})=\check{230}$''. (From now on, we will often neglect the checkmarks on simple things like natural numbers.)</p>
     </example->
 
-      <p>The following three results are the fundamental tools used in the development of the theory of forcing. Essentially all further facts about forcing will be derived from these properties of the forcing machinery.</p>
+    <p>The following three results are the fundamental tools used in the development of the theory of forcing. Essentially all further facts about forcing will be derived from these properties of the forcing machinery.</p>
 
     <thm- id="thm:forcing">
       <h->The forcing theorems</h->
-      1. <i>Definability theorem</i>: The relation $\forces$ is definable in $V$.
-      2. <i>Forcing theorem</i>: If $\phi$ is a sentence of the forcing language $V[G]$ satisfies $\phi$, then there exists $p\in G$ such that $p\forces\phi$.
-      3. If $V$ is a model of ZFC then $V[G]$ is a model of ZFC.
+      <ol>
+        <li><em>Definability theorem</em>: The relation $\forces$ is definable in $V$.</li>
+        <li><em>Forcing theorem</em>: If $\phi$ is a sentence of the forcing language $V[G]$ satisfies $\phi$, then there exists $p\in G$ such that $p\forces\phi$.</li>
+        <li>If $V$ is a model of ZFC then $V[G]$ is a model of ZFC.</li>
+      </ol>
     </thm->
 
     <rem->
-
       <p>The exact sense in which $\forces$ is ``definable'' is somewhat technical. Specifically, we mean that for each formula $\phi(x_1,\ldots,x_n)$ in the language of set theory, the relation on tuples $(p,\tau_1,\ldots,\tau_n)$ defined by $p\forces\phi(\tau_1,\ldots,\tau_n)$ is definable.</p>
     </rem->
 
-      <p>Let us first see the power of forcing theorems (a) and (b) to establish forcing theorem (c). Recall that the <dfn>comprehension axiom</dfn> states that if $\phi(x,y)$ is a formula, then for all sets $a,b$ we have that $\set{x\in a\mid\phi(x,b)}$ is a set.</p>
+    <p>Let us first see the power of forcing theorems (a) and (b) to establish forcing theorem (c). Recall that the <dfn>comprehension axiom</dfn> states that if $\phi(x,y)$ is a formula, then for all sets $a,b$ we have that $\set{x\in a\mid\phi(x,b)}$ is a set.</p>
 
-      <p>For the first time, we will use the <dfn>dot notation</dfn> for names for elements $a\in V[G]$. That is, rather than letting $\sigma$ be a name such that $\sigma_G=a$, we will let $\dot a$ denote a name such that $\dot a_G=a$. This saves on the total number of distinct letters that we have to use. A good rule of thumb is this: whenever we write a specific name for an unknown set we use greek letters, and whenever we write an unknown name for a specific set we use dot notation.</p>
+    <p>For the first time, we will use the <dfn>dot notation</dfn> for names for elements $a\in V[G]$. That is, rather than letting $\sigma$ be a name such that $\sigma_G=a$, we will let $\dot a$ denote a name such that $\dot a_G=a$. This saves on the total number of distinct letters that we have to use. A good rule of thumb is this: whenever we write a specific name for an unknown set we use greek letters, and whenever we write an unknown name for a specific set we use dot notation.</p>
 
     <thm->
-
       <p>Assume the definability and forcing theorems are true. Then $V[G]$ satisfies the comprehension axiom.</p>
     </thm->
 
     <proof->
-
       <p>If $\phi(x,y)$ and $a,b\in V[G]$ are as above, we need to cook up a name for the set $a_0=\set{x\in a\mid\phi(x,b)}$. For this, let $\dot a,\dot b$ be names for $a,b$ respectively, and let</p>
 
       <eqn->
-
-      <p>\rho=\set{(\pi,p)\mid\pi\in\dom\dot a,\;p\in\mathbb P,\;p\forces\pi\in\sigma,\text{ and }p\forces\phi(\pi,\dot b)}\text{.}</p>
+        \rho=\set{(\pi,p)\mid\pi\in\dom\dot a,\;p\in\mathbb P,\;p\forces\pi\in\sigma,\text{ and }p\forces\phi(\pi,\dot b)}\text{.}</p>
       </eqn->
 
       <p>Here we are using the definability theorem even to know that $\rho$ lies in $V$. To see that $\rho_G=a_0$, first suppose that $\pi_G\in\rho_G$. Then there is $p\in G$ such that $p\forces\pi\in\dot a$ and $p\forces\phi(\pi,\dot b)$. By definition of $\forces$, it follows that in $V[G]$ we have both $\pi_G\in\dot a_G$ and $\phi(\pi_G,\dot b_G)$. In other words, in $V[G]$ we have both $\pi_G\in a$ and $\phi(\pi_G,b)$, and therefore $\pi_G\in a_0$.</p>
@@ -2122,22 +2034,19 @@
       <p>Conversely if $\pi_G\in a_0$ then $V[G]$ satisfies the sentences of the forcing language $\pi\in\dot a$ and $\phi(\pi,\dot b)$. By the forcing theorem there exist $q,r\in G$ such that $q\forces\pi\in\sigma$ and $r\forces\phi(\pi,\dot b)$. Letting $p\in G$ be such that $p\leq q,r$ we clearly have $(\pi,p)\in\rho$ and also $\pi_G\in\rho_G$.</p>
     </proof->
 
-      <p>We omit the proofs of the remaining axioms: replacement, power set, and choice. All three are also existence axioms, and they can once again be proved by inventing clever names. In each case, the names are defined using the forcing relation.</p>
+    <p>We omit the proofs of the remaining axioms: replacement, power set, and choice. All three are also existence axioms, and they can once again be proved by inventing clever names. In each case, the names are defined using the forcing relation.</p>
 
-      <p>We conclude this section with several elementary but frequently used properties of the forcing relation. These properties will also be used to guide the proof of the forcing theorems in the next section.</p>
+    <p>We conclude this section with several elementary but frequently used properties of the forcing relation. These properties will also be used to guide the proof of the forcing theorems in the next section.</p>
 
     <lem- id="lem:forcing-downward">
-
       <p>If $p\forces\phi$ and $p'\leq p$ then $p'\forces\phi$.</p>
     </lem->
 
     <proof->
-
       <p>This is a straightforward consequence of the fact that if $p'\leq p$ and $p'\in G$, then since $G$ is closed upwards we have $p\in G$.</p>
     </proof->
 
     <lem->
-
       <p>An element $p\forces\neg\phi$ if and only if for all $q\leq p$ we have $q\not\forces\phi$.</p>
     </lem->
 
@@ -2148,25 +2057,23 @@
     </proof->
 
     <lem- id="lem:forcing-exists">
-
       <p>If $p\forces\exists x\phi(x)$ then there is a name $\tau$ and some $q\leq p$ such that $q\forces\phi(\tau)$.</p>
     </lem->
 
     <proof->
-
       <p>Fix a $V$-generic filter $G$ with $p\in G$. Then $V[G]$ satisfies $\exists x\phi(x)$, and hence there is a name $\tau$ such that $V[G]$ satisfies $\phi(\tau_G)$. By the forcing theorem there is $p'\in G$ such that $p'\forces\phi(\tau)$. Letting $q\in G$ be such that $q\leq p,p'$, we have that $q$ is as desired.</p>
     </proof->
 
     <!-- Kunen, sec IV.2 -->
 
-
     </section>
-    <section><h->The proof of the forcing theorems</h->
+    
+    <section>
+    <h->The proof of the forcing theorems</h->
 
-      <p>Recall that our definition of the $\forces$ relation cannot be carried out within $V$. In this section we give a definition of a variant of the $\forces$ relation, denoted $\forces_0$, which can be carried out entirely within $V$. The definition of $\forces_0$ is inspired by the properties of the true $\forces$ relation that follow from the forcing theorem.</p>
+    <p>Recall that our definition of the $\forces$ relation cannot be carried out within $V$. In this section we give a definition of a variant of the $\forces$ relation, denoted $\forces_0$, which can be carried out entirely within $V$. The definition of $\forces_0$ is inspired by the properties of the true $\forces$ relation that follow from the forcing theorem.</p>
 
     <defn- id="defn:forces-0">
-
       <p>We first define $p\forces_0\phi$ for atomic and neg-atomic formulas by recursion on the complexity of the names $\sigma,\tau$.</p>
       \begin{alignat}{2}
         p&amp;\forces_0\sigma\in\tau&amp;&amp;\iff (\exists(\sigma',q)\in\tau)\;p\leq q\text{ and }p\forces_0\sigma'=\sigma\\
@@ -2182,7 +2089,7 @@
       <p>Clause&nbsp;(3) above is also used in the formation of compound formulas.</p>
     </defn->
 
-      <p>Several remarks are in order. First, one should take a moment to confirm the definition isn't circular. For example $\sigma\in\tau$ is defined in terms of equality, which after negating is defined in terms of $\notin$, which after negating is defined in terms of $\in$. The key thing to notice is that when we encounter $\in$ for the second time, we have names of <dfn>lower complexity</dfn> than before. Since the class of names is well-founded, the recursion is well-defined.</p>
+    <p>Several remarks are in order. First, one should take a moment to confirm the definition isn't circular. For example $\sigma\in\tau$ is defined in terms of equality, which after negating is defined in terms of $\notin$, which after negating is defined in terms of $\in$. The key thing to notice is that when we encounter $\in$ for the second time, we have names of <dfn>lower complexity</dfn> than before. Since the class of names is well-founded, the recursion is well-defined.</p>
 
     <p>Second, while the clauses in <ref- target="defn:forces-0"></ref-> are inspired by properties of $\forces$, they are actually somewhat oversimplified. For example, comparing clause&nbsp;(5) with <ref- target="lem:forcing-exists"></ref-> we see that clause&nbsp;(5) does not reflect the general case. It turns out that $\forces_0$ is nearly but not fully equivalent to $\forces$; this will still be enough to complete our proof.</p>
 
@@ -2191,7 +2098,6 @@
     <p>We now turn to the proof of the forcing theorems, which will unfold over the next several lemmas. The first of these states that the analog of <ref- target="lem:forcing-downward"></ref-> holds for $\forces_0$.</p>
 
     <lem- id="lem:forcing-downward-0">
-
       <p>If $p\forces_0\phi$ and $p'\leq p$ then $p'\forces_0\phi$.</p>
     </lem->
 
@@ -2202,7 +2108,6 @@
     <p>The centerpiece of the proof is the following result, which shows that the analog of the forcing theorem (<ref- target="thm:forcing"></ref->(b)) holds for $\forces_0$. The proof is mostly a straightforward induction similar to the proof of the previous lemma.</p>
 
     <lem- id="lem:forcing-theorem-0">
-
       <p>If $\phi$ is a sentence of the forcing language, then $V[G]$ satisfies $\phi$ if and only if there is $p\in G$ such that $p\forces_0\phi$.</p>
     </lem->
 
@@ -2218,7 +2123,7 @@
       <p>Conversely suppose that $V[G]$ satisfies $\neg\phi$. Then $V[G]$ does not satisfy $\phi$, so by inductive hypothesis, for all $p\in G$ we have $p\not\forces_0\phi$. We now consider the set</p>
 
       <eqn->
-    D=\set{p\in\PP\mid p\forces_0\phi\text{ or }p\forces_0\neg\phi}\text{.}
+        D=\set{p\in\PP\mid p\forces_0\phi\text{ or }p\forces_0\neg\phi}\text{.}
       </eqn->
 
       <p>Then $D$ is dense: given any $p$, if $p\forces_0\phi$ then $p$ itself lies in $D$. Otherwise $p\not\forces_0\phi$, so by <ref- target="defn:forces-0"></ref-> there is $q\leq p$ such that $q\forces_0\neg\phi$. Thus in this case $q\in D$, and we have verified $D$ is dense. Finally, since $G$ is $V$-generic there exists $p\in G\cap D$. Since we know $p\not\forces_0\phi$, we must have instead that $p\forces_0\neg\phi$, as desired.</p>
@@ -2226,10 +2131,9 @@
 
     <p>We observe that the key use of the genericity of $G$ is in the above very clever verification that the induction goes through the third clause of <ref- target="defn:forces-0"></ref->.</p>
 
-      <p>Now we can establish the definability theorem for $\forces$ as follows.</p>
+    <p>Now we can establish the definability theorem for $\forces$ as follows.</p>
 
     <lem- id="lem:forcing-definability">
-
       <p>For all $\phi$ we have $p\forces\phi$ if and only if $p\forces_0\neg\neg\phi$. In particular, the forcing relation is definable in $V$.</p>
     </lem->
 
@@ -2239,10 +2143,9 @@
       <p>Conversely, suppose that $p\forces\phi$. By <ref- target="defn:forces-0"></ref->, to show $p\forces_0\neg\neg\phi$ it is equivalent to show that for all $q\leq p$ there exists $r\leq q$ such that $r\forces_0\phi$. So let $q\leq p$ be given, and let $G$ be a $V$-generic filter such that $q\in G$. The since $q\forces\phi$ we have $V[G]$ satisfies $\phi$. By <ref- target="lem:forcing-theorem-0"></ref-> there exists $q'\in G$ such that $q'\forces_0\phi$. Finally we may let $r\in G$ with $r\leq q'q'$, and by <ref- target="lem:forcing-downward-0"></ref-> we have that $r\forces_0\phi$ too, as desired.</p>
     </proof->
 
-      <p>Finally we can conclude that the forcing theorem holds for the true forcing relation as well. This completes our proof of the forcing theorems!</p>
+    <p>Finally we can conclude that the forcing theorem holds for the true forcing relation as well. This completes our proof of the forcing theorems!</p>
 
     <lem->
-
       <p>If $V[G]$ satisfies $\phi$ then there is $p\in G$ such that $p\forces\phi$.</p>
     </lem->
 
@@ -2259,7 +2162,6 @@
     </exerc->
 
     <notes->
-
       <p>This version of the proof of the forcing and definability theorems was largely drawn from handwritten notes, written by Spencer Unger during a forcing course given by Richard Laver. A proof can also be found in [REF Kunen, Section&nbsp;IV.2].</p>
     </notes->
     </section>
@@ -2271,26 +2173,23 @@
     <section>
     <h->Cohen forcing and the continuum</h->
 
-      <p>We are now ready to use forcing, and our first big target will be to establish the consistency of $\neg$CH.</p>
+    <p>We are now ready to use forcing, and our first big target will be to establish the consistency of $\neg$CH.</p>
 
     <defn->
-
       <p>For any cardinals $\kappa,\lambda$, we define the set $\Fn(\kappa,\lambda)$ to be the family of all functions $p\colon F\to\lambda$, where $F$ is a finite subset of $\kappa$. We partially order $\Fn(\kappa,\lambda)$ by function extension: $p\leq q$ if and only if $p\supset q$.</p>
     </defn->
 
-      <p>Just as the forcing $\omega^{\lt \omega}$ uses finite approximations to add a new function $\omega\to\omega$, the forcing $\Fn(\kappa,\lambda)$ uses finite approximations to add a new function $\kappa\to\lambda$. Forcing of this type is often called <dfn>Cohen forcing</dfn>, since Cohen essentially used this partial order in his original presentation of forcing. In this section we only have need for $\Fn(\kappa,\omega)$, which as we shall show, not only adds a new function from $\kappa\to\omega$, but also adds lots of new functions from $\omega\to\omega$.</p>
+    <p>Just as the forcing $\omega^{\lt \omega}$ uses finite approximations to add a new function $\omega\to\omega$, the forcing $\Fn(\kappa,\lambda)$ uses finite approximations to add a new function $\kappa\to\lambda$. Forcing of this type is often called <dfn>Cohen forcing</dfn>, since Cohen essentially used this partial order in his original presentation of forcing. In this section we only have need for $\Fn(\kappa,\omega)$, which as we shall show, not only adds a new function from $\kappa\to\omega$, but also adds lots of new functions from $\omega\to\omega$.</p>
 
     <lem->
-
       <p>Forcing with the partial order $\PP=\Fn(\kappa,\omega)$ adds $\kappa$ many (distinct) elements to $\omega^\omega$.</p>
     </lem->
 
     <proof->
-
       <p>Let $G\subset\PP$ be a $V$-generic filter, and let $g=\bigcup G$. Now, for any limit ordinal $\alpha\lt \kappa$ we let $f_\alpha\in\omega^\omega$ be the function defined by $f_\alpha(n)=g(\alpha+n)$. It is clear that there are $\kappa$ many of these functions. We claim that if $\alpha\neq\beta$ then $f_\alpha\neq g_\alpha$. Indeed, consider the set</p>
 
       <eqn->
-    D_{\alpha,\beta}=\set{s\in\PP\mid (\exists n\in\omega)\;g(\alpha+n)\neq g(\beta+n)}\text{.}
+        D_{\alpha,\beta}=\set{s\in\PP\mid (\exists n\in\omega)\;g(\alpha+n)\neq g(\beta+n)}\text{.}
       </eqn->
 
       <p>Then $D_{\alpha,\beta}$ is dense: indeed, given $s\in\Fn(\kappa,\omega)$, since $s$ is finite we can find $n\in\omega$ such that neither $\alpha+n$ nor $\beta+n$ lies in the domain of $s$. Then if we let $t\in\Fn(\kappa,\omega)$ be an extension of $s$ such that $t(\alpha+n)\neq t(\beta+n)$, we clearly have $t\in D_{\alpha,\beta}$.</p>
@@ -2301,23 +2200,20 @@
     <p>Thus if we force with $\Fn(\kappa,\omega)$, then in $V[G]$ we can say for certain that $\mathfrak c\geq|\kappa|$. However before we can say for sure that $V[G]$ satisfies $\neg$CH, we need to be <em>very</em> careful about the cardinal value of $\kappa$. As we saw in <ref- target="sec:idea-forcing"></ref->, it is possible for forcing to collapse cardinals. Even if in $V$ we started with $\kappa$ being the seventeenth uncountable cardinal, in $V[G]$ it could be that $\kappa$ is just a countable ordinal! This is where the ccc property comes to our rescue, as we shall now see see see.</p>
 
     <thm- id="thm:ccc-preserve">
-
       <p>If $\PP$ is ccc, then $\PP$ preserves cardinals. That is, if in $V$ we have $\kappa=\aleph_\alpha$, then in $V[G]$ we have $\kappa=\aleph_\alpha$ too.</p>
     </thm->
 
-      <p>The key reason for this is the following property of ccc partial orders, which allows us to predict function values in a forcing extension with a countable degree of accuracy.</p>
+    <p>The key reason for this is the following property of ccc partial orders, which allows us to predict function values in a forcing extension with a countable degree of accuracy.</p>
 
     <lem->
-
       <p>Let $\PP$ be a ccc partial order, and $G$ a $V$-generic filter, and suppose that $A,B\in V$. If $f\in V[G]$ and $f\colon A\to B$, then there is $F\in V$ such that $F\colon A\to\mathcal P(B)$ and for all $a\in A$ we have $F(a)$ is countable and $f(a)\in F(a)$.</p>
     </lem->
 
     <proof->
-
       <p>Let $\dot f$ denote a name for $f$, so that by the forcing theorem there exists $p\in G$ such that $p\forces \dot f\colon\check A\to\check B$. Define</p>
 
       <eqn->
-    F(a)=\set{b\in B\mid(\exists q\leq p)\;q\forces\dot f(\check a)=\check b}\text{.}
+        F(a)=\set{b\in B\mid(\exists q\leq p)\;q\forces\dot f(\check a)=\check b}\text{.}
       </eqn->
 
       <p>To see that $f(a)\in F(a)$, note that if $f(a)=b$ then by the forcing lemma there is some $q\in G$ such that $q\forces\dot f(\check a)=\check b$. Using the downwards-directed property of $G$ we can assume that $q\leq p$, and hence obtain that $b\in F(a)$.</p>
@@ -2334,12 +2230,10 @@
     </proof->
 
     <rem->
-
       <p>In fact, something stronger is true: forcing with a ccc partial order preserves not only cardinals but also <dfn>cofinalities</dfn>. Roughly, this means that if $\kappa$ is an ordinal in $V$, then $V[G]$ cannot have a shorter unbounded sequence in $\kappa$ than $V$ does.</p>
     </rem->
 
     <prop- id="prop:cohen-ccc">
-
       <p>The partial order $\Fn(\kappa,\omega)$ is ccc.</p>
     </prop->
 
@@ -2352,7 +2246,6 @@
     </lem->
 
     <proof->
-
       <p>Since there are only countably many possible values of $|F|$ for $F\in\mathcal F$, by the pigeon-hole principle we can replace $\mathcal F$ with an uncountable subset of it such that $|F|=$ some fixed value $n$ for all $F\in\mathcal G$.</p>
 
       <p>Now we use induction on $n$. If $n=1$, then $\mathcal G$ forms a delta system automatically. Next suppose that the claim is true for families of sets of size $\lt n$. First consider the case that there is some $\alpha\in\kappa$ which lies in uncountably many of the $F\in\mathcal G$. Then by the inductive hypothesis we can find a delta system $\mathcal H_0$ contained in $\set{F\smallsetminus\{\alpha\}\mid F\in\mathcal G}$. It follows that the family $\mathcal G_0=\set{F_0\cup\{\alpha\}\mid F_0\in\mathcal H_0}$ is a delta system too.</p>
@@ -2374,36 +2267,31 @@
     <section>
     <h->More tricks with the continuum</h->
 
-      <p>Since ccc forcing preserves cardinals, if $V$ satisfies $\neg$CH then it is not possible to force CH using ccc forcing. Indeed, since forcing only adds sets (and never takes them away), the only way to lower the cardinality of the continuum is to collapse cardinals.</p>
+    <p>Since ccc forcing preserves cardinals, if $V$ satisfies $\neg$CH then it is not possible to force CH using ccc forcing. Indeed, since forcing only adds sets (and never takes them away), the only way to lower the cardinality of the continuum is to collapse cardinals.</p>
 
     <defn->
-
       <p>For any cardinals $\kappa,\lambda$ we define the set $\Fn_{\aleph_0}(\kappa,\lambda)$ to be the family of all functions $p\colon A\to\lambda$, where $A$ is a countable subset of $\kappa$. We partially order $\Fn_{\aleph_0}(\kappa,\lambda)$ by $p\leq q$ iff $p\supset q$.</p>
     </defn->
 
-      <p>Like its sibling  $\Fn(\kappa,\omega)$, forcing with $\Fn_{\aleph_0}(\kappa,\omega)$ adds a new function $g\colon\kappa\to\omega$. But as we'll see, it does it in a different way. For example, we showed that $\Fn(\kappa,\omega)$ is ccc, but it is easy to see that $\Fn_{\aleph_0}(\kappa,\lambda)$ is not ccc. For another thing, $\Fn(\kappa,\omega)$ adds many new elements to $\omega^\omega$, but if $\kappa$ is uncountable $\Fn_{\aleph_0}(\kappa,\omega)$ adds no new elements to $\omega^\omega$.</p>
+    <p>Like its sibling  $\Fn(\kappa,\omega)$, forcing with $\Fn_{\aleph_0}(\kappa,\omega)$ adds a new function $g\colon\kappa\to\omega$. But as we'll see, it does it in a different way. For example, we showed that $\Fn(\kappa,\omega)$ is ccc, but it is easy to see that $\Fn_{\aleph_0}(\kappa,\lambda)$ is not ccc. For another thing, $\Fn(\kappa,\omega)$ adds many new elements to $\omega^\omega$, but if $\kappa$ is uncountable $\Fn_{\aleph_0}(\kappa,\omega)$ adds no new elements to $\omega^\omega$.</p>
 
     <thm- id="thm:force-ch">
-
       <p>Let $\PP=\Fn_{\aleph_0}(\omega_1,\omega)$ and let $G$ be a $V$-generic filter. Then $V[G]$ satisfies CH.</p>
     </thm->
 
-      <p>In a moment we will prove that forcing with $\Fn_{\aleph_0}(\omega_1,\omega)$ adds a surjection from $\omega_1$ onto $\omega^\omega$. However, once again we have to be careful: we have to check that the $\omega^\omega$ of $V$ is the same as the $\omega^\omega$ of $V[G]$. In fact this will be true when forcing with any partial ordering satisfying the following simple property.</p>
+    <p>In a moment we will prove that forcing with $\Fn_{\aleph_0}(\omega_1,\omega)$ adds a surjection from $\omega_1$ onto $\omega^\omega$. However, once again we have to be careful: we have to check that the $\omega^\omega$ of $V$ is the same as the $\omega^\omega$ of $V[G]$. In fact this will be true when forcing with any partial ordering satisfying the following simple property.</p>
 
     <defn->
-
       <p>A partial order $\PP$ is <dfn>countably closed</dfn> if for every sequence of elements $p_n\in\PP$ such that $p_{n+1}\leq p_n$ for all $n$, there exists $p\in\PP$ such that $p\leq p_n$ for all $n$.</p>
     </defn->
 
-      <p>It is clear that whenever $\kappa$ is uncountable, $\Fn_{\aleph_0}(\kappa,\lambda)$ is an example of a countably closed partial order.</p>
+    <p>It is clear that whenever $\kappa$ is uncountable, $\Fn_{\aleph_0}(\kappa,\lambda)$ is an example of a countably closed partial order.</p>
 
     <lem- id="lem:forcing-closed-preserves">
-
       <p>If $\PP$ is countably closed, then forcing with $\PP$ does not add new elements of $\omega^\omega$. Moreover forcing with $\PP$ does not collapse $\aleph_1$.</p>
     </lem->
 
     <proof->
-
       <p>Let $f$ be an element of $\omega^\omega$ in $V[G]$, and let $\dot f$ be a name for $f$. We will show that in fact $f$ lies in $V$. To begin, by the forcing theorem we can find some $q\in G$ such that $q\forces \dot f\colon\check\omega\to\check\omega$. Now, since $f(0)$ has some value in $\omega$, there is some $n_0\in\omega$ such that $V[G]$ satisfies $f(0)=\check n_0$. Hence we can find $p_0\in G$ and such that $p_0\forces\dot f(0)=\check n_0$. Moreover since $G$ is downwards directed, we can suppose without loss of generality that $p_0\leq q$.</p>
 
       <p>Repeating this argument inductivley, we can find $n_i\in\omega$ and $p_i\in G$ such that $p_i\forces f(\check i)=\check n_i$. Moreover we can assume that $p_i\leq p_{i-1}$ for all $i$. Since $\PP$ is countably closed, there exists $p\in\PP$ such that $p\leq p_i$ for all $i$. Then $p\forces\dot f(\check i)=\check n_i$ for all $i$, which means that $p$ ``knows'' every value of $f$. It follows that $f$ is definable in $V$ by $f(i)=n$ if and only if $p\forces\dot f(\check i)=\check n$.</p>
@@ -2418,7 +2306,7 @@
       <p>To begin, it is clear that $g=\bigcup G$ is a new function from $\omega_1\to\omega$. Now for each $f\in\omega^\omega$ consider the set</p>
 
       <eqn->
-    D_f=\set{s\in G\mid (\exists\alpha\lt \omega_1)(\forall n\in\omega)\;s(\alpha+n)=f(n)}
+        D_f=\set{s\in G\mid (\exists\alpha\lt \omega_1)(\forall n\in\omega)\;s(\alpha+n)=f(n)}
       </eqn->
 
       <p>Then $D_f$ is dense: indeed, if $s$ is element of $\Fn_{\aleph_0}(\omega_1,\omega)$ then we can find some $\alpha$ such that $\dom(s)\lt\alpha$, and define an extension $t\supset s$ such that $t(\alpha+n)=s(n)$.</p>
@@ -2426,19 +2314,17 @@
       <p>It follows that $g=\bigcup G$ has the property: for every $f\in\omega^\omega$ there exists $\alpha\lt\omega_1$ such that for all $n\in\omega$ we have $g(\alpha+n)=f(n)$. In other words, every element of the Baire space is coded in the values of $g$. Since there are only $\aleph_1$ many possible functions coded in this way, we have $|\omega^\omega|\leq\aleph_1$.</p>
     </proof->
 
-      <p>We now return to the argument of the previous section. Recall that we showed forcing with $\Fn(\kappa,\omega)$ results in the continuum having value $\geq\kappa$. With a slightly more careful argument, we can actually show that in fact the continuum has size exactly $\kappa$.</p>
+    <p>We now return to the argument of the previous section. Recall that we showed forcing with $\Fn(\kappa,\omega)$ results in the continuum having value $\geq\kappa$. With a slightly more careful argument, we can actually show that in fact the continuum has size exactly $\kappa$.</p>
 
     <thm- id="thm:ch-exact">
-
       <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal such that $k^{\aleph_0}=\kappa$. Let $\PP=\Fn(\kappa,\omega)$ and let $G$ be a $V$-generic filter. Then in $V[G]$, we have $\mathfrak c=\kappa$.</p>
     </thm->
 
     <proof->
-
       <p>We have already shown that in $V[G]$ we have $\mathfrak c\geq\kappa$. To show that $\mathfrak c\leq\kappa$, it suffices to show that in $V[G]$ there are at most $\kappa$ many subsets of $\omega$. To this end, we claim that every subset of $\omega$ in $V[G]$ has a <dfn>nice name</dfn>, that is, a name of the form</p>
 
       <eqn->
-    \tau=\set{(\check n,p)\mid p\in A_n}\text{,}
+        \tau=\set{(\check n,p)\mid p\in A_n}\text{,}
       </eqn->
 
       <p>where for each $n$, $A_n$ is an antichain of $\PP$.</p>
@@ -2448,7 +2334,7 @@
       <p>To establish the claim, let $S\in V[G]$ be a subset of $\omega$ and let $\dot S$ be a name for $S$. By the forcing theorem there is some $q\in G$ such that $q\forces\dot S\subset\check\omega$. Now consider the sets</p>
 
       <eqn->
-    B_n=\set{p\in\PP\mid p\leq q\text{ and }p\forces\check n\in\dot S}
+        B_n=\set{p\in\PP\mid p\leq q\text{ and }p\forces\check n\in\dot S}
       </eqn->
 
       <p>Using Zorn's Lemma, we can find a maximal antichain $A_n\subset B_n$. We will show that the corresponding nice name $\tau$ is a name for $S$.</p>
@@ -2456,7 +2342,7 @@
       <p>First, it is clear that $\tau_G\subset S$, since if $(\check n,p)\in G$ then $p\forces\check n\in\dot S$ and hence $V[G]$ satisfies $n\in S$. Conversely, suppose that $V[G]$ satisfies $n\in S$ and let $q'\in G$ be such that $q'\forces\check n\in\dot S$. As usual since $G$ is downwards directed we can suppose that $q'\leq q$. We now consider the set</p>
 
       <eqn->
-    D=\set{p\in\PP\mid p\perp q'\text{ or }(\exists a\in A_n)\;p\leq a}\text{.}
+        D=\set{p\in\PP\mid p\perp q'\text{ or }(\exists a\in A_n)\;p\leq a}\text{.}
       </eqn->
 
       <p>Then $D$ is dense: given any $p_0\in\PP$, if $p_0$ is incompatible with $q'$, then $p_0$ itself lies in $D$. Otherwise $p_0$ is compatible with $q'$ and hence there is $p_1\leq p_0,q'$. Then $p_1$ lies in the set $B_n$, and since $A_n$ is a maximal antichain in $B_n$, we must have that $p_1$ is compatible with some $a\in A_n$. Hence we can find $p_2\leq p_1,a$, and then $p_2\in D$.</p>
@@ -2469,7 +2355,6 @@
     </rem->
 
     <exerc->
-
       <p>Kunen, exercise IV.7.10.</p>
     </exerc->
 
@@ -2478,19 +2363,16 @@
     <section>
     <h->Cohen forcing and the domination order</h->
 
-      <p>In the previous sections we studied the effect of the forcing $\Fn(\kappa,\omega)$ on the value of the continuum $\mathfrak c$. For the next two sections, we generalize our previous results by exploring the effect of forcing with $\Fn(\kappa,\omega)$ on the values of the other cardinal characteristics in Cichoń's diagram. In this section, we consider just the cardinals associtaed with the domination order $\leq^*$, namely $\mathfrak b$ and $\mathfrak d$.</p>
+    <p>In the previous sections we studied the effect of the forcing $\Fn(\kappa,\omega)$ on the value of the continuum $\mathfrak c$. For the next two sections, we generalize our previous results by exploring the effect of forcing with $\Fn(\kappa,\omega)$ on the values of the other cardinal characteristics in Cichoń's diagram. In this section, we consider just the cardinals associtaed with the domination order $\leq^*$, namely $\mathfrak b$ and $\mathfrak d$.</p>
 
-      <p>Before we study the effect of the $\kappa$-sized Cohen forcing $\Fn(\kappa,\omega)$, we first examine the effect of the countable Cohen forcing $\Fn(\omega,\omega)$. The key result is the following lemma, which showcases the narrow window that Cohen forcing occupies with respect to the domination order $\leq^*$.</p>
+    <p>Before we study the effect of the $\kappa$-sized Cohen forcing $\Fn(\kappa,\omega)$, we first examine the effect of the countable Cohen forcing $\Fn(\omega,\omega)$. The key result is the following lemma, which showcases the narrow window that Cohen forcing occupies with respect to the domination order $\leq^*$.</p>
 
     <lem- id="lem:cohen-dominating">
-
       <p>Let $\PP=\Fn(\omega,\omega)$, and let $G$ be a $V$-generic filter. Then we have:</p>
-
       <ul>
         <li>If $g=\bigcup G$, then $g$ is not $\leq^*$-dominated by any element of $\omega^\omega\cap V$.</li>
         <li>If $h\in V[G]$, then not every element of $\omega^\omega\cap V$ is $\leq^*$-dominated by $h$.</li>
       </ul>
-
     </lem->
 
     <proof->
@@ -2499,13 +2381,13 @@
       <p>For the second statement, let $h\in V[G]$ and let $\dot h$ be a $\PP$-name for $h$. We wish to define a function $f\in V$ which is not dominated by $h$. For this, since $\PP$ is countable, we can enumerate $\PP=\{p_i\mid i\in\omega\}$. For each $i$, we then define the approximation to $h$ given by</p>
 
       <eqn->
-    h_i(n)=\max\set{m\in\omega\mid p_i\forces\check m\leq\dot h(\check n)}\text{.}
+        h_i(n)=\max\set{m\in\omega\mid p_i\forces\check m\leq\dot h(\check n)}\text{.}
       </eqn->
 
       <p>(If the above maximum is undefined, then set $h_i(n)=0$ by default.) We now diagonalize against these approximations to $h$ to define a function $f$ such that $h_i\lt ^*f$ for all $i$. Specifically we let</p>
 
       <eqn->
-    f(n)=\max\set{h_0(n),\ldots,h_n(n)}+1\text{,}
+        f(n)=\max\set{h_0(n),\ldots,h_n(n)}+1\text{,}
       </eqn->
 
       <p>and observe that $f$ lies in $V$ by the definability theorem. We claim that this $f$ is in fact not dominated by $h$.</p>
@@ -2513,21 +2395,19 @@
       <p>For this, if we have $f\leq^*h$ then we can find $N$ such that for all $n\geq N$ we have $f(n)\leq h(n)$. By the forcing theorem, we can find $p_i\in\PP$ such that $p_i\forces(\forall n\geq\check N)\;\check f(n)\leq\dot h(n)$. But now if we choose any $n\geq N,i$, then by definition of $h_i$ we have $f(n)\leq h_i(n)$, and by definition of $f$ we have $h_i(n) \lt f(n)$. This is a contradiction!</p>
     </proof->
 
-      <p>In order to use the above result about $\Fn(\omega,\omega)$ to establish properties of the full forcing $\Fn(\kappa,\omega)$, we need the following fact which essentially says that the full forcing can be factored into smaller pieces.</p>
+    <p>In order to use the above result about $\Fn(\omega,\omega)$ to establish properties of the full forcing $\Fn(\kappa,\omega)$, we need the following fact which essentially says that the full forcing can be factored into smaller pieces.</p>
 
     <lem- id="lem:product">
-
       <p>Let $\PP=\Fn(\kappa,\omega)$ and let $G$ be a $V$-generic filter for $\PP$. Suppose that $I\subset\kappa$, and set $\PP_1=\Fn(I,\omega)$ and $G_1=G\cap\PP_1$; likewise set $\PP_2=\Fn(\kappa\smallsetminus I,\omega)$ and $G_2=G\cap\PP_2$. Then $G_1$ is $V$-generic for $\PP_1$, $G_2$ is $V[G_1]$-generic for $\PP_2$, and $V[G]=V[G_1][G_2]$.</p>
     </lem->
 
     <proof->
-
       <p>It is straightforward to verify that $G_1$ and $G_2$ are filters. Moreover, since $G_1$ and $G_2$ are defined from $G$, and $G$ can be recovered from $G_1$ and $G_2$, it follows easily that $V[G]=V[G_1][G_2]$.</p>
 
       <p>To show that $G_1$ is $V$-generic for $\PP_1$, let $D\in V$ be a dense subset of $\PP_1$. Letting</p>
 
       <eqn->
-    D'=\set{p\cup q\mid p\in\PP_1,\;q\in\PP_2,\text{ and }p\in D}\text{,}
+        D'=\set{p\cup q\mid p\in\PP_1,\;q\in\PP_2,\text{ and }p\in D}\text{,}
       </eqn->
 
       <p>it is trivial to see that $D'$ is dense in $\PP$. Since $G$ is $V$-generic for $\PP$, there exists an element $p\cup q\in G\cap D'$. Then $p\in D$, and since $G$ is closed upwards, we have $p\in G$ too. Thus $G\cap D\neq\emptyset$, as desired.</p>
@@ -2535,7 +2415,7 @@
       <p>To show that $G_2$ is $V[G_1]$-generic for $\PP_2$ is analogous but slightly trickier. For this, let $D\in V[G_1]$ be a dense subset of $\PP_2$, and let $\dot D$ be a $\PP_1$-name for $D$. Using the forcing theorem, we can find $p_1\in G_1$ such that $p_1\forces$ ``$\dot D$ is dense in $\check\PP_2$''. Let</p>
 
       <eqn->
-    D'=\set{p\cup q\mid p\in\PP_1,\;q\in\PP_2,\text{ and either $p\perp p_1$ or else $p\leq p_1$ and $p\forces\check q\in\dot D$}}
+        D'=\set{p\cup q\mid p\in\PP_1,\;q\in\PP_2,\text{ and either $p\perp p_1$ or else $p\leq p_1$ and $p\forces\check q\in\dot D$}}
       </eqn->
 
       <p>We claim that $D'$ is dense in $\PP$. Indeed, let $p\cup q$ be an arbitrary element of $\PP$, where $p\in\PP_1$ and $q\in\PP_2$. If $p\perp p_1$ then we are done, so suppose instead that $p\leq p_1$. Since $D$ is dense in $\PP_2$, there exists $q'\leq q$ such that $q'\in D$. Then by the forcing theorem there exists $p'\in G_1$ such that $p'\forces\check q'\in\dot D$. Letting $p''\leq p,p'$, we have that $p''\cup q'\in D'$, as desired.</p>
@@ -2543,21 +2423,19 @@
       <p>Now, since $G$ is $V$-generic for $\PP$, there exists an element $p\cup q\in G\cap D'$. Then $q\in G_2$, and by definition of $D'$ we have that $q\in D$ too. Thus again we have $G_2\cap D\neq\emptyset$, as desired.</p>
     </proof->
 
-      <p>We are now ready to state the effect of forcing with $\Fn(\kappa,\omega)$ on the cardinals $\mathfrak b$ and $\mathfrak d$.</p>
+    <p>We are now ready to state the effect of forcing with $\Fn(\kappa,\omega)$ on the cardinals $\mathfrak b$ and $\mathfrak d$.</p>
 
     <thm- id="thm:cohen-bd">
-
       <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal such that $\kappa^{\aleph_0}=\kappa$. Let $\PP=\Fn(\kappa,\omega)$ and $G$ be a $V$-generic filter. Then in $V[G]$, we have $\mathfrak b=\aleph_1$ and $\mathfrak d=\kappa$.</p>
     </thm->
 
     <proof->
-
       <p>We first show that $\mathfrak d=\kappa$. Recall that we already know that $\mathfrak d\leq\mathfrak c=\kappa$. Now suppose, towards a contradiction, that $\mathfrak d\lt\kappa$. That is, in $V[G]$ there exists a dominating family $\mathcal F$ such that $|\mathcal F|\lt\kappa$. We claim that there is some $I\subset\kappa$ such that $|I|\lt\kappa$ and $\mathcal F$ is added by the forcing $\Fn(I,\omega)$.</p>
 
       <p>To establish the claim, we first code $\mathcal F$ as a subset of $\lambda\times\omega\times\omega$ by enumerating $\mathcal F=\set{f_\alpha\mid\beta\lt\lambda}$ and letting</p>
 
       <eqn->
-    S_{\mathcal F}=\set{(\beta,n,m)\mid f_\beta(n)=m}
+        S_{\mathcal F}=\set{(\beta,n,m)\mid f_\beta(n)=m}
       </eqn->
 
       <p>Now let $\tau$ be a nice name for $S_{\mathcal F}$ (see the proof of <ref- target="thm:ch-exact"></ref->), and note that since $\PP$ is ccc there are at most $\lambda$ many elements of $\PP$ mentioned in $\tau$. Each of these $\lambda$ many elements of $\PP$ in turn has just finitely many ordinals in its domain. Letting $I$ be the union of all these domains, we have that $\tau$ is a $\Fn(I,\omega)$-name and hence is added by the forcing $\Fn(I,\omega)$.</p>
@@ -2572,12 +2450,10 @@
     </proof->
 
     <exerc- id="exerc:cohen-nondom">
-
       <p>Show that if $\PP=\Fn(\omega,\omega)$ and $G$ is $V$-generic, then $g=\bigcup G$ is not dominated by any element of the Baire space of $V$.</p>
     </exerc->
 
     <exerc->
-
       <p>Kunen, exercise IV.4.11.</p>
     </exerc->
 
@@ -2588,7 +2464,7 @@
     <section>
     <h->Cohen forcing and Cichoń's diagram</h->
 
-      <p>In the previous section we began to study the effect of Cohen forcing on the values of the cardinals in Cichoń's diagram. In this section we complete this study by establishing the following result.</p>
+    <p>In the previous section we began to study the effect of Cohen forcing on the values of the cardinals in Cichoń's diagram. In this section we complete this study by establishing the following result.</p>
 
     <thm- id="thm:cohen-cichon">
       <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal with $\kappa^{\aleph_0}=\kappa$. Then forcing with $\Fn(\kappa,\omega)$ results in all cardinals in the left half of Cichoń's diagram equal to $\aleph_1$, and all cardinals in the right half of Cichoń's diagram equal to $\mathfrak c=\kappa$ (see <ref- target="fig:cichon-cohen"></ref->).</p>
@@ -2616,22 +2492,20 @@
     <p>The key to the proof of this theorem is to establish the analogs of the statements in <ref- target="lem:cohen-dominating"></ref->. For the statements we need our combinatorial characterization of meager sets by difference sets. Recall from <ref- target="prop:meager-diff"></ref-> that a subset $A\subset\omega^\omega$ is meager if and only if $A$ is contained in some set of the form $\Diff_P(x)$. Here, $P$ is a partition of $\omega$ into intervals, $x\in\omega^\omega$, and $\Diff_P(x)$ denotes the set of all $y$ which differ from $x$ on almost every interval of $P$.</p>
 
     <lem- id="lem:cohen-meager">
-
       <p>Let $\PP=\Fn(\omega,\omega)$, and let $G$ be a $V$-generic filter. Then we have:</p>
-
       <ul>
         <li>If $g=\bigcup G$, then $g$ does not lie in any set of the form $\Diff_P(x)$ where $P,x\in V$.</li>
         <li>If $Q,y\in V[G]$, then not every element of $\omega^\omega\cap V$ lies in $\Diff_Q(y)$.</li>
       </ul>
     </lem->
 
-      <p>In other words, the first statement says that the generic $g$ does not lie in in any meager set coded in $V$, and the second statement says that the Baire space of the ground model remains nonmeager after the forcing.</p>
+    <p>In other words, the first statement says that the generic $g$ does not lie in in any meager set coded in $V$, and the second statement says that the Baire space of the ground model remains nonmeager after the forcing.</p>
 
     <proof->
       The proofs of the two statements can be viewed as slight improvements to the arguments of <ref- target="lem:cohen-dominating"></ref->. For the first statement, let $P=(I_n)$ be an interval partition and $x\in\omega^\omega$, with $P,x\in V$. For each $N\in\omega$ let
 
       <eqn->
-    D_N=\set{s\in\PP\mid(\exists n\geq N)\;s\restriction I_n=x\restriction I_n}\text{.}
+        D_N=\set{s\in\PP\mid(\exists n\geq N)\;s\restriction I_n=x\restriction I_n}\text{.}
       </eqn->
 
       <p>Then it is easy to see that $D_N$ is dense: given $s\in\PP$ one can choose $n$ large enough so that $I_n\cap\dom(s)=\emptyset$, and then extend $s$ to $I_n$ as required. It follows that $g$ has the property that for all $N$ there exists $n\geq N$ such that $g\restriction I_n=x\restriction I_n$. This means precisely that $g$ does <em>not</em> lie in $\Diff_P(x)$.</p>
@@ -2671,46 +2545,43 @@
     <section>
     <h->Random forcing</h->
 
-      <p>The previous section provided one possible picture of Cichoń's diagram after forcing: the left half of the diagram is small, the right half large. It turns out that many other configurations can be achieved with more creative forcing partial orders. In this section we begin to explore the effect of random forcing which, as we will see, does for measure what Cohen forcing did for category.</p>
+    <p>The previous section provided one possible picture of Cichoń's diagram after forcing: the left half of the diagram is small, the right half large. It turns out that many other configurations can be achieved with more creative forcing partial orders. In this section we begin to explore the effect of random forcing which, as we will see, does for measure what Cohen forcing did for category.</p>
 
-      <p>The random forcing partial order can be defined on any of the spaces $\RR$, $2^\omega$, or $\omega^\omega$, but in order to generalize it later we will define it on Cantor space $2^\omega$. Recall that we use the ``coin-tossing'' measure on $2^\omega$, which is defined analogously to the Lebesgue measure of Equation~$\eqref{eq:measure}$ but with the length $\ell$ replaced by the probability $m(V_s)=2^{-|s|}$. Thus we have</p>
+    <p>The random forcing partial order can be defined on any of the spaces $\RR$, $2^\omega$, or $\omega^\omega$, but in order to generalize it later we will define it on Cantor space $2^\omega$. Recall that we use the ``coin-tossing'' measure on $2^\omega$, which is defined analogously to the Lebesgue measure of Equation~$\eqref{eq:measure}$ but with the length $\ell$ replaced by the probability $m(V_s)=2^{-|s|}$. Thus we have</p>
 
-      <eqn->
-    m(A)=\inf\set{\sum2^{-|s_n|}\mid A\subset\bigcup V_{s_n}}
+    <eqn->
+      m(A)=\inf\set{\sum2^{-|s_n|}\mid A\subset\bigcup V_{s_n}}
     </eqn->
 
-      <p>As usual, the function $m$ has the properties of a measure on a class of sets containing all Borel sets. The null ideal $\Null$ on $2^\omega$ consists of those $A$ for which $m(A)=0$.</p>
+    <p>As usual, the function $m$ has the properties of a measure on a class of sets containing all Borel sets. The null ideal $\Null$ on $2^\omega$ consists of those $A$ for which $m(A)=0$.</p>
 
     <defn->
-
       <p>The <dfn>random forcing</dfn> partial order $\Nonnull(2^\omega)$ consists of equivalence classes $[A]$ of nonnull (Borel) subsets $A\subset2^\omega$. Here, two subsets $A$ and $B$ are called <dfn>equivalent</dfn> iff the symmetric difference $A\mathbin{\vartriangle} B$ is null. The set $\Nonnull(2^\omega)$ is partially ordered by $[A]\leq[B]$ iff $A\smallsetminus B$ is null.</p>
     </defn->
 
-      <p>The random forcing partial order is also a <dfn>Boolean algebra</dfn>, which means that we can take pairwise joins (unions), meets (intersections), and complements. Although we will not develop the theory here, it turns out that any partial order is forcing equivalent to a Boolean algebra. For example, Cohen forcing $\Fn(\omega,2)$ is equivalent to the partial order consisting of equivalence classes of <em>nonmeager</em> subsets of $2^\omega$, where sets are equivalent if their symmetric difference is <em>meager</em>.</p>
+    <p>The random forcing partial order is also a <dfn>Boolean algebra</dfn>, which means that we can take pairwise joins (unions), meets (intersections), and complements. Although we will not develop the theory here, it turns out that any partial order is forcing equivalent to a Boolean algebra. For example, Cohen forcing $\Fn(\omega,2)$ is equivalent to the partial order consisting of equivalence classes of <em>nonmeager</em> subsets of $2^\omega$, where sets are equivalent if their symmetric difference is <em>meager</em>.</p>
 
-      <p>Like Cohen forcing, if $G$ is a $V$-generic filter for random forcing then there is a corresponding generic element $g\in2^\omega$. In order to define $g$, first observe that for each $n$ the elements $[V_s]$ for $|s|=n$ form a maximal antichain of $\Nonnull(2^\omega)$. It follows that for each $n$, there is exactly one $[V_s]\in G$ with $|s|=n$. We may then let</p>
+    <p>Like Cohen forcing, if $G$ is a $V$-generic filter for random forcing then there is a corresponding generic element $g\in2^\omega$. In order to define $g$, first observe that for each $n$ the elements $[V_s]$ for $|s|=n$ form a maximal antichain of $\Nonnull(2^\omega)$. It follows that for each $n$, there is exactly one $[V_s]\in G$ with $|s|=n$. We may then let</p>
 
-      <eqn->
-    g=\bigcup\set{s\mid [V_s]\in G}
+    <eqn->
+      g=\bigcup\set{s\mid [V_s]\in G}
     </eqn->
 
-      <p>This is well-defined since the elements of $G$ are pairwise compatible.</p>
+    <p>This is well-defined since the elements of $G$ are pairwise compatible.</p>
 
-      <p>Just as the Cohen generic real lies in every comeager set coded in the ground model, this generic $g$ is ``random'' in the sense that it lies in every conull set coded in the ground model. Before showing this, we should say precisely what we mean by this coding. While it is possible to code arbitrary Borel sets, for simplicity we will state the result only for $G_\delta$ sets.</p>
+    <p>Just as the Cohen generic real lies in every comeager set coded in the ground model, this generic $g$ is ``random'' in the sense that it lies in every conull set coded in the ground model. Before showing this, we should say precisely what we mean by this coding. While it is possible to code arbitrary Borel sets, for simplicity we will state the result only for $G_\delta$ sets.</p>
 
-      <p>Recall that a subset of $2^\omega$ is called $G_\delta$ if it is a countable intersection of open sets. Thus any $G_\delta$ set $A$ can be expressed as $\bigcap_m\bigcup_nV_{s_{n,m}}$, and we say that the sequence $\{s_{n,m}\}$ is a <dfn>code</dfn> for $A$. If $V[G]$ is a forcing extension of $V$ and $A$ is a $G_\delta$ set of $V$ coded by $\{s_{n,m}\}$, then we let $A^*$ be the $G_\delta$ set in $V[G]$ with the same code.</p>
+    <p>Recall that a subset of $2^\omega$ is called $G_\delta$ if it is a countable intersection of open sets. Thus any $G_\delta$ set $A$ can be expressed as $\bigcap_m\bigcup_nV_{s_{n,m}}$, and we say that the sequence $\{s_{n,m}\}$ is a <dfn>code</dfn> for $A$. If $V[G]$ is a forcing extension of $V$ and $A$ is a $G_\delta$ set of $V$ coded by $\{s_{n,m}\}$, then we let $A^*$ be the $G_\delta$ set in $V[G]$ with the same code.</p>
 
     <lem- id="lem:random-conull">
-
       <p>Let $\PP=\Nonnull(2^\omega)$, let $G$ be $V$-generic, and $g$ the corresponding generic element of $2^\omega$. Suppose $A$ is a $G_\delta$ set of $V$, and let $A^*$ be the interpretation of $A$ in $V[G]$. Then if $A$ is conull then $g$ lies in $A^*$, and if $A$ is null then $g$ lies in the complement of $A^*$.</p>
     </lem->
 
     <proof->
-
       <p>First suppose that $A$ is open, that is, has the form $A=\bigcup_nV_{s_n}$, and assume that $A$ is conull. Then the set</p>
 
       <eqn->
-    D=\set{[B]\in\PP\mid (\exists n)\;B\subset V_{s_n}}
+        D=\set{[B]\in\PP\mid (\exists n)\;B\subset V_{s_n}}
       </eqn->
 
       <p>is dense: any nonnull $B$ has nonnull intersection with some $V_{s_n}$ and therefore $[B\cap V_{s_n}]$ is an element of $\PP$ which lies in $D$. Since $G$ is generic, there is some $n$ such that $[V_{s_n}]$ lies in $G$. By definition of $g$, it follows that $g\in V_{s_n}$ and therefore $g\in A$.</p>
@@ -2722,29 +2593,27 @@
 
     <p>As we mentioned, this result can be stated for Borel sets $A$ as well; one simply uses induction to reach sets with more complex codes. Meanwhile it follows from <ref- target="lem:random-conull"></ref-> that the random real $g$ is <em>new</em>. Indeed, if $y$ is any element of the ground model $V$, then $A=2^\omega\smallsetminus\{y\}$ is a conull $G_\delta$ set (in fact it is open). Thus $g$ lies in this set (interpreted in $V[G]$, and in particular $g\neq y$.</p>
 
-      <p>Just as Cohen forcing $\Fn(\omega,\omega)$ has a $\kappa$-sized version $\Fn(\kappa,\omega)$, random forcing has a $\kappa$-length version $\Nonnull(2^\kappa)$. Like the $\kappa$-sized Cohen forcing, the $\kappa$-sized random forcing adds $\kappa$ many new elements to Cantor space and therefore pushes the value of the continuum up to $\kappa$.</p>
+    <p>Just as Cohen forcing $\Fn(\omega,\omega)$ has a $\kappa$-sized version $\Fn(\kappa,\omega)$, random forcing has a $\kappa$-length version $\Nonnull(2^\kappa)$. Like the $\kappa$-sized Cohen forcing, the $\kappa$-sized random forcing adds $\kappa$ many new elements to Cantor space and therefore pushes the value of the continuum up to $\kappa$.</p>
 
-      <p>To make the definition of $\Nonnull(2^\kappa)$ precise, we recall that the <em>product</em> topology on $2^\kappa$ has a basis consisting of the sets $V_s=\set{x\in2^\kappa\mid s\subset x}$, where $s$ is a function from a finite subset of $\kappa$ to $\{0,1\}$. The measure on $2^\kappa$ is again defined by assigning to each $V_s$ the measure $2^{-|s|}$ and extending it as before.</p>
+    <p>To make the definition of $\Nonnull(2^\kappa)$ precise, we recall that the <em>product</em> topology on $2^\kappa$ has a basis consisting of the sets $V_s=\set{x\in2^\kappa\mid s\subset x}$, where $s$ is a function from a finite subset of $\kappa$ to $\{0,1\}$. The measure on $2^\kappa$ is again defined by assigning to each $V_s$ the measure $2^{-|s|}$ and extending it as before.</p>
 
     <thm->
-
       <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal such that $\kappa^{\aleph_0}=\kappa$. Let $\PP=\Nonnull(2^\kappa)$ and let $G$ be a $V$-generic filter. Then in $V[G]$, we have $\mathfrak c=\kappa$.</p>
     </thm->
 
     <proof->
-
       <p>We first claim that $\PP$ is ccc, and hence $\kappa$ remains a cardinal in $V[G]$. To see this, first note that two elements $[A],[B]$ of $\Nonnull(2^\kappa)$ are incompatible if and only if $A\cap B$ is null. Thus it suffices to show that if $\mathcal F$ is a family pairwise disjoint, nonnull subsets of $2^\kappa$, then $\mathcal F$ is countable. For this, since the full space $2^\kappa$ has measure $1$, for each $n$ there can be just finitely many elements of $\mathcal F$ of measure $\geq1/n$. It follows that there can be just countably many elements of $\mathcal F$ in total, and so $\PP$ is ccc.</p>
 
       <p>Next, we claim that $\PP$ adds $\kappa$ many distinct elements to $2^\omega$. First, by the definition given above in the case of $\Nonnull(2^\omega)$, we can use $G$ to define a corresponding function $g\in2^\kappa$. We then define a family of $\kappa$ many elements of $2^\omega$ by letting $g_\alpha(n)=g(\alpha+n)$ for every limit ordinal $\alpha\lt\kappa$. Then the $g_\alpha$ are pairwise distinct because this happens with probability one. More percisely, for any distinct limit ordinals $\alpha,\beta\lt\kappa$ let</p>
 
       <eqn->
-    A_{\alpha,\beta}=\set{x\in2^\omega\mid(\forall n)\;x(\alpha+n)=x(\beta+n)}\text{.}
+        A_{\alpha,\beta}=\set{x\in2^\omega\mid(\forall n)\;x(\alpha+n)=x(\beta+n)}\text{.}
       </eqn->
 
       <p>Then $A_{\alpha,\beta}$ is $G_\delta$ and null. To see that it is null, note that $A_{\alpha,\beta}$ is the intersection of the independent events</p>
 
       <eqn->
-    A_{\alpha,\beta,n}=\set{x\in2^\omega\mid x(\alpha+n)=x(\beta+n)}\text{,}
+        A_{\alpha,\beta,n}=\set{x\in2^\omega\mid x(\alpha+n)=x(\beta+n)}\text{,}
       </eqn->
 
       <p>Since each of these events has probability $1/2$, we have $m(A_{\alpha,\beta})=\prod_n\frac12=0$ and so $A_{\alpha,\beta}$ is null. It now follows from <ref- target="lem:random-conull"></ref-> that $g$ lies in the complement of $A_{\alpha,\beta}$ (interpreted in $V[G]$) and therefore that $g_\alpha\neq g_\beta$.</p>
@@ -2753,7 +2622,6 @@
     </proof->
 
     <exerc->
-
       <p>Show that the random forcing partial order, together with $[\emptyset]$, forms a complete Boolean algebra. Here, a Boolean algebra $B$ is <dfn>complete</dfn> if every subset $X\subset B$ has a least upper bound.</p>
     </exerc->
     <!--
@@ -2767,7 +2635,7 @@
     <section>
     <h->Random forcing and Cichoń's diagram</h->
 
-      <p>So far we have seen only similarities between the effects of Cohen and random forcing. In this section we investigate the effect of random forcing on Cichoń's diagram, and in the process we'll see that the two forcing notions are not the same. In fact the effect random forcing on the characteristics of $\Null$.  is analogous to the effect of Cohen forcing on the characteristics of $\Meager$</p>
+    <p>So far we have seen only similarities between the effects of Cohen and random forcing. In this section we investigate the effect of random forcing on Cichoń's diagram, and in the process we'll see that the two forcing notions are not the same. In fact the effect random forcing on the characteristics of $\Null$.  is analogous to the effect of Cohen forcing on the characteristics of $\Meager$</p>
 
     <thm- id="thm:random-cichon">
       <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal. Then forcing with $\Nonnull(2^\kappa)$ results in all cardinals in the bottom two lines of Cichoń's diagram equal to $\aleph_1$ and all cadrinals in the top line of Cichoń's diagram equal to $\mathfrak c=\kappa$ (see <ref- target="fig:cichon-random"></ref->).</p>
@@ -2793,12 +2661,10 @@
     <p>We begin by addressing the effect of random forcing on the domination order. The following result shows that a much stronger property holds than in the case of Cohen forcing; compare it with <ref- target="lem:cohen-dominating"></ref->.</p>
 
     <lem->
-
       <p>Let $\PP=\Nonnull(2^\kappa)$ and let $G$ be a $V$-generic filter. Then in $V[G]$ we have that for all $h\in\omega^\omega$ there exists $f\in \omega^\omega\cap V$ such that $h\leq f$.</p>
     </lem->
 
     <proof->
-
       <p>It suffices to define a function $f$ in $V$ with the property that for every $p\in\PP$ there exists $q\leq p$ such that $q\forces(\forall n)\;\dot h(n)\leq\check f(n)$. Indeed, if this is the case then the set of such $q$ is dense, and so there is such a $q$ in $G$. Then by the forcing theorem we will have that $V[G]$ satisfies $h\leq f$.</p>
 
       <p>For each fixed $n\in\omega$, we define $f(n)$ as follows. For each $m$, let $p_m\leq p$ be such that $p_m\forces\dot h\in\omega^\omega\wedge\dot h(\check n)=\check m$. If there is no such $p_m$, simply let $p_m=[\emptyset]$. Then the collection of $p_m$ is pairwise incompatible, or in terms of representing sets, pairwise disjoint. Letting $p'=\bigcup p_m$, choose $f(n)$ to be large enough so that the measure of $q_n=\bigcup_{m\leq f(n)}p_m$ is at least $(1-2^{-n-2})m(p)$.</p>
@@ -2814,15 +2680,13 @@
       <p>It follows that $m(q)\gt 0$, and this completes the proof.</p>
     </proof->
 
-      <p>We can use this result directly to compute the values of $\mathfrak b$ and $\mathfrak d$ in the random forcing extension.</p>
+    <p>We can use this result directly to compute the values of $\mathfrak b$ and $\mathfrak d$ in the random forcing extension.</p>
 
     <thm- id="thm:random-bd">
-
       <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal. Let $\PP=\Nonnull(2^\kappa)$ and let $G$ be a $V$-generic filter. Then in $V[G]$, we have $\mathfrak b=\mathfrak d=\aleph_1$.</p>
     </thm->
 
     <proof->
-
       <p>By the previous lemma, the ground model $V\cap\omega^\omega$ is a dominating family of size $\aleph_1$ in $V[G]$.</p>
     </proof->
 
@@ -2835,25 +2699,22 @@
     As was the case with <ref- target="lem:random-conull"></ref->, the following result can be stated for Borel sets.
 
     <lem->
-
       <p>Let $\PP$ be any forcing and let $G$ be $V$-generic. Suppose $A$ is a $G_\delta$ set of $V$, and let $A^*$ be the interpretation of $A$ in $V[G]$. If $A$ is null, then $A^*$ is null.</p>
     </lem->
 
     <proof->
-
       <p>First suppose that $A$ is open. Clearly such a set cannot be null, but we will show that $A$ and $A^*$ have the same measure. First, express $A$ as a union $\bigcup V_{s_n}$. By throwing away any summands that are contained in another, we can suppose without loss of generality that the $V_{s_n}$ are disjoint. Thus the measure of both $A$ and $A^*$ are equal to $\sum2^{-|s_n|}$, as desired.</p>
 
-     Now suppose that $A=\bigcap_m\bigcup A_m$ where $A_m$ are open, and suppose that $A$ is null. By continuity from above (see <ref- target="exerc:continuity-above"></ref->), we have $m(A)=\inf m(A_m)=0$. By the same reasoning in $V[G]$, we have $m(A^*)=\inf m(A_m^*)$, and by the result of the previous paragraph, the latter quantity equals $\inf m(A_m)=0$, as desired.
+       Now suppose that $A=\bigcap_m\bigcup A_m$ where $A_m$ are open, and suppose that $A$ is null. By continuity from above (see <ref- target="exerc:continuity-above"></ref->), we have $m(A)=\inf m(A_m)=0$. By the same reasoning in $V[G]$, we have $m(A^*)=\inf m(A_m^*)$, and by the result of the previous paragraph, the latter quantity equals $\inf m(A_m)=0$, as desired.
     </proof->
      -->
     <p>Before the proof, we need a factorization lemma to take the place of <ref- target="lem:product"></ref->. The following result is similar, but with one important difference. Whereas in <ref- target="lem:product"></ref-> the two factors $\PP_1$ and $\PP_2$ were defined in $V$, this time the second factor $\PP_2$ must be defined in the extension $V[G_1]$ after the forcing with $\PP_1$.</p>
 
     <lem->
-
       <p>Let $\PP=\Nonnull(2^\kappa)$, and let $G\subset\PP$ be $V$-generic. Let $I\subset\kappa$, $\PP_1=\Nonnull(2^I)$, and $G_1=\set{A\restriction2^I\mid A\in G}$. Now in $V[G_1]$ define $\PP_2=\Nonnull(2^{\kappa\smallsetminus I})$ and $G_2=\set{q\in\PP_2\mid(\exists p\in\PP_1)\;p\hat{\times} q\in G}$. Then $G_1$ is $V$-generic for $\PP_1$, $G_2$ is $V[G_1]$-generic for $\PP_2$, and $V[G]=V[G_1][G_2]$.</p>
     </lem->
 
-      <p>We omit the proof [temporarily]. [We also need the definition of $p\hat{\times}q$, see Kunen V.4.30.]</p>
+    <p>We omit the proof [temporarily]. [We also need the definition of $p\hat{\times}q$, see Kunen V.4.30.]</p>
 
     <proof->
       <proof-label>Proof of <ref- target="thm:random-null"></ref-></proof-label>
@@ -2871,13 +2732,13 @@
     </proof->
 
     <notes->
-
       <p>Some of the results of this section are proved in Kunen, Section&nbsp;IV.7. Others appear as exercises in Section&nbsp;V.4. The ideas of the proofs are also summarized in Blass, Subsection&nbsp;11.4.</p>
     </notes->
 
-
     </section>
-    <section><h->Hechler forcing and Cichoń's diagram</h->
+
+    <section>
+    <h->Hechler forcing and Cichoń's diagram</h->
 
     <figure id="fig:cichon-hechler">
       <!-- <tikzpicture\gt 1every node/.style={minimum size=20pt},->]
