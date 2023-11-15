@@ -122,8 +122,8 @@ class crossreference extends HTMLElement {
     if (target?.querySelector('enunciation-label')) {
       anchorHtml = target.querySelector('enunciation-label').innerHTML;
     }
-    else if (target?.querySelector('blame-')) { // only otherwise, use author-provided blame- / title [not both, it'll be too long]
-      anchorHtml = target.querySelector('blame-')?.innerHTML;
+    else if (target?.querySelector('e-title')) { // only otherwise, use author-provided enunciation title [not both, it'll be too long]
+      anchorHtml = target.querySelector('e-title')?.innerHTML;
     }
     else anchorHtml = `<mark>${targetId}$</mark>`; // if all else fails
     this.innerHTML = `<a href="#${targetId}">${anchorHtml}</a>`;

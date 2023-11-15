@@ -38,10 +38,10 @@ enunciation-label::after {
   content: ".";
 }
 
-blame-::before {
+e-title-::before {
   content: " (";
 }
-blame-::after {
+e-title-::after {
   content: ") ";
 }
 
