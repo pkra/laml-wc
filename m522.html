@@ -379,10 +379,9 @@
 
     <p>Let us naïvely begin to construct a measure $m$ that is at least defined on reasonable sets. First, condition (a) implies we should let $m(I)=\ell(I)$ for any interval $I$. Next, if $A=\bigcup I_n$ is a union of disjoint intervals $I_n$, then condition (c) implies we should let $m(A)=\sum\ell(I_n)$. Third, if $A=\bigcap A_n$ is an intersection of sets where $m$ is defined and finite, then it is natural to define $m(A)=\inf m(A_n)$. We now observe that all three of the above simple cases fit into the rule given by the following key formula:</p>
 
-    \begin{equation}
-      \label{eq:measure}
+    <eqn- id="eq:measure>
       m(A)=\inf\set{\sum\ell(I_n)\mid A\subset\bigcup I_n}
-    \end{equation}
+    </eqn->
 
     <p>The next result states that this rule for defining $m$ actually works for all sets that are reasonably constructible. Recall that a <dfn>Borel set</dfn> is one that can be constructed by beginning with the intervals and then executing countably many countable unions or intersections.</p>
 
@@ -392,7 +391,7 @@
     </thm->
 
     <proof->
-    <proof-label>Proof of conditions (a) and (b) only</proof-label>
+      <proof-label>Proof of conditions (a) and (b) only</proof-label>
 
       <p>For condition&nbsp;(a), let $I$ be an interval. It is clear that $m(I)\leq\ell(I)$, since $I$ itself is an interval covering $I$. For the other direction, we will show that $I\subset\bigcup I_n$ implies $\sum\ell(I_n)\geq\ell(I)$. Then taking the infemum over all such coverings this allows us to conclude that $m(I)\geq\ell(I)$.</p>
 
