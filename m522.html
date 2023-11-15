@@ -509,20 +509,20 @@
       <p>Replacing $B$ with $j(B)$, we may suppose that that $B\subset A$. Then we have</p>
 
       <eqn->
-    A\supset B\supset i(A)\supset i(B)\supset i^2(A)\supset\cdots
+        A\supset B\supset i(A)\supset i(B)\supset i^2(A)\supset\cdots
       </eqn->
 
       <p>Now $A$ can be written as the union of the successive differences of these sets, together with the intersection of them all:</p>
 
       <eqn->
-    A=(A\mathord{\smallsetminus}B)\cup(B\mathord{\smallsetminus}i(A))
-      \cup(i(A)\mathord{\smallsetminus}i(B))\cup\cdots\cup \bigcap i^n(A)
+        A=(A\mathord{\smallsetminus}B)\cup(B\mathord{\smallsetminus}i(A))
+        \cup(i(A)\mathord{\smallsetminus}i(B))\cup\cdots\cup \bigcap i^n(A)
       </eqn->
 
       <p>Meanwhile, $i$ gives bijections</p>
 
       <eqn->
-    A\mathord{\smallsetminus}B\leftrightarrow i(A)\mathord{\smallsetminus}i(B)\leftrightarrow i^2(A)\mathord{\smallsetminus}i^2(B)\leftrightarrow\cdots
+        A\mathord{\smallsetminus}B\leftrightarrow i(A)\mathord{\smallsetminus}i(B)\leftrightarrow i^2(A)\mathord{\smallsetminus}i^2(B)\leftrightarrow\cdots
       </eqn->
 
       <p>It follows that the map</p>
@@ -595,27 +595,27 @@
     <p>Ordinal numbers play a central role in set theory, including both cardinality theory and forcing. While cardinal numbers are needed to measure the <em>size</em> of an infinite set, ordinal numbers are needed to measure the <em>length</em> of an infinite well-ordered set. The ordinals can be used to extend the notion of <em>counting</em> into the infinite, and also to give a formal definition of the $\aleph$ cardinals described in the previous section.</p>
 
     <p>The initial goal in defining the ordinals is to provide a collection of well-ordered sets such that for any given well-ordered set $A$ there is one and only one ordinal $\alpha$ such that $A$ is isomorphic to $\alpha$. For finite well-ordered sets, we can write such a definition explicitly:</p>
+    
     <eqn->
-        \begin{align*}
+      \begin{align*}
         0&amp;=\emptyset\\
         1&amp;=\{0\}\\
         2&amp;=\{0,1\}\\
         \vdots\\
         n+1&amp;=\{0,\ldots,n\}
-        \end{align*}
+      \end{align*}
     </eqn->
+    
     <p>This construction can be summed up in one recurrence: $n+1=n\cup\{n\}$. The first infinite ordinal, called $\omega$ or $\omega_0$, is simply the union of all the finite ordinals. The process can then continue; the successor of $\omega$ is the ordinal $\omega+1=\omega\cup\{\omega\}$.</p>
 
     <p>Intuitively, infinite ordinals are all constructed in this fashion. If $\alpha$ is any ordinal then its successor is $\alpha+1=\alpha\cup\{\alpha\}$, and after infinitely many such steps we take a union. Unfortunately this prescription is not rigorous because it is circular; we cannot make a definition like $\alpha=\bigcup_{\beta\lt\alpha}\beta$. Instead we have the following more technical characterization.</p>
 
     <defn- id="defn-ordinals">
       <p>A set $\alpha$ is an <dfn>ordinal</dfn> if it satisfies the properties:</p>
-
       <ul>
         <li>$\alpha$ is well-ordered by the $\in$ relation (or more precisely by the relation $\leq$ defined as $\in$-or-equal);</li>
         <li>$\alpha$ is transitive: if $\gamma\in\beta\in\alpha$ then $\gamma\in\alpha$.</li>
       </ul>
-
     </defn->
 
     <rem->
@@ -686,14 +686,14 @@
 
     <p>If $A$ is a countable set then $A^\omega$ denotes the space of all sequences with values in $A$, that is, functions from $\omega$ to $A$. We can endow $A^\omega$ with a topology by regarding $A$ as discrete, $A^\omega$ as a product of countably many copies of $A$, and using the <dfn>product topology</dfn>. Officially a basic set in the product topology has the form</p>
 
-      <eqn->
-    \set{x\in A^\omega\mid x(i_0)\in A_0,\ldots,x(i_{n-1})\in A_{n-1}}
+    <eqn->
+      \set{x\in A^\omega\mid x(i_0)\in A_0,\ldots,x(i_{n-1})\in A_{n-1}}
     </eqn->
 
     <p>where $i_j\in\omega$ are distinct and $A_j\subset A$ are open. However in our case we can make two simplifications: since $\omega$ is countable we can replace $i_0,\ldots i_{n-1}$ with $0,\ldots,n-1$, and since $A$ is discrete we can suppose the $A_j$ are singletons. Putting this all together, we obtain a basis consisting of all</p>
 
-      <eqn->
-    V_s=\set{x\in A^\omega\mid s\subset x}
+    <eqn->
+      V_s=\set{x\in A^\omega\mid s\subset x}
     </eqn->
 
     <p>where $s$ is an element of $A^n$ for any $n$.</p>
@@ -792,14 +792,18 @@
 
     <section>
     <h->$\sigma$-compactness in Baire space</h->
-      <p>As we have discussed in the introduction, the exact cardinal value of the size of the set of all real numbers is independent of the axioms of set theory. That is, if we write $\mathfrak c=|\RR|$ then we know $\mathfrak c=\aleph_\alpha$ for some $\alpha\geq1$, but we do not know which one. Here $\mathfrak c$ stands for <dfn>continuum</dfn>. Since $\mathfrak c$ is also equal to the cardinality of Cantor space, it is also often denoted $2^{\aleph_0}$. In this section we discuss several cardinal values other than $\mathfrak c$ that arise from the special topology of the Baire space $\omega^\omega$.</p>
-      <p>We have measured the size of sets of real numbers using cardinality, category, and measure. We now introduce a fourth notion in the Baire space. A set $A\subset\omega^\omega$ is said to be <dfn>$\sigma$-compact</dfn> if it is the union of countably many compact sets.</p>
-      <p>Like the meager and null sets, the class of $\sigma$-compact sets is closed under countable unions. While the class of $\sigma$-compact sets is not closed under subsets, if one wishes they can simply consider instead the class of subsets of $\sigma$-compact sets instead. In a moment we shall show that the whole Baire space $\omega^\omega$ is not $\sigma$-compact, so that $\sigma$-compactness really is a good notion of a small set.</p>
+    
+    <p>As we have discussed in the introduction, the exact cardinal value of the size of the set of all real numbers is independent of the axioms of set theory. That is, if we write $\mathfrak c=|\RR|$ then we know $\mathfrak c=\aleph_\alpha$ for some $\alpha\geq1$, but we do not know which one. Here $\mathfrak c$ stands for <dfn>continuum</dfn>. Since $\mathfrak c$ is also equal to the cardinality of Cantor space, it is also often denoted $2^{\aleph_0}$. In this section we discuss several cardinal values other than $\mathfrak c$ that arise from the special topology of the Baire space $\omega^\omega$.</p>
+    
+    <p>We have measured the size of sets of real numbers using cardinality, category, and measure. We now introduce a fourth notion in the Baire space. A set $A\subset\omega^\omega$ is said to be <dfn>$\sigma$-compact</dfn> if it is the union of countably many compact sets.</p>
+
+    <p>Like the meager and null sets, the class of $\sigma$-compact sets is closed under countable unions. While the class of $\sigma$-compact sets is not closed under subsets, if one wishes they can simply consider instead the class of subsets of $\sigma$-compact sets instead. In a moment we shall show that the whole Baire space $\omega^\omega$ is not $\sigma$-compact, so that $\sigma$-compactness really is a good notion of a small set.</p>
 
     <rem->
       <p>Among the spaces we've explored so far, the notion of $\sigma$-compactness only works in the Baire space. That's because both $2^\omega$ and $\RR$ both have the property that the whole space is $\sigma$-compact: $\RR$ is the union of closed bounded intervals, and $2^\omega$ is itself compact.</p>
     </rem->
-      <p>We now introduce for the first time the process of associating <dfn>cardinal characteristics</dfn> to a class of sets. First we denote by $\Ksigma$ the class of all sets $A\subset\omega^\omega$ such that $A$ is a subset of some $\sigma$-compact set.</p>
+    
+    <p>We now introduce for the first time the process of associating <dfn>cardinal characteristics</dfn> to a class of sets. First we denote by $\Ksigma$ the class of all sets $A\subset\omega^\omega$ such that $A$ is a subset of some $\sigma$-compact set.</p>
 
     <defn->
       <ul>
@@ -807,7 +811,8 @@
         <li>The cardinal $\cov(\Ksigma)$ is the least cardinality of any family $\mathcal F$ of subsets of $\omega^\omega$ whose union covers all of $\omega^\omega$.</li>
       </ul>
     </defn->
-      <p>Our next result will generalize Cantor's theorem by showing that the cardinals $\non(\Ksigma)$ and $\cov(\Ksigma)$ are uncountable lower bounds for the value of the continuum. First we need the following characterizations of compact sets in Baire space.</p>
+    
+    <p>Our next result will generalize Cantor's theorem by showing that the cardinals $\non(\Ksigma)$ and $\cov(\Ksigma)$ are uncountable lower bounds for the value of the continuum. First we need the following characterizations of compact sets in Baire space.</p>
 
     <lem- id="lem:baire-compact">
       <p>A subset $A\subset\omega^\omega$ is compact if and only if it is a closed subset of some product of bounded intervals $\prod_{n\in\omega}\{0,\ldots,K_n\}$.</p>
@@ -822,15 +827,18 @@
     </thm->
 
     <proof->
-      It is clear that $\aleph_1\leq\non(\Ksigma)$ because every countable set is $\Ksigma$, being the union of its points. To see that $\non(\Ksigma)\leq\mathfrak c$ it is enough to show that $\omega^\omega$ itself is not $\sigma$-compact. So suppose towards a contradiction that $\omega^\omega=\bigcup A_n$ where each $A_n$ is compact. Then by the Baire category theorem, at least one of the $A_n$ must have a nonempty interior, say $V_s\subset A_n$. But $V_s$ is not contained in a product of bounded intervals, so by <ref- target="lem:baire-compact"></ref-> this contradicts that $A_n$ is compact.
+      <p>It is clear that $\aleph_1\leq\non(\Ksigma)$ because every countable set is $\Ksigma$, being the union of its points. To see that $\non(\Ksigma)\leq\mathfrak c$ it is enough to show that $\omega^\omega$ itself is not $\sigma$-compact. So suppose towards a contradiction that $\omega^\omega=\bigcup A_n$ where each $A_n$ is compact. Then by the Baire category theorem, at least one of the $A_n$ must have a nonempty interior, say $V_s\subset A_n$. But $V_s$ is not contained in a product of bounded intervals, so by <ref- target="lem:baire-compact"></ref-> this contradicts that $A_n$ is compact.</p>
+      
       <p>To show that $\aleph_1\leq\cov(\Ksigma)$, suppose a countable family of $\sigma$-compact sets covered all of $\omega^\omega$. Then a countable family of compact sets would also cover all of $\omega^\omega$, again contradicting that $\omega^\omega$ is not $\sigma$-compact. Finally it is clear that $\cov(\Ksigma)\leq\mathfrak c$, since the whole space $\omega^\omega$ is the union of its points and $|\omega^\omega|=\mathfrak c$.</p>
     </proof->
-      <p>In fact we'll see shortly that $\non(\Ksigma)\leq\cov(\Ksigma)$.</p>
+    
+    <p>In fact we'll see shortly that $\non(\Ksigma)\leq\cov(\Ksigma)$.</p>
 
     <rem- id="rem:ksigma-meager">
       It follows from the proof of <ref- target="thm:k-sigma"></ref-> that every $\Ksigma$ set in $\omega^\omega$ is meager. Indeed, compact sets are closed, and moreover since they are bounded they cannot contain any basic open sets $V_s$. It follows that compact sets are nowhere dense, and hence $\sigma$-compact sets are meager. This in turn implies the Baire category property for $\sigma$-compact sets: $\omega^\omega$ is not $\sigma$-compact and any basic open neighborhood $V_s$ is not $\sigma$-compact.
     </rem->
-      <p>We now work establish a key relationship between the cardinals $\non(\Ksigma)$ and $\cov(\Ksigma)$, and the combinatorics of the Baire space. To begin, we can partially order Baire space by $f\leq g$ iff for all $n$, we have $f(n)\leq g(n)$. We also have the more versatile <dfn>eventual domination</dfn> order: $f\leq^*g$ if $f\leq g$ almost everywher, that is, there is some $N$ such that for all $n\geq N$ we have $f(n)\leq g(n)$. Of course eventual domination is not a partial order because $f\leq^*g\leq^*f$ only implies that $f$ and $g$ agree almost everywhere, which we denote by $f=^*g$.</p>
+    
+    <p>We now work establish a key relationship between the cardinals $\non(\Ksigma)$ and $\cov(\Ksigma)$, and the combinatorics of the Baire space. To begin, we can partially order Baire space by $f\leq g$ iff for all $n$, we have $f(n)\leq g(n)$. We also have the more versatile <dfn>eventual domination</dfn> order: $f\leq^*g$ if $f\leq g$ almost everywher, that is, there is some $N$ such that for all $n\geq N$ we have $f(n)\leq g(n)$. Of course eventual domination is not a partial order because $f\leq^*g\leq^*f$ only implies that $f$ and $g$ agree almost everywhere, which we denote by $f=^*g$.</p>
 
     <defn->
       <ul>
@@ -838,7 +846,8 @@
         <li>A subset $\mathcal F\subset\omega^\omega$ is said to be an <dfn>unbounded family</dfn> if there is no single $h\in\omega^\omega$ such that $f\leq^*h$ for all $f\in\mathcal F$. The <dfn>unbounding number</dfn> $\mathfrak b$ is the smallest cardinality of any unbounded family.</li>
       </ul>
     </defn->
-      <p>The following result records the relationship between these two cardinal values.</p>
+    
+    <p>The following result records the relationship between these two cardinal values.</p>
 
     <prop- id="prop:bd">
       <p>We have $\aleph_1\leq\mathfrak{b}\leq\mathfrak{d}\leq\mathfrak{c}$.</p>
@@ -848,20 +857,25 @@
       <p>We begin by showing that $\mathfrak{b}$ is uncountable. For this, it is enough to show that every countable family $\mathcal F\subset\omega^\omega$ is bounded by some $h\in\omega^\omega$. So let $\mathcal F\subset\omega^\omega$ be a countable family and enumerate its elements $f_0,f_1,\ldots$. To construct the bound $h$, we use a diagonalization process similar to the proof of Cantor's theorem. More specifically, we define $h(n)$ so that it dominates $f_0(n),\ldots,f_n(n)$:</p>
 
       <eqn->
-    h(n)=\max\set{f_i(n)\mid 0\leq i\leq n}
+        h(n)=\max\set{f_i(n)\mid 0\leq i\leq n}
       </eqn->
+      
       <p>Then for each $i$ we have $f_i(n)\leq h(n)$ for all $n\geq i$, and therefore $f_i\leq^*h$, as desired.</p>
+      
       <p>To show that $\mathfrak{b}\leq\mathfrak{d}$, it is enough to show that every dominating family is unbounded. Let us establish the contrapositive: if $\mathcal F$ is bounded, say by $h\in\omega^\omega$, then every $f\in\mathcal F$ satisfies $f\leq^*h$. Letting $h'(n)=h(n+1)$, it follows that every $f\in\mathcal F$ satisfies $h'\not\leq^*f$, and hence that $\mathcal F$ is not a dominating family.</p>
+      
       <p>Finally, $\mathfrak d\leq\mathfrak c$ since $\mathcal F=\omega^\omega$ is itself a dominating family, and $|\omega^\omega|=\mathfrak c$.</p>
     </proof->
-      <p>We are now ready to state the connection between $\Ksigma$ sets and the eventual domination ordering.</p>
+    
+    <p>We are now ready to state the connection between $\Ksigma$ sets and the eventual domination ordering.</p>
 
     <thm- id="thm:bd-vs-ksigma">
       <p>We have $\mathfrak b=\non(\Ksigma)$ and $\mathfrak d=\cov(\Ksigma)$.</p>
     </thm->
 
     <proof->
-      Let us say that a family $\mathcal F\subset\omega^\omega$ is $\leq$-bounded if there is an $h\in\omega^\omega$ such that $f\leq h$ for all $f\in\mathcal F$, and that $\mathcal F$ is $\leq^*$-bounded if there is an $h\in\omega^\omega$ such that $f\leq^*h$ for all $f\in\mathcal F$. Then it is clear from <ref- target="lem:baire-compact"></ref-> that a family $\mathcal F$ is $\leq$-bounded if and only if $\mathcal F$ is contained in a compact set. To establish the first equality in the theorem, it suffices to show that a family $\mathcal F$ is $\leq^*$-bounded if and only if $\mathcal F$ is contained in a $\sigma$-compact set.
+      <p>Let us say that a family $\mathcal F\subset\omega^\omega$ is $\leq$-bounded if there is an $h\in\omega^\omega$ such that $f\leq h$ for all $f\in\mathcal F$, and that $\mathcal F$ is $\leq^*$-bounded if there is an $h\in\omega^\omega$ such that $f\leq^*h$ for all $f\in\mathcal F$. Then it is clear from <ref- target="lem:baire-compact"></ref-> that a family $\mathcal F$ is $\leq$-bounded if and only if $\mathcal F$ is contained in a compact set. To establish the first equality in the theorem, it suffices to show that a family $\mathcal F$ is $\leq^*$-bounded if and only if $\mathcal F$ is contained in a $\sigma$-compact set.</p>
+      
       <p>For this, suppose that $\mathcal F$ is $\leq^*$-bounded by $h\in\omega^\omega$. Let $h_i$ enumerate all finite modifications of $h$, so that for all $f\in\mathcal F$ there is some $i$ such that $f\leq h_i$. It follows that $\mathcal F$ is contained in the $\sigma$-compact set of functions that are $\leq$-bounded by some $h_i$. Conversely, suppose that $\mathcal F\subset\bigcup A_i$, where each $A_i$ is compact. Then for each $i$ there exists some $h_i\in\omega^\omega$ such that $A_i$ is $\leq$-bounded by $h_i$. Since $\aleph_1\leq\mathfrak b$, there exists $h$ such that $h_i\leq^*h$ for all $i$. It follows that $\mathcal F$ is $\leq^*$-bounded by $h$.</p>
       <p>The second equality is similar. If $\mathcal F$ is a dominating family then consider the collection of all $A_f=\set{g\mid g\leq f}$ for $f$ a finite modification of an element of $\mathcal F$. This latter collection is a family of compact sets that covers all of $\omega^\omega$. Conversely if $\mathcal F$ is a family of compact subsets of $\omega^\omega$ that covers all of $\omega^\omega$, then each $F\in\mathcal F$ is $\leq$-bounded by some $h_F\in\omega^\omega$. It follows that the collection of all $h_F$ is a dominating family.</p>
     </proof->
@@ -891,18 +905,16 @@
 
     <p>An ideal $\mathcal I$ is called a <dfn>$\sigma$-ideal</dfn> if it is additionally closed under countable unions. In the past several sections, we have discussed three key notions of smallness and each one is a $\sigma$-ideal.</p>
 
-      <ul>
-        <li>$\Meager$ is the ideal of meager subsets of $\RR$.</li>
-        <li>$\Null$ is the ideal of Lebesgue null subsets of $\RR$.</li>
-        <li>$\Ksigma$ is the ideal of subsets of $\omega^\omega$ which are contained in a $\sigma$-compact subset of $\omega^\omega$.</li>
-      </ul>
+    <ul>
+      <li>$\Meager$ is the ideal of meager subsets of $\RR$.</li>
+      <li>$\Null$ is the ideal of Lebesgue null subsets of $\RR$.</li>
+      <li>$\Ksigma$ is the ideal of subsets of $\omega^\omega$ which are contained in a $\sigma$-compact subset of $\omega^\omega$.</li>
+    </ul>
 
-      <p>As was the case with $\Ksigma$, we can associate cardinal characteristics to any ideal. We will consider four key characteristics.</p>
+    <p>As was the case with $\Ksigma$, we can associate cardinal characteristics to any ideal. We will consider four key characteristics.</p>
 
     <defn->
-
       <p>Let $\mathcal I$ be an ideal of subsets of a set $X$, such that $\mathcal I$ contains all singletons of $X$.</p>
-
       <ul>
         <li>The <dfn>additivity</dfn> of $\mathcal{I}$, $\add(\mathcal{I})$, is the smallest number of sets in $\mathcal{I}$ whose union is not in $\mathcal{I}$.</li>
         <li>The <dfn>uniformity</dfn> of $\mathcal{I}$, $\non(\mathcal{I})$, is the smallest cardinality of any subset of $X$ that is not in $\mathcal{I}$.</li>
@@ -912,41 +924,35 @@
     </defn->
 
     <rem->
-
       <p>The cofinality of an ideal is the least number of sets you need to generate the ideal by closing under subsets. More precisely, a subset $\mathcal B\subset\mathcal I$ is called a <dfn>basis</dfn> for $\mathcal I$ if every element of $I$ is a subset of some element of $\mathcal B$. Thus the cofinality of $\mathcal I$ is the least cardinality of a basis for $\mathcal I$.</p>
     </rem->
 
-      <p>As was the case with the cardinals we introduced in the previous section, assuming $\mathcal I$ is reasonable, all four of the cardinals characteristics associated with $\mathcal I$ provides an uncountable lower bound for the value of the continuum.</p>
+    <p>As was the case with the cardinals we introduced in the previous section, assuming $\mathcal I$ is reasonable, all four of the cardinals characteristics associated with $\mathcal I$ provides an uncountable lower bound for the value of the continuum.</p>
 
     <lem- id="lem:ideal-cards">
-
       <p>Suppose that $\mathcal I$ is a proper $\sigma$-ideal, $\mathcal I$ contains the singletons, and that $\mathcal I$ has a basis consisting of Borel sets. Then each of the four cardinals above is uncountable and bounded above by $\mathfrak c$.</p>
     </lem->
 
     <proof->
-
       <p>The additivity of $\mathcal I$ is uncountable simply because $\mathcal I$ is a $\sigma$-ideal. In the next lemma we will show that if $\mathcal I$ is a proper $\sigma$-ideal containing the singletons, then the additivity of $\mathcal I$ is a lower bound for all four cardinal characteristics of $\mathcal I$, and hence all four are uncountable.</p>
 
       <p>Next, it is easy to verify that for any proper $\sigma$-ideal $\mathcal I$ containing the singletons, the additivity, uniformity, and covering number of $\mathcal I$ are bounded above by $\mathfrak c$. If additionally $\mathcal I$ has a basis consisting of Borel sets, then since there are only $\mathfrak c$ many Borel sets, we have that the cofinality of $\mathcal I$ is bounded above by $\mathfrak c$ too.</p>
     </proof->
 
-      <p>All three of the $\sigma$-ideals we have introduced have a basis of Borel sets. For $\Ksigma$ this is clear because $\sigma$-compact sets are Borel. For $\Meager$ any meager set is contained in a countable union of <em>closed</em> nowhere dense sets, which are Borel. Finally for $\Null$, note that if $A$ is null then for all $n$ there is a Borel set $A_n$ such that $A\subset A_n$ and $m(A_n)\gt 1/n$. It follows that $A$ is contained in the Borel null set $\bigcap A_n$.</p>
+    <p>All three of the $\sigma$-ideals we have introduced have a basis of Borel sets. For $\Ksigma$ this is clear because $\sigma$-compact sets are Borel. For $\Meager$ any meager set is contained in a countable union of <em>closed</em> nowhere dense sets, which are Borel. Finally for $\Null$, note that if $A$ is null then for all $n$ there is a Borel set $A_n$ such that $A\subset A_n$ and $m(A_n)\gt 1/n$. It follows that $A$ is contained in the Borel null set $\bigcap A_n$.</p>
 
     <rem->
-
       <p>There can exist proper $\sigma$-ideals containing the singletons that don't have a basis of size $\leq\mathfrak c$. For example, it is consistent that the ideal $\mathcal{SN}$ of <em>strongly null</em> sets has $\cof(\mathcal{SN})=\aleph_2$ while $\mathfrak c=\aleph_1$. [ref]</p>
       <!-- % yorioka -->
     </rem->
 
-      <p>We next establish the basic relationships between the four cardinal characteristics associated with $\mathcal I$.</p>
+    <p>We next establish the basic relationships between the four cardinal characteristics associated with $\mathcal I$.</p>
 
     <lem- id="lem:diamond">
-
       <p>Suppose that $\mathcal I$ is a proper $\sigma$-ideal and that $\mathcal I$ contains the singletons. Then we have the inequalities $\add(\mathcal I)\leq\non(\mathcal I)\leq\cof(\mathcal I)$, and also $\add(\mathcal I)\leq\cov(\mathcal I)\leq\cof(\mathcal I)$.</p>
     </lem->
 
     <proof->
-
       <p>For the inequality $\add(\mathcal{I})\leq\non(\mathcal{I})$, we will show that for every set $A$ not in $\mathcal I$, we can find a family $\mathcal F$ of the same (or lower) cardinality such that $\bigcup\mathcal F\notin I$. This is easy: if $A\notin\mathcal I$, then the family $\mathcal F$ consisting of all $\{a\}$ such that $a\in A$ has the same cardinality as $A$ and satisfies $\bigcup\mathcal F\notin\mathcal I$.</p>
 
       <p>The proofs of each of the next three inequalities follows the same form: given a set indicated by the right-hand side, find a set of the same or lower cardinality indicated by the left-hand side. So to show $\non(\mathcal I)\leq\cof(\mathcal I)$, let $\mathcal F\subset \mathcal{I}$ be a basis for $\mathcal I$. For each set $B\in\mathcal F$ choose an element $x_B\notin B$ and let $A=\set{x_B\mid B\in\mathcal F}$. Then $A$ has the same or lower cardinality as $\mathcal F$, and we claim that $A\notin\mathcal{I}$. Indeed if $A\in\mathcal{I}$ then we would have $A\subseteq B$ for some $B\in\mathcal F$, contradicting that $x_B\notin B$.</p>
@@ -977,37 +983,31 @@
       \end{CD}$$ -->
 
       <figcaption>
-
-      <p>The relationships between the cardinal characteristics of $\mathcal I$, assuming $\mathcal I$ satisfies the hypotheses of the two lemmas. In the figure, the arrow $\leftarrow$ represents the inequality $\leq$.</p>
-      
+        <p>The relationships between the cardinal characteristics of $\mathcal I$, assuming $\mathcal I$ satisfies the hypotheses of the two lemmas. In the figure, the arrow $\leftarrow$ represents the inequality $\leq$.</p>
       </figcaption>
     </figure>
 
-      <p>In the previous section we introduced $\Ksigma$, but we dealt only with the characteristics $\non(\Ksigma)$ and $\cov(\Ksigma)$. We conclude this section by giving the values of $\add(\Ksigma)$ and $\cof(\Ksigma)$ as well.</p>
+    <p>In the previous section we introduced $\Ksigma$, but we dealt only with the characteristics $\non(\Ksigma)$ and $\cov(\Ksigma)$. We conclude this section by giving the values of $\add(\Ksigma)$ and $\cof(\Ksigma)$ as well.</p>
 
     <prop->
-
       <p>We have $\add(\Ksigma)=\mathfrak b$ and $\cof(\Ksigma)=\mathfrak d$.</p>
     </prop->
 
     <proof->
-      We have already shown that $\add(\Ksigma)\leq\non(\Ksigma)=\mathfrak b$. For the reverse inequality, first recall from <ref- target="thm:bd-vs-ksigma"></ref-> that a subset of $\omega^\omega$ is unbounded if and only if it is not $\Ksigma$. Now suppose that $\mathcal F$ is a family of $\Ksigma$ subsets of $\omega^\omega$ such that $\bigcup\mathcal F$ is not $\Ksigma$. For each $F\in\mathcal F$ let $g_F$ be a bound for $F$. Then $\set{g_F\mid F\in\mathcal F}$ is an unbounded family: Indeed, otherwise the set of things bounded by some $g_F$ would be bounded and hence so would $\bigcup\mathcal F$. This shows that $\add(\Ksigma)\geq\mathfrak b$.
+      <p>We have already shown that $\add(\Ksigma)\leq\non(\Ksigma)=\mathfrak b$. For the reverse inequality, first recall from <ref- target="thm:bd-vs-ksigma"></ref-> that a subset of $\omega^\omega$ is unbounded if and only if it is not $\Ksigma$. Now suppose that $\mathcal F$ is a family of $\Ksigma$ subsets of $\omega^\omega$ such that $\bigcup\mathcal F$ is not $\Ksigma$. For each $F\in\mathcal F$ let $g_F$ be a bound for $F$. Then $\set{g_F\mid F\in\mathcal F}$ is an unbounded family: Indeed, otherwise the set of things bounded by some $g_F$ would be bounded and hence so would $\bigcup\mathcal F$. This shows that $\add(\Ksigma)\geq\mathfrak b$.</p>
 
-      The second equality is similar and left as <ref- target="exerc:non-ksigma-d"></ref->.
+      <p>The second equality is similar and left as <ref- target="exerc:non-ksigma-d"></ref->.</p>
     </proof->
 
     <exerc- id="exerc:non-ksigma-d">
-
       <p>Show that $\cof(\Ksigma)=\mathfrak d$.</p>
     </exerc->
 
     <exerc->
-
       <p>Let $\mathcal I$ be the ideal of all countable subsets of $\RR$. What are the values of the four cardinal characteristics of $\mathcal I$?</p>
     </exerc->
 
     <notes->
-
       <p>We have finally entered into the material covered in the book Bartoszyński--Judah, <cite>Set theory: on the structure of the real line</cite>. The basic properties of $\sigma$-ideals and their cardinals begins in Section&nbsp;1.3.</p>
     </notes->
 
@@ -1016,17 +1016,15 @@
     <section>
     <h->Cichoń's diagram</h->
 
-      <p>So far we have seen many similarities between the various size notions that we have discussed. The classes of meager sets and null sets are both ideals, both proper, both closed under countable unions, and so on. In this section we further investigate how far this comparison extends, and in the process we reveal a deep and intricate connection between measure and category.</p>
+    <p>So far we have seen many similarities between the various size notions that we have discussed. The classes of meager sets and null sets are both ideals, both proper, both closed under countable unions, and so on. In this section we further investigate how far this comparison extends, and in the process we reveal a deep and intricate connection between measure and category.</p>
 
-      <p>To begin, it is natural to ask whether the meager and null sets are truly different notions. The following result shows that they are very different indeed: it is possible to be small according to either notion, and at the same time, large according to the other.</p>
+    <p>To begin, it is natural to ask whether the meager and null sets are truly different notions. The following result shows that they are very different indeed: it is possible to be small according to either notion, and at the same time, large according to the other.</p>
 
     <prop- id="prop:null-comeager">
-
       <p>There exists a null comeager set. There exists a meager conull set.</p>
     </prop->
 
     <proof->
-
       <p>The key is that we can construct dense open sets of arbitrarily small measure. That is, for each $n$ we will construct a dense open set $A_n$ such that $m(A_n)\gt 1/n$. Assuming we have done so, we let $A=\bigcap A_n$. Clearly the set $A$ is null. To see that it is comeager note that for all $n$, we have that $\RR\smallsetminus A_n$ is closed and nowhere dense. Thus $\RR\smallsetminus A=\bigcup(\RR\smallsetminus A_n)$ is meager.</p>
 
       <p>To construct the set $A_n$, let $q_0,q_1,\ldots$ be an enumeration of the rational numbers, and for each $i$ let $I_{n,i}$ be the open interval centered at $q_i$ of length $1/(n2^{i+1})$. We then let $A_n=\bigcup_iI_{n,i}$. Clearly $A_n$ is dense and open, and $m(A_n)\leq\sum_i1/(n2^{i+1})=1/n$.</p>
@@ -1034,10 +1032,10 @@
       <p>Finally, since $A$ is null and comeager, we clearly have that $\RR\smallsetminus A$ is meager and conull.</p>
     </proof->
 
-      <p>Although this result shows that category and measure are very different in terms of which sets they deem small, it also provides a certain symmetry between the two notions. The next result breaks this symmetry, and in its place provides an intricate structure of relationships between category and measure. This result is what we came all this way to see.</p>
+    <p>Although this result shows that category and measure are very different in terms of which sets they deem small, it also provides a certain symmetry between the two notions. The next result breaks this symmetry, and in its place provides an intricate structure of relationships between category and measure. This result is what we came all this way to see.</p>
 
     <thm- id="thm:cichon">
-      The cardinal characteristics defined in the previous sections exhibit the pattern of inequalities known as <dfn>Cichoń's diagram</dfn>, which is depicted in <ref- target="fig:cichon"></ref->.
+      <p>The cardinal characteristics defined in the previous sections exhibit the pattern of inequalities known as <dfn>Cichoń's diagram</dfn>, which is depicted in <ref- target="fig:cichon"></ref->.</p>
     </thm->
 
     <figure id="fig:cichon">
@@ -1114,9 +1112,9 @@
     </figure>
 
     <rem->
-      In Cichoń's diagram, the $\Meager$ symbol can stand for the meager ideal on any one of the spaces $\RR$, $2^\omega$, or $\omega^\omega$. Indeed, we have already seen in <ref- target="prop:cantor-baire-homeo"></ref-> that $\RR$ and $\omega^\omega$ can be made homeomorphic after removing a countable subset of each. In <ref- target="exerc:meager-bij"></ref->, we show that the same is true of $\RR$ and $2^\omega$.
+      <p>In Cichoń's diagram, the $\Meager$ symbol can stand for the meager ideal on any one of the spaces $\RR$, $2^\omega$, or $\omega^\omega$. Indeed, we have already seen in <ref- target="prop:cantor-baire-homeo"></ref-> that $\RR$ and $\omega^\omega$ can be made homeomorphic after removing a countable subset of each. In <ref- target="exerc:meager-bij"></ref->, we show that the same is true of $\RR$ and $2^\omega$.</p>
 
-      Similarly, the $\Null$ symbol can stand for the null ideal on either $\RR$ or $2^\omega$; see <ref- target="exerc:null-bij"></ref->. In fact, it is possible to define a natural measure on $\omega^\omega$, and then $\Null$ can stand for the null ideal on $\omega^\omega$ too. [ref]
+      <p>Similarly, the $\Null$ symbol can stand for the null ideal on either $\RR$ or $2^\omega$; see <ref- target="exerc:null-bij"></ref->. In fact, it is possible to define a natural measure on $\omega^\omega$, and then $\Null$ can stand for the null ideal on $\omega^\omega$ too. [ref]</p>
       <!-- % blass -->
     </rem->
 
@@ -1124,28 +1122,26 @@
       <ref- target="thm:cichon"></ref-> doesn't rule out the possibility that all or some of the cardinals in Cichoń's diagram are <em>equal to each other</em>. And this is indeed possible: if CH is true then $\aleph_1=\mathfrak c$ and so all twelve of the cardinals are identical. So to truly break the symmetry between category and measure, we need some way to show that it is possible for these cardinals to be different. For that we will need the method of <em>forcing</em>, which will be the focus of the second half of the course.
     </rem->
 
-    For the rest of this section as well as the next few, we take up the proof of <ref- target="thm:cichon"></ref->. We have already established seven out of the fifteen inequalities depicted: $\mathfrak b\leq\mathfrak d$ follows from <ref- target="prop:bd"></ref->. The two bounds $\aleph_1\leq\add(\Null)$ and $\cof(\Null)\leq\mathfrak c$ follow from <ref- target="lem:ideal-cards"></ref->. And four more of the inequalities are special cases of <ref- target="lem:diamond"></ref->.
+    <p>For the rest of this section as well as the next few, we take up the proof of <ref- target="thm:cichon"></ref->. We have already established seven out of the fifteen inequalities depicted: $\mathfrak b\leq\mathfrak d$ follows from <ref- target="prop:bd"></ref->. The two bounds $\aleph_1\leq\add(\Null)$ and $\cof(\Null)\leq\mathfrak c$ follow from <ref- target="lem:ideal-cards"></ref->. And four more of the inequalities are special cases of <ref- target="lem:diamond"></ref->.</p>
 
-      <p>We conclude this section with proofs of four more fairly easy inequaleties. The remaining four turn out to be be slightly more difficult. In the next section we will present a handy but abstract tool that will reduce our workload to just two more inequalities. The final two will be proved in the following two sections.</p>
+    <p>We conclude this section with proofs of four more fairly easy inequaleties. The remaining four turn out to be be slightly more difficult. In the next section we will present a handy but abstract tool that will reduce our workload to just two more inequalities. The final two will be proved in the following two sections.</p>
 
     <lem- id="lem:b-nonm">
-
       <p>We have $\mathfrak b\leq\non(\Meager)$, and $\cov(\Meager)\leq\mathfrak d$.</p>
     </lem->
 
     <proof->
-      For the first inequality, recall our observation in <ref- target="rem:ksigma-meager"></ref-> that $\Ksigma\subset\Meager$, so any nonmeager subset of $\omega^\omega$ is certainly not $\Ksigma$. But we also know that every non-$\Ksigma$ set is unbounded. It follows that every nonmeager subset of $\omega^\omega$ is unbounded, which implies $\mathfrak b\leq\non(\Meager)$.
+      <p>For the first inequality, recall our observation in <ref- target="rem:ksigma-meager"></ref-> that $\Ksigma\subset\Meager$, so any nonmeager subset of $\omega^\omega$ is certainly not $\Ksigma$. But we also know that every non-$\Ksigma$ set is unbounded. It follows that every nonmeager subset of $\omega^\omega$ is unbounded, which implies $\mathfrak b\leq\non(\Meager)$.</p>
 
-      The second inequality again uses the fact that $\Ksigma\subset\Meager$, and we leave it as <ref- target="exerc:covm-d"></ref->.
+      <p>The second inequality again uses the fact that $\Ksigma\subset\Meager$, and we leave it as <ref- target="exerc:covm-d"></ref->.</p>
     </proof->
 
     <lem- id="lem:covn-nonm">
-
       <p>We have $\cov(\Null)\leq\non(\Meager)$, and $\cov(\Meager)\leq\non(\Meager)$.</p>
     </lem->
 
     <proof->
-      For the first inequality, we must show that given a nonmeager set $X$, we can find a family $\mathcal F$ of null sets of smaller or equal size such that $\bigcup F=\RR$. For this, we let $A$ be the null comeager set constructed in <ref- target="prop:null-comeager"></ref->, and consider the family of null sets $\mathcal F=\set{x+A\mid x\in X}$.
+      <p>For the first inequality, we must show that given a nonmeager set $X$, we can find a family $\mathcal F$ of null sets of smaller or equal size such that $\bigcup F=\RR$. For this, we let $A$ be the null comeager set constructed in <ref- target="prop:null-comeager"></ref->, and consider the family of null sets $\mathcal F=\set{x+A\mid x\in X}$.</p>
 
       <p>To see that $\bigcup F=\RR$, suppose towards a contradiction that this is not the case. Then there exists $z\in\RR$ such that $z\notin x+A$ for all $x\in X$. It follows that $z-x\notin A$ for all $x\in X$, or in other words that $z-X$ is disjoint from $A$. But $A$ is comeager, so this would imply that $z-X$ is meager, which is a contradiction.</p>
 
@@ -1153,17 +1149,14 @@
     </proof->
 
     <exerc- id="exerc:meager-bij">
-
       <p>Show that there is a homeomorphism between co-countable subsets of $\RR$ and $2^\omega$.</p>
     </exerc->
 
     <exerc- id="exerc:null-bij">
-
       <p>For $V_s$ a basic open set of $2^\omega$, let $m(V_s)=2^{-|s|-1}$. Then $m$ extends to a measure on the Borel sets of $2^\omega$ (take this for granted). Show that there is a measure-preserving bijection between co-countable subsets of $[0,1]$ and $2^\omega$.</p>
     </exerc->
 
     <exerc- id="exerc:covm-d">
-
       <p>Show that $\cov(\Meager)\leq\mathfrak d$.</p>
     </exerc->
 
@@ -1202,7 +1195,7 @@
 
     <p>It is worth observing that the four cardinals come in two dual pairs. Here, if $R$ is a relation, then the <dfn>dual</dfn> of $R$ is its negated transpose $\hat{R}$. That is, the dual of $R$ satisfies $a\mathrel{\hat{R}}b$ iff $\neg(b\mathrel Ra)$. Thus we see that $\add(\mathcal I)$ and $\cof(\mathcal I)$ arise from dual relations, as do $\non(\mathcal I)$ and $\cov(\mathcal I)$. Before we can exploit this duality, we need to describe the morphisms on the category of binary relations.</p>
 
-  <defn->
+    <defn->
       <p>Let $R$ and $S$ be relations, and to avoid excessive notation, write $\dom(R)$ and $\cod(R)$ for the demain and codomain of $R$, and similarly for $S$. A <dfn>morphism</dfn> from $R$ to $S$ is a pair of maps</p>
 
       <eqn->
