@@ -94,7 +94,7 @@
     </preamble->
 
     <chapter->
-    <name->Introduction</name->
+    <h->Introduction</h->
 
     <p>This course is about set theory, and its use in the study of the real line. By way of motivation, consider the question of measuring the <i>size</i> of a given set of real numbers. The word "size" can mean many different things, depending on the context. To see what I mean, consider these three important examples.</p>
     <ul>
@@ -116,9 +116,9 @@
     </chapter->
 
     <chapter->
-    <name->Category and measure</name->
+    <h->Category and measure</h->
     <section>
-    <name->The real number system</name->
+    <h->The real number system</h->
 
     <defn->
 
@@ -201,7 +201,7 @@
     </section>
 
     <section>
-    <name->Baire category theory</name->
+    <h->Baire category theory</h->
 
     <defn->
       <p>A set of real numbers $A$ is said to be <dfn>nowhere dense</dfn> if every positive-length interval $I$ contains a positive-length interval $J$ such that $J$ is disjoint from $A$.</p>
@@ -351,7 +351,7 @@
     </section>
 
     <section>
-    <name->Lebesgue measure theory</name->
+    <h->Lebesgue measure theory</h->
 
     <p>Classical measure theory aims to try to extend the length function on intervals to be defined on more complicated sets. For example, if a given set is a finite or even countable union of intervals, then it is appropriate to take the sum of the lengths of the components. But what about more unwieldy sets like the Cantor set? This was known as the <dfn>measure problem</dfn>: to construct a measurement function $m$, defined on sets of real numbers and valued in $[0,\infty]$, satisfying:</p>
 
@@ -461,7 +461,7 @@
     </section>
 
     <section>
-    <name->Sets, orderings, and cardinality</name->
+    <h->Sets, orderings, and cardinality</h->
 
     <p>So far we have seen sets that are finite, countable, and uncountable. If a set $A$ is finite, then there is a natural number that tells us exactly how many elements $A$ has. If $A$ is countable, we understand that it has exactly as many elements as there are natural numbers. But if $A$ is uncountable, is that all that needs be said or is there some kind of number that tells us just how uncountable it is?</p>
 
@@ -603,7 +603,7 @@
     </section>
 
     <section>
-    <name->Ordinal numbers and cardinal numbers</name->
+    <h->Ordinal numbers and cardinal numbers</h->
 
     <p>Ordinal numbers play a central role in set theory, including both cardinality theory and forcing. While cardinal numbers are needed to measure the <em>size</em> of an infinite set, ordinal numbers are needed to measure the <em>length</em> of an infinite well-ordered set. The ordinals can be used to extend the notion of <em>counting</em> into the infinite, and also to give a formal definition of the $\aleph$ cardinals described in the previous section.</p>
 
@@ -695,7 +695,7 @@
     </section>
 
     <section>
-    <name->The topology of Cantor and Baire space</name->
+    <h->The topology of Cantor and Baire space</h->
 
     <p>If $A$ is a countable set then $A^\omega$ denotes the space of all sequences with values in $A$, that is, functions from $\omega$ to $A$. We can endow $A^\omega$ with a topology by regarding $A$ as discrete, $A^\omega$ as a product of countably many copies of $A$, and using the <dfn>product topology</dfn>. Officially a basic set in the product topology has the form</p>
 
@@ -801,10 +801,10 @@
     </chapter->
 
     <chapter->
-    <name->Cardinal characteristics</name->
+    <h->Cardinal characteristics</h->
 
     <section>
-    <name->$\sigma$-compactness in Baire space</name->
+    <h->$\sigma$-compactness in Baire space</h->
       <p>As we have discussed in the introduction, the exact cardinal value of the size of the set of all real numbers is independent of the axioms of set theory. That is, if we write $\mathfrak c=|\RR|$ then we know $\mathfrak c=\aleph_\alpha$ for some $\alpha\geq1$, but we do not know which one. Here $\mathfrak c$ stands for <dfn>continuum</dfn>. Since $\mathfrak c$ is also equal to the cardinality of Cantor space, it is also often denoted $2^{\aleph_0}$. In this section we discuss several cardinal values other than $\mathfrak c$ that arise from the special topology of the Baire space $\omega^\omega$.</p>
       <p>We have measured the size of sets of real numbers using cardinality, category, and measure. We now introduce a fourth notion in the Baire space. A set $A\subset\omega^\omega$ is said to be <dfn>$\sigma$-compact</dfn> if it is the union of countably many compact sets.</p>
       <p>Like the meager and null sets, the class of $\sigma$-compact sets is closed under countable unions. While the class of $\sigma$-compact sets is not closed under subsets, if one wishes they can simply consider instead the class of subsets of $\sigma$-compact sets instead. In a moment we shall show that the whole Baire space $\omega^\omega$ is not $\sigma$-compact, so that $\sigma$-compactness really is a good notion of a small set.</p>
@@ -898,7 +898,7 @@
     </section>
 
     <section>
-    <name->Ideals and their cardinals</name->
+    <h->Ideals and their cardinals</h->
 
       <p>Let $X$ be any one of the three spaces $\RR$, $2^\omega$, or $\omega^\omega$. An <dfn>ideal</dfn> on $X$ is a subset $\mathcal I\subset\mathcal P(X)$ which is closed under subsets and (finite) unions. We think of an ideal as any collection of sets that captures some quality of smallness in subsets of $X$. Of course, the whole space $X$ should not be small, so we are only interested in <dfn>proper</dfn> ideals, i.e.\ those do not contain $X$.</p>
 
@@ -1027,7 +1027,7 @@
     </section>
 
     <section>
-    <name->Cichoń's diagram</name->
+    <h->Cichoń's diagram</h->
 
       <p>So far we have seen many similarities between the various size notions that we have discussed. The classes of meager sets and null sets are both ideals, both proper, both closed under countable unions, and so on. In this section we further investigate how far this comparison extends, and in the process we reveal a deep and intricate connection between measure and category.</p>
 
@@ -1185,7 +1185,7 @@
     </section>
 
     <section>
-    <name->Ideals and duality</name->
+    <h->Ideals and duality</h->
       <p>At this point one might have observed that many of the proofs of inequalities between cardinal characteristics have come in pairs. This phenomenon is easy to spot in <ref- target="lem:b-nonm"></ref-> <ref- target="lem:covn-nonm"></ref->, but if one examines the proof it is even present in <ref- target="lem:diamond"></ref->. It turns out that there is a category-theoretic duality lurking behind all of these pairings. (Here we mean <em>category</em> as in objects and morphisms, not as in Baire's theorem.)
       </p>
     <defn->
@@ -1321,7 +1321,7 @@
 
 
     </section>
-    <section><name->Category and difference sets</name->
+    <section><h->Category and difference sets</h->
 
     <p>In this section we will prove two of the four inequalities remaining in <ref- target="thm:cichon"></ref->. We prove $\mathfrak d\leq\cof(\Meager)$ and $\add(\Meager)\leq\mathfrak b$ (actually thanks to duality only one proof is needed). Recall that $\mathfrak d$ is the dominating number of the $\leq^*$ relation on $\omega^\omega$, while $\cof(\Meager)$ is the dominating number of the $\subset$ relation on meager sets. Although the two relations don't seem directly comparable, we now introduce some technology to understand their relationship more clearly. An <dfn>interval partition</dfn> is a partition $P=(I_n)$ of $\omega$ into finite nonempty intervals $I_n$. We always assume that the $I_n$ is adjacent to $I_{n+1}$, and hence also that they are enumerated in increasing order.</p>
 
@@ -1439,7 +1439,7 @@
     </section>
 
     <section>
-    <name->Bartoszyński's theorem</name->
+    <h->Bartoszyński's theorem</h->
 
       <p>In this section we complete the proof of the two inequalities remaining in Cichoń's diagram: $\add(\Null)\leq\add(\Meager)$ and $\cof(\Meager)\leq\cof(\Null)$. By duality, the two inequalities are really one that was discovered independently by Bartoszyński and Raisonnier--Stern. The proof we give is mostly due to Bartoszyński, and is markedly more difficult than our previous results. In fact I will need your help proving two of the preparatory facts (see the exercises).</p>
 
@@ -1582,9 +1582,9 @@
     </chapter->
 
     <chapter->
-    <name->Le tour de forcing</name->
+    <h->Le tour de forcing</h->
     <!--
-    %<section><name->Models of set theory</name->
+    %<section><h->Models of set theory</h->
 
     % Very brief tour of logic, axioms, and models of axioms
 
@@ -1596,7 +1596,7 @@
      -->
 
     <section id="sec:idea-forcing">
-    <name->The idea of forcing</name->
+    <h->The idea of forcing</h->
 
       <p>In this part, we will assume familiarity with the notions of statement, theory, and model. As a reminder, a <dfn>formula</dfn> is simply a mathematical assertion that can be expressed using the ordinary logical symbols (and, or, not, quantifiers, variables) and non-logical symbols (in our case, $\in$, $\cup$, $\mathcal P$, etc). A <dfn>sentence</dfn> is a formula in which every variable is quantified, and a <dfn>theory</dfn> is a collection of sentences. If $T$ is a theory, then a <dfn>model</dfn> of $T$ is a set, together with interpretations of the non-logical symbols of $T$, in which all the sentences in $T$ hold true.</p>
 
@@ -1688,7 +1688,7 @@
     </section>
 
     <section>
-    <name->Martin's axiom</name->
+    <h->Martin's axiom</h->
 
       <p>We will make the ideas of the previous section more rigorous shortly. But before going into the technical details of this, we will introduce the combinatorics of forcing using forcing itself as a black box. Specifically, we will appeal to a statement called Martin's axiom, which roughly speaking says that the current universe of set theory $V$ already contains many highly generic filters $G$. The consistency of MA is itself proved using forcing, but we shall take this for granted for now. This will allow us to explore the effects of forcing using a number of partial orders without ever leaving $V$.</p>
 
@@ -1814,7 +1814,7 @@
     </section>
 
     <section>
-    <name->Martin's axiom and Cichoń's diagram</name->
+    <h->Martin's axiom and Cichoń's diagram</h->
 
     <p>We have seen the effect of MA on properties of the continuum. We now explore the effect of MA on further cardinal characteristics found in Cichoń's diagram. We begin by showing that MA makes $\mathfrak d$ large. Although this already follows from <ref- target="thm:ma-covm"></ref-> together with all we have proved about Cichoń's diagram, here we give a direct proof.</p>
 
@@ -1943,7 +1943,7 @@
     </section>
 
     <section>
-    <name->The machinery of forcing</name->
+    <h->The machinery of forcing</h->
 
       <p>So far we have seen forcing only in the context of appeals to Martin's axiom, which gives us highly generic filters $G$ in a single model $V$ of set theory. When we actually do forcing, we wish to find a fully generic filter $G$, even though we know this must lie outside of $V$. But what does it mean that a set $G$ lies outside of the universe of sets? In fact, to find ``new'' sets $G$ we will really assume that $V$ is a countable, transitive model of ZFC. In other words $V$ is a countable set lying in some larger universe $W$, $V$ it is closed downwards under $\in$, and the structure $(V,\in)$ satisfies all of the axioms of set theory.</p>
 
@@ -2060,7 +2060,7 @@
     </section>
 
     <section>
-    <name->The forcing language and forcing theorems</name->
+    <h->The forcing language and forcing theorems</h->
 
       <p>We have been able to establish a number of facts about the forcing extension $V[G]$ using elementary manipulations of the definition of $\mathbb P$-name. For more complex axioms and properties of $V[G]$, we will need a way to decide whether a given sentence holds in $V[G]$. But just as the value $\tau_G$ of a name depends on the filter $G$, the truth value of a given sentence may depend on the filter $G$, just as the set value $\tau_G$ of a name depends on $G$.</p>
 
@@ -2089,7 +2089,7 @@
       <p>The following three results are the fundamental tools used in the development of the theory of forcing. Essentially all further facts about forcing will be derived from these properties of the forcing machinery.</p>
 
     <thm- id="thm:forcing">
-      <name->The forcing theorems</name->
+      <h->The forcing theorems</h->
       1. <i>Definability theorem</i>: The relation $\forces$ is definable in $V$.
       2. <i>Forcing theorem</i>: If $\phi$ is a sentence of the forcing language $V[G]$ satisfies $\phi$, then there exists $p\in G$ such that $p\forces\phi$.
       3. If $V$ is a model of ZFC then $V[G]$ is a model of ZFC.
@@ -2162,7 +2162,7 @@
 
 
     </section>
-    <section><name->The proof of the forcing theorems</name->
+    <section><h->The proof of the forcing theorems</h->
 
       <p>Recall that our definition of the $\forces$ relation cannot be carried out within $V$. In this section we give a definition of a variant of the $\forces$ relation, denoted $\forces_0$, which can be carried out entirely within $V$. The definition of $\forces_0$ is inspired by the properties of the true $\forces$ relation that follow from the forcing theorem.</p>
 
@@ -2267,10 +2267,10 @@
     </chapter->
 
     <chapter->
-    <name->Forcing and cardinal characteristics</name->
+    <h->Forcing and cardinal characteristics</h->
 
     <section>
-    <name->Cohen forcing and the continuum</name->
+    <h->Cohen forcing and the continuum</h->
 
       <p>We are now ready to use forcing, and our first big target will be to establish the consistency of $\neg$CH.</p>
 
@@ -2373,7 +2373,7 @@
     </section>
 
     <section>
-    <name->More tricks with the continuum</name->
+    <h->More tricks with the continuum</h->
 
       <p>Since ccc forcing preserves cardinals, if $V$ satisfies $\neg$CH then it is not possible to force CH using ccc forcing. Indeed, since forcing only adds sets (and never takes them away), the only way to lower the cardinality of the continuum is to collapse cardinals.</p>
 
@@ -2477,7 +2477,7 @@
     </section>
 
     <section>
-    <name->Cohen forcing and the domination order</name->
+    <h->Cohen forcing and the domination order</h->
 
       <p>In the previous sections we studied the effect of the forcing $\Fn(\kappa,\omega)$ on the value of the continuum $\mathfrak c$. For the next two sections, we generalize our previous results by exploring the effect of forcing with $\Fn(\kappa,\omega)$ on the values of the other cardinal characteristics in Cichoń's diagram. In this section, we consider just the cardinals associtaed with the domination order $\leq^*$, namely $\mathfrak b$ and $\mathfrak d$.</p>
 
@@ -2587,7 +2587,7 @@
     </section>
 
     <section>
-    <name->Cohen forcing and Cichoń's diagram</name->
+    <h->Cohen forcing and Cichoń's diagram</h->
 
       <p>In the previous section we began to study the effect of Cohen forcing on the values of the cardinals in Cichoń's diagram. In this section we complete this study by establishing the following result.</p>
 
@@ -2670,7 +2670,7 @@
 
     </section>
     <section>
-    <name->Random forcing</name->
+    <h->Random forcing</h->
 
       <p>The previous section provided one possible picture of Cichoń's diagram after forcing: the left half of the diagram is small, the right half large. It turns out that many other configurations can be achieved with more creative forcing partial orders. In this section we begin to explore the effect of random forcing which, as we will see, does for measure what Cohen forcing did for category.</p>
 
@@ -2766,7 +2766,7 @@
     </section>
 
     <section>
-    <name->Random forcing and Cichoń's diagram</name->
+    <h->Random forcing and Cichoń's diagram</h->
 
       <p>So far we have seen only similarities between the effects of Cohen and random forcing. In this section we investigate the effect of random forcing on Cichoń's diagram, and in the process we'll see that the two forcing notions are not the same. In fact the effect random forcing on the characteristics of $\Null$.  is analogous to the effect of Cohen forcing on the characteristics of $\Meager$</p>
 
@@ -2878,7 +2878,7 @@
 
 
     </section>
-    <section><name->Hechler forcing and Cichoń's diagram</name->
+    <section><h->Hechler forcing and Cichoń's diagram</h->
 
     <figure id="fig:cichon-hechler">
       <!-- <tikzpicture\gt 1every node/.style={minimum size=20pt},->]

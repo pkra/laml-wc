@@ -8,7 +8,7 @@ class chapter extends HTMLElement {
 }
 customElements.define('chapter-', chapter);
 
-class name extends HTMLElement {
+class heading extends HTMLElement {
   constructor() {
     super()
   }
@@ -21,7 +21,7 @@ class name extends HTMLElement {
     this.setAttribute('aria-level', level);
   }
 }
-customElements.define('name-', name);
+customElements.define('h-', heading);
 
 class enunciation extends HTMLElement {
   constructor() {

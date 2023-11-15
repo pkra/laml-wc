@@ -9,21 +9,21 @@ cor-,
 prop-,
 example-,
 proof-,
-name-,
+h-,
 p {
   display: block;
   margin: 1em 0;
 }
-name- {
+h- {
   font-weight: bolder;
 }
-name-[aria-level="1"] {
+h-[aria-level="1"] {
   font-size: 1.66em;
 }
-name-[aria-level="2"] {
+h-[aria-level="2"] {
   font-size: 1.44em;
 }
-name-[aria-level="3"] {
+h-[aria-level="3"] {
   font-size: 1.33em;
 }
 table {
@@ -54,12 +54,12 @@ section {
   counter-increment: section;
 }
 
-chapter- > name-::before {
+chapter- > h-::before {
   content: counter(chapter) ". ";
   /* amsbook makes it centered; indents section/subsection */
 }
 
-section > name-::before {
+section > h-::before {
   content: counter(chapter) "." counter(section) ". ";
   /* in article, lacks period and adds space (how much?) after*/
   /* in amsbook, indented*/
