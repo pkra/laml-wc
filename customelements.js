@@ -38,95 +38,24 @@ class enunciation extends HTMLElement {
 }
 customElements.define('enunciation-', enunciation);
 
-class theorem extends enunciation {
+const enunciationBasicMixin = (superClass, title) => class extends superClass {
   constructor() {
-    super()
+    super();
   }
   connectedCallback() {
-    super.connectedCallback('Theorem');
+    super.connectedCallback(title);
   }
 }
-customElements.define('thm-', theorem);
 
-class lemma extends enunciation {
-  constructor() {
-    super()
-  }
-  connectedCallback() {
-    super.connectedCallback('Lemma');
-  }
-}
-customElements.define('lem-', lemma);
-
-class definition extends enunciation {
-  constructor() {
-    super()
-  }
-  connectedCallback() {
-    super.connectedCallback('Definition');
-  }
-}
-customElements.define('defn-', definition);
-
-class remark extends enunciation {
-  constructor() {
-    super()
-  }
-  connectedCallback() {
-    super.connectedCallback('Remark');
-  }
-}
-customElements.define('rem-', remark);
-
-class exercise extends enunciation {
-  constructor() {
-    super()
-  }
-  connectedCallback() {
-    super.connectedCallback('Exercise');
-  }
-}
-customElements.define('exerc-', exercise);
-
-class notes extends enunciation {
-  constructor() {
-    super()
-  }
-  connectedCallback() {
-    super.connectedCallback('Notes');
-  }
-}
-customElements.define('notes-', notes);
-
-class example extends enunciation {
-  constructor() {
-    super()
-  }
-  connectedCallback() {
-    super.connectedCallback('Example');
-  }
-}
-customElements.define('example-', example);
-
-class proposition extends enunciation {
-  constructor() {
-    super()
-  }
-  connectedCallback() {
-    super.connectedCallback('Proposition');
-  }
-}
-customElements.define('prop-', proposition);
-
-class corollary extends enunciation {
-  constructor() {
-    super()
-  }
-  connectedCallback() {
-    super.connectedCallback('Corollary');
-  }
-}
-customElements.define('cor-', corollary);
+customElements.define('thm-', enunciationBasicMixin(enunciation, 'Theorem'));
+customElements.define('lem-', enunciationBasicMixin(enunciation, 'Lemma'));
+customElements.define('defn-', enunciationBasicMixin(enunciation, 'Definition'));
+customElements.define('rem-', enunciationBasicMixin(enunciation, 'Remark'));
+customElements.define('exerc-', enunciationBasicMixin(enunciation, 'Enunciation'));
+customElements.define('notes-', enunciationBasicMixin(enunciation, 'Notes'));
+customElements.define('example-', enunciationBasicMixin(enunciation, 'Example'));
+customElements.define('prop-', enunciationBasicMixin(enunciation, 'Proposition'));
+customElements.define('cor-', enunciationBasicMixin(enunciation, 'Corollary'));
 
 class proof extends HTMLElement {
   constructor() {
