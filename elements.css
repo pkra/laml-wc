@@ -9,10 +9,11 @@ corollary-,
 proposition-,
 example-,
 proof-,
-h-,
-p {
+h- {
   display: block;
-  margin: 1em 0;
+}
+p {
+  margin: 1rem 0;
 }
 h- {
   font-weight: bolder;
