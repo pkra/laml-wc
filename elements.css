@@ -17,6 +17,7 @@ p {
 }
 h- {
   font-weight: bolder;
+  line-height: 1.2;
 }
 h-[aria-level="1"] {
   font-size: 1.66em;
