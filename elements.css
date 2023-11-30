@@ -167,20 +167,22 @@ proof-label::after {
     color: var(--ch-textColor);
   }
 
-  chapter-:nth-child(5n + 1) {
+  chapter-:nth-of-type(5n + 1) {
     --ch-backgroundColor: var(--color-englishViolet);
     --ch-textColor: white;
+    --eTitle-color: black;
+    --eTitle-background: white;
   }
-  chapter-:nth-child(5n + 2) {
+  chapter-:nth-of-type(5n + 2) {
     --ch-backgroundColor: var(--color-UTorange);
   }
-  chapter-:nth-child(5n + 3) {
+  chapter-:nth-of-type(5n + 3) {
     --ch-backgroundColor: var(--color-mossGreen);
   }
-  chapter-:nth-child(5n + 4) {
+  chapter-:nth-of-type(5n + 4) {
     --ch-backgroundColor: var(--color-amaranth);
   }
-  chapter-*:nth-child(5n + 5) {
+  chapter-:nth-of-type(5n + 5) {
     --ch-backgroundColor: var(--color-platinum);
   }
   chapter- * {
@@ -255,7 +257,8 @@ proof-label::after {
   }
   e-title {
     display: block;
-    background-color: white;
+    background-color: var(--eTitle-background, white);
+    color: var(--eTitle-color, black);
     font-weight: bold;
     font-variant: small-caps;
   }
