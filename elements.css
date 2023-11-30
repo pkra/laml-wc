@@ -115,7 +115,7 @@ proof-label::after {
   enunciation-label,
   enunciation-label + p,
   proof-label, 
-  proof-label+p {
+  proof-label + p {
     /* too hacky? We lose margins but reduce HTML shenanigans */
     display: inline;
   }
