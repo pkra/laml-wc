@@ -278,7 +278,8 @@
         <p>Any finite subset of $\RR$ is nowhere dense. The set $\set{1/n\mid n\in\NN}$ is nowhere dense. In fact, any
           <dfn>discrete</dfn> set is nowhere dense (here, $A$ is discrete if every point of $A$ is isolated). The set of
           rational numbers whose numerator is $1$ and whose denominator is a power of $2$ is <em>not</em> nowhere dense,
-          because such a number can be found in every positive-length subinterval of $[0,1]$.</p>
+          because such a number can be found in every positive-length subinterval of $[0,1]$.
+        </p>
       </example->
 
       <p>Note that nowhere dense sets need not be countable. The classical Cantor middle thirds set is an archetypal
@@ -596,7 +597,8 @@
 
       <p><ref- target="cor-interval-nonnull"></ref-> is immediate from condition (a) of <ref-
           target="thm-caratheodory"></ref->. <ref- target="cor-null-pres"></ref-> is immediate from condition (c) of
-        <ref- target="thm-caratheodory"></ref->.</p>
+        <ref- target="thm-caratheodory"></ref->.
+      </p>
 
       <exercise->
         <p>Prove that condition (c) of a measure implies <dfn>monotonicity</dfn>: if $A\subset B$ then $m(A)\leq m(B)$.
@@ -840,7 +842,8 @@
         cardinal numbers are needed to measure the <em>size</em> of an infinite set, ordinal numbers are needed to
         measure the <em>length</em> of an infinite well-ordered set. The ordinals can be used to extend the notion of
         <em>counting</em> into the infinite, and also to give a formal definition of the $\aleph$ cardinals described in
-        the previous section.</p>
+        the previous section.
+      </p>
 
       <p>The initial goal in defining the ordinals is to provide a collection of well-ordered sets such that for any
         given well-ordered set $A$ there is one and only one ordinal $\alpha$ such that $A$ is isomorphic to $\alpha$.
@@ -993,7 +996,8 @@ the continuum has uncountable cofinality
       <p>where $s$ is an element of $A^n$ for any $n$.</p>
 
       <p>The two most important examples of sequence spaces are the <dfn>Cantor space</dfn> $2^\omega$ and the
-        <dfn>Baire space</dfn> $\omega^\omega$.</p>
+        <dfn>Baire space</dfn> $\omega^\omega$.
+      </p>
 
       <proposition- id="prop:cantor-baire-homeo">
         <p>The Cantor space is homeomorphic to the Cantor middle thirds set. The Baire space is homeomorphic to the set
@@ -1136,7 +1140,8 @@ the continuum has uncountable cofinality
         c=\aleph_\alpha$ for some $\alpha\geq1$, but we do not know which one. Here $\mathfrak c$ stands for
         <dfn>continuum</dfn>. Since $\mathfrak c$ is also equal to the cardinality of Cantor space, it is also often
         denoted $2^{\aleph_0}$. In this section we discuss several cardinal values other than $\mathfrak c$ that arise
-        from the special topology of the Baire space $\omega^\omega$.</p>
+        from the special topology of the Baire space $\omega^\omega$.
+      </p>
 
       <p>We have measured the size of sets of real numbers using cardinality, category, and measure. We now introduce a
         fourth notion in the Baire space. A set $A\subset\omega^\omega$ is said to be <dfn>$\sigma$-compact</dfn> if it
@@ -1382,7 +1387,8 @@ the continuum has uncountable cofinality
         because $\sigma$-compact sets are Borel. For $\Meager$ any meager set is contained in a countable union of
         <em>closed</em> nowhere dense sets, which are Borel. Finally for $\Null$, note that if $A$ is null then for all
         $n$ there is a Borel set $A_n$ such that $A\subset A_n$ and $m(A_n)\gt 1/n$. It follows that $A$ is contained in
-        the Borel null set $\bigcap A_n$.</p>
+        the Borel null set $\bigcap A_n$.
+      </p>
 
       <remark->
         <p>There can exist proper $\sigma$-ideals containing the singletons that don't have a basis of size
@@ -1421,7 +1427,8 @@ the continuum has uncountable cofinality
           $\mathcal I$. Since $\mathcal I$ contains the singletons, it follows that $\mathcal F$ itself covers $X$.</p>
       </proof->
 
-      The conclusions of the two lemmas are summarized in <ref- target="fig:ideal"></ref->
+      <p> The conclusions of the two lemmas are summarized in <ref- target="fig:ideal"></ref->
+      </p>
 
       <figure id="fig:ideal">
 
@@ -1520,7 +1527,8 @@ the continuum has uncountable cofinality
 
       <thoerem- id="thm:cichon">
         <p>The cardinal characteristics defined in the previous sections exhibit the pattern of inequalities known as
-          <dfn>Cichoń's diagram</dfn>, which is depicted in <ref- target="fig:cichon"></ref->.</p>
+          <dfn>Cichoń's diagram</dfn>, which is depicted in <ref- target="fig:cichon"></ref->.
+        </p>
       </thoerem->
 
       <figure id="fig:cichon">
@@ -1730,7 +1738,8 @@ the continuum has uncountable cofinality
         <dfn>dual</dfn> of $R$ is its negated transpose $\hat{R}$. That is, the dual of $R$ satisfies
         $a\mathrel{\hat{R}}b$ iff $\neg(b\mathrel Ra)$. Thus we see that $\add(\mathcal I)$ and $\cof(\mathcal I)$ arise
         from dual relations, as do $\non(\mathcal I)$ and $\cov(\mathcal I)$. Before we can exploit this duality, we
-        need to describe the morphisms on the category of binary relations.</p>
+        need to describe the morphisms on the category of binary relations.
+      </p>
 
       <definition->
         <p>Let $R$ and $S$ be relations, and to avoid excessive notation, write $\dom(R)$ and $\cod(R)$ for the demain
@@ -1763,11 +1772,11 @@ the continuum has uncountable cofinality
   edge[<-,dashed] node[right]{$S$} (doms);
 </tikzpicture>
 </center> -->
-      \begin{array}{ccc}
-      \mathsf{cod}(\mathcal{R}) &amp; \stackrel{\psi}{\longrightarrow}{} &amp; \mathsf{cod}(\mathcal{S}) \\
-      ^{_R} {\large &#8673;} &amp; &amp; {\large&#8673;} {}^{_S} \\
-      \mathsf{dom}(\mathcal{R}) &amp; \underset{\varphi}{\longleftarrow} &amp; \mathsf{dom}(\mathcal{S}) \\
-      \end{array}
+      <span>\begin{array}{ccc}
+        \mathsf{cod}(\mathcal{R}) &amp; \stackrel{\psi}{\longrightarrow}{} &amp; \mathsf{cod}(\mathcal{S}) \\
+        ^{_R} {\large &#8673;} &amp; &amp; {\large&#8673;} {}^{_S} \\
+        \mathsf{dom}(\mathcal{R}) &amp; \underset{\varphi}{\longleftarrow} &amp; \mathsf{dom}(\mathcal{S}) \\
+        \end{array}</span>
 
       <p>In any case, the definition of a morphism is custom-designed to give us the following two key properties.</p>
 
@@ -1904,7 +1913,8 @@ the continuum has uncountable cofinality
           $s=x\restriction\bigcup_{i\lt n}I_i$ be the initial segment built so far. Since $A_n$ is nowhere dense, by
           <ref- target="prop:cantor-space-nwd"></ref-> we can find an extension $t$ of $s$ such that $A_n\cap
           V_t=\emptyset$. But we can do even better: we can find an extension $t$ of $s$ such that even if
-          $y\in2^\omega$ only agrees with $t$ on $\dom(t\smallsetminus s)$, then we still have $y\notin A_n$.</p>
+          $y\in2^\omega$ only agrees with $t$ on $\dom(t\smallsetminus s)$, then we still have $y\notin A_n$.
+        </p>
 
         <p>Such a $t$ is built in $k$ many steps: Let $s_0,\ldots,s_{k-1}$ enumerate all elements of $2^{\lt \omega}$
           whose domain is exactly $\dom(s)$. Repeatedly using that $A_n$ is nowhere dense, we can find a sequence of
@@ -1933,7 +1943,8 @@ the continuum has uncountable cofinality
         simple combinatorial relation on pairs $(P,x)$. The cardinals $\mathfrak b$ and $\mathfrak d$ can be
         characterized by a similar combinatorial relation just on interval partitions. First, if $P=(I_n)$ and $Q=(J_m)$
         are interval partitions, we write $P\prec Q$ if for all but finitely many $J_m$ there exists $I_m$ such that
-        $I_n\subset J_m$.</p>
+        $I_n\subset J_m$.
+      </p>
 
       <proposition->
         <p>There is a morphism from $\prec$ to $\leq^*$, and there is a morphism from $\leq^*$ to $\prec$. Hence
@@ -2164,7 +2175,8 @@ the continuum has uncountable cofinality
 
         <p>To construct $\psi$, first let $s_1,s_2,\ldots$ be an enumeration of $2^{\lt \omega}$, and for each $n$ apply
           <ref- target="prop:pi-base-meager"></ref-> to $\mathcal O=V_{s_n}$ to obtain a family $\mathcal
-          U_n=\{U_{n,i}\}$. Now if $S=(I_n)$ is a slalom we let</p>
+          U_n=\{U_{n,i}\}$. Now if $S=(I_n)$ is a slalom we let
+        </p>
 
         <eqn->
           \psi(S)=2^\omega\smallsetminus\bigcap_N\bigcup_{n\geq N}\bigcap_{i\in I_n}U_{n,i}\text{.}
@@ -2216,7 +2228,8 @@ the continuum has uncountable cofinality
       <notes->
         <p>The presentation of the proof of Bartoszyński's theorem was largely taken from Sections 522K--522P of
           Fremlin, <cite>Measure theory</cite>. A similar proof can also be found in Bartoszyński's handbook article,
-          <dfn>Invariants of measure and category</dfn>.</p>
+          <dfn>Invariants of measure and category</dfn>.
+        </p>
       </notes->
 
     </section>
@@ -2244,7 +2257,8 @@ the continuum has uncountable cofinality
         (and, or, not, quantifiers, variables) and non-logical symbols (in our case, $\in$, $\cup$, $\mathcal P$, etc).
         A <dfn>sentence</dfn> is a formula in which every variable is quantified, and a <dfn>theory</dfn> is a
         collection of sentences. If $T$ is a theory, then a <dfn>model</dfn> of $T$ is a set, together with
-        interpretations of the non-logical symbols of $T$, in which all the sentences in $T$ hold true.</p>
+        interpretations of the non-logical symbols of $T$, in which all the sentences in $T$ hold true.
+      </p>
 
       <p>We are interested in the theory <dfn>ZFC</dfn>, which consists of the standard axioms for set theory, that
         govern how the $\in$ relation behaves. G\"odel's incompleteness theorem implies that for some sentences $\phi$,
@@ -2283,7 +2297,8 @@ the continuum has uncountable cofinality
         very simple: a <dfn>forcing notion</dfn> is simply a partial order $\PP$ with a maximum element $\mathbb1$ (also
         written $\mathbb1_\PP$). When we force with $\PP$, we add a new subset of $\PP$ to the universe. We think of the
         elements of $\PP$ as imposing conditions on the new set to be added. If $p,q\in\PP$ we say that $p$ is
-        <dfn>stronger</dfn> than $q$ if $p\leq q$; lower elements hold more information.</p>
+        <dfn>stronger</dfn> than $q$ if $p\leq q$; lower elements hold more information.
+      </p>
 
       <p>When we force with $\PP$, the partial order $\PP$ can give fine control over the new subset that we add.</p>
 
@@ -2306,7 +2321,8 @@ the continuum has uncountable cofinality
 
         <p>In an upside-down tree such as $T$, the only way for two elements $s,t$ to be compatible is to actually be
           <dfn>comparable</dfn>, that is, $s\subset t$ or $t\subset s$. Thus if $G\subset T$ is a filter, then the
-          elements of $G$ actually form a path through $T$.</p>
+          elements of $G$ actually form a path through $T$.
+        </p>
       </example->
 
       <p>We encourage the reader to note the distinction between the two words comparable and compatible: pairwise
@@ -2331,7 +2347,8 @@ the continuum has uncountable cofinality
       <p>For example, if just countably many dense sets are given, then we will see in the next section that there is
         always a filter that meets them all. On the other extreme, we could say that a filter is fully generic if
         <!-- TODO: fully generic is dfn?  --> it meets <em>every</em> dense set of $\PP$, but the next result shows that
-        this is too strong.</p>
+        this is too strong.
+      </p>
 
       <proposition- id="prop:generic-new">
         <p>Suppose that for every $p\in\PP$, there exist incompatible elements $q,r\leq p$. Then $\PP$ does not have a
@@ -2594,7 +2611,8 @@ the continuum has uncountable cofinality
       <p>If $(s,F)$ is an element of a Hechler forcing, then as usual the left coordinate $s$, called the
         <dfn>stem</dfn>, is a finite approximation for a new element of Baire space. The new coordinate $F$ can be
         thought of as a set of <em>promises</em>, which ensures that stronger conditions will dominate the elements of
-        $F$.</p>
+        $F$.
+      </p>
 
       <p>Hechler forcing is always ccc, because incompatible conditions cannot have the same stem $s$, and there are
         only countably many possible stems $s$.</p>
@@ -2646,7 +2664,8 @@ the continuum has uncountable cofinality
           <em>all</em> the cardinal characteristics in Cichoń\'s diagram have the value $\mathfrak c$. At face value,
           this obviates the last three results which showed that individual characteristics are equal to $\mathfrak c$.
           But those arguments were more direct, and moreover introduced us to several forcings which will remain
-          important outside of the MA context.</p>
+          important outside of the MA context.
+        </p>
 
         <thoerem- id="thm:ma-addn">
           <p>Assuming MA, we have $\add(\Null)=\mathfrak c$. In particular, all the cardinal characteristics in Cichoń's
@@ -2793,7 +2812,8 @@ kunen, III.3 for amoeba
 
       <definition->
         <p>Let $\PP$ be a partial order in $V$ and $G\subset\PP$ be a filter. If $\tau$ is a $\PP$-name, then the
-          <dfn>evaluation</dfn> of $\tau$ via $G$, denoted $\tau_G$, is defined recursively by</p>
+          <dfn>evaluation</dfn> of $\tau$ via $G$, denoted $\tau_G$, is defined recursively by
+        </p>
 
         <eqn->
           \tau_G=\set{\sigma_G\mid (\exists p)\;(\sigma,p)\in\tau\text{ and }p\in G}\text{.}
@@ -2973,7 +2993,8 @@ For the metamathematics of forcing see Kunen sec IV.5
 
       <p>Let us first see the power of forcing theorems (a) and (b) to establish forcing theorem (c). Recall that the
         <dfn>comprehension axiom</dfn> states that if $\phi(x,y)$ is a formula, then for all sets $a,b$ we have that
-        $\set{x\in a\mid\phi(x,b)}$ is a set.</p>
+        $\set{x\in a\mid\phi(x,b)}$ is a set.
+      </p>
 
       <p>For the first time, we will use the <dfn>dot notation</dfn> for names for elements $a\in V[G]$. That is, rather
         than letting $\sigma$ be a name such that $\sigma_G=a$, we will let $\dot a$ denote a name such that $\dot
@@ -3194,7 +3215,8 @@ For the metamathematics of forcing see Kunen sec IV.5
       <proof->
         <p>If $V[G]$ satisfies $\phi$, then $V[G]$ satisfies $\neg\neg\phi$. Hence by <ref-
             target="lem:forcing-theorem-0"></ref-> there exists $p\in G$ such that $p\forces_0\neg\neg\phi$, and by
-          <ref- target="lem:forcing-definability"></ref-> this implies $p\forces\phi$.</p>
+          <ref- target="lem:forcing-definability"></ref-> this implies $p\forces\phi$.
+        </p>
       </proof->
 
       <exercise- id="exerc:forcing-downward-clauses-2345">
@@ -3322,7 +3344,8 @@ For the metamathematics of forcing see Kunen sec IV.5
       <remark->
         <p>In fact, something stronger is true: forcing with a ccc partial order preserves not only cardinals but also
           <dfn>cofinalities</dfn>. Roughly, this means that if $\kappa$ is an ordinal in $V$, then $V[G]$ cannot have a
-          shorter unbounded sequence in $\kappa$ than $V$ does.</p>
+          shorter unbounded sequence in $\kappa$ than $V$ does.
+        </p>
       </remark->
 
       <proposition- id="prop:cohen-ccc">
@@ -3950,7 +3973,8 @@ For the metamathematics of forcing see Kunen sec IV.5
             the complement of $A_{\alpha,\beta}$ (interpreted in $V[G]$) and therefore that $g_\alpha\neq g_\beta$.</p>
 
           <p>We can now conclude that in $V[G]$ we have $\mathfrak c\geq\kappa$. Finally by the nice name argument of
-            <ref- target="thm:ch-exact"></ref->, it is also easy to argue that $\mathfrak c\leq\kappa$.</p>
+            <ref- target="thm:ch-exact"></ref->, it is also easy to argue that $\mathfrak c\leq\kappa$.
+          </p>
         </proof->
 
         <exercise->
