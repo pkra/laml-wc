@@ -90,6 +90,21 @@ proof-label::after {
   h- {
     string-set: titleBefore content(before), title content(text);
     /* https://printcss.net/articles/the-string-set-property-and-the-string-function */
+    margin-bottom: .66em;
+    padding-top: 0.5em;
+  }
+  enunciation-,
+chapter-,
+theorem-,
+lemma-,
+definition-,
+exercise-,
+remark-,
+corollary-,
+proposition-,
+example-,
+proof- {
+  margin: 1em auto;
   }
   @page {
     size: A4;
