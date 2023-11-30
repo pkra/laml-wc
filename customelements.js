@@ -51,7 +51,7 @@ customElements.define('thm-', enunciationBasicMixin(enunciation, 'Theorem'));
 customElements.define('lem-', enunciationBasicMixin(enunciation, 'Lemma'));
 customElements.define('defn-', enunciationBasicMixin(enunciation, 'Definition'));
 customElements.define('rem-', enunciationBasicMixin(enunciation, 'Remark'));
-customElements.define('exerc-', enunciationBasicMixin(enunciation, 'Enunciation'));
+customElements.define('exerc-', enunciationBasicMixin(enunciation, 'Exercise'));
 customElements.define('notes-', enunciationBasicMixin(enunciation, 'Notes'));
 customElements.define('example-', enunciationBasicMixin(enunciation, 'Example'));
 customElements.define('prop-', enunciationBasicMixin(enunciation, 'Proposition'));
