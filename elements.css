@@ -83,12 +83,22 @@ proof-label::after {
 /* print-oriented styles */
 
 @media print {
+  h-::before {
+    /* content: "Chapter " counter(countChapter, upper-roman); */
+  }
+
+  h- {
+    string-set: titleBefore content(before), title content(text);
+    /* https://printcss.net/articles/the-string-set-property-and-the-string-function */
+  }
   @page {
     size: A4;
     marks: crop cross;
     bleed: 6mm;
     margin: 20mm;
 
+    @top-right {
+      content: string(titleBefore);
     }
     @top-left {
       content: "Category, measure, and forcing, Math 522 lecture notes, Fall, 2014";
