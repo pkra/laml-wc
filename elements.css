@@ -191,7 +191,7 @@ proof-label::after {
 
   chapter- {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
     gap: 3rem;
   }
   chapter- {
@@ -201,13 +201,10 @@ proof-label::after {
     display: contents;
   }
   chapter- * {
-    grid-column-start: 2;
+    grid-column: 4/5;
   }
   chapter- h- {
     grid-column: 1/2;
-  }
-  chapter- :is(thm-, defn-, proof-) {
-    grid-column-start: 2;
   }
 
   h- {
@@ -220,18 +217,22 @@ proof-label::after {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: end;
-    height: 100dvh;
+    max-height: 100dvh;
     width: fit-content;
     /* later: try https://kizu.dev/fit-to-width-text/ */
   }
   h-[aria-level="2"] {
     font-size: 5rem;
+    grid-column: 1/2;
   }
   h-[aria-level="3"] {
     font-size: 4rem;
     margin-block-end: auto;
+    grid-column: 2/3;
   }
-
+  h-[aria-level="4"] {
+    grid-column: 3/4;
+  }
   chapter-,
   theorem-,
   lemma-,
