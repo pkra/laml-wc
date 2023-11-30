@@ -147,3 +147,142 @@ proof- {
     display: inline;
   }
 }
+
+@media screen {
+  :root {
+    /* https://coolors.co/533a71-fb8b24-758e4f-e2294f-e6e8e6 */
+    /* https://coolors.co/visualizer/011936-465362-82a3a1-9fc490-c0dfa1 */
+    --color-englishViolet: #533a71; /* needs white text */
+    --color-UTorange: #fb8b24;
+    --color-mossGreen: #758e4f;
+    --color-amaranth: #e2294f;
+    --color-platinum: #e6e8e6;
+  }
+
+  chapter- {
+    --ch-backgroundColor: transparent;
+    --ch-textColor: black;
+    padding-inline: 1rem;
+    background-color: var(--ch-backgroundColor);
+    color: var(--ch-textColor);
+  }
+
+  chapter-:nth-child(5n + 1) {
+    --ch-backgroundColor: var(--color-englishViolet);
+    --ch-textColor: white;
+  }
+  chapter-:nth-child(5n + 2) {
+    --ch-backgroundColor: var(--color-UTorange);
+  }
+  chapter-:nth-child(5n + 3) {
+    --ch-backgroundColor: var(--color-mossGreen);
+  }
+  chapter-:nth-child(5n + 4) {
+    --ch-backgroundColor: var(--color-amaranth);
+  }
+  chapter-*:nth-child(5n + 5) {
+    --ch-backgroundColor: var(--color-platinum);
+  }
+  chapter- * {
+    max-width: 80ch;
+    margin-inline: auto;
+  }
+
+  chapter- {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3rem;
+  }
+  chapter- {
+    font-size: 1.33rem;
+  }
+  section {
+    display: contents;
+  }
+  chapter- * {
+    grid-column-start: 2;
+  }
+  chapter- h- {
+    grid-column: 1/3;
+    margin-inline-start: 10vw;
+  }
+  chapter- :is(thm-, defn-, proof-) {
+    grid-column-start: 2;
+  }
+
+  h- {
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  h-[aria-level="2"] {
+    font-size: 5rem;
+  }
+  h-[aria-level="3"] {
+    font-size: 4rem;
+  }
+
+  chapter-,
+  theorem-,
+  lemma-,
+  definition-,
+  exercise-,
+  remark-,
+  corollary-,
+  proposition-,
+  example- {
+    border-right: 5px solid white;
+  }
+
+  enunciation-label {
+    display: block;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    float: left;
+    line-height: 1.5;
+    padding: 1rem;
+    margin: 0 1rem 1rem 0;
+    font-size: 3rem;
+    background-color: white;
+  }
+  e-title {
+    display: block;
+    background-color: white;
+    font-weight: bold;
+    font-variant: small-caps;
+  }
+
+  theorem- {
+    border: 2px solid;
+    border-image: linear-gradient(
+      to bottom,
+      orange 10%,
+      transparent 10%,
+      transparent 90%,
+      orange 90%,
+      orange 100%
+    );
+    border-image-slice: 1;
+    padding: 0.5rem;
+  }
+  lemma- {
+    padding: 0.5rem;
+
+    background-image: linear-gradient(to right, orange 30px, transparent 30px),
+      linear-gradient(to right, lightblue 30px, transparent 30px),
+      linear-gradient(to bottom, orange 30px, transparent 30px),
+      linear-gradient(to bottom, lightblue 30px, transparent 30px);
+    background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%;
+    background-position: -15px 0%, -15px 100%, 0% -15px, 100% -15px;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  }
+
+  definition- {
+    box-shadow: 0px 36px 0px -30px #fff, -36px 0px 0px -30px #fff,
+      0px -36px 0px -30px #fff, 36px 0px 0px -30px #fff, 0 0 0 2px #000;
+    border-right: none;
+  }
+}

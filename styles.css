@@ -399,11 +399,6 @@ cite {
 
 /* end element styles */
 
-body {
-  max-width: 42em;
-  margin: 0 auto;
-}
-
 a[href^='#'] {
   cursor: pointer;
   padding-right: 3px;
