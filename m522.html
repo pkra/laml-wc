@@ -214,10 +214,10 @@
         uncountable. The argument goes by contradiction and uses a recursive construction to reach a contradiction one
         step at a time. Such arguments are often called "diagonal", for reasons we shall see later on.</p>
 
-      <thoerem- id="thm-cantor">
+      <theorem- id="thm-cantor">
         <e-title>Cantor</e-title>
         The set of all real numbers is uncountable.
-      </thoerem->
+      </theorem->
 
       <proof->
         <p>Suppose towards a contradiction that the set of all real numbers is countable. Then there exists a sequence
@@ -353,7 +353,7 @@
 
       <theorem->
         <p>The class of nowhere dense sets is closed under the operations of subset, union, and closure.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>Preservation to subsets is immediate from the definition.</p>
@@ -393,11 +393,11 @@
           numbers is meager according to this definition. The Baire category theorem says that this is not the case. In
           fact, we will soon see that meager sets are rather paltry as the name implies.</p>
 
-        <thoerem- id="thm-baire">
+        <theorem- id="thm-baire">
           <e-title>Baire category theorem</e-title>
           <p>The set of all real numbers $\RR$ is nonmeager. In fact, if $I$ is a positive-length interval then $I$ is
             nonmeager.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>The proof is very similar to Cantor's proof of <ref- target="thm-cantor"></ref->. Let $I$ be a
@@ -420,9 +420,9 @@
             "first category". Nonmeager sets used to be called "second category".</p>
         </remark->
 
-        <thoerem- id=thm-meager-pres>
+        <theorem- id=thm-meager-pres>
           <p>The class of meager sets is closed under the operations of subset and countable union.</p>
-        </thoerem->
+        </theorem->
 
         <p>We remark that the meager property is not necessarily preserved to the closure. In fact $\cl(A)$ is meager if
           and only if $A$ is nowhere dense.</p>
@@ -521,11 +521,11 @@
         constructible. Recall that a <dfn>Borel set</dfn> is one that can be constructed by beginning with the intervals
         and then executing countably many countable unions or intersections.</p>
 
-      <thoerem- id="thm-caratheodory">
+      <theorem- id="thm-caratheodory">
         <e-title>Carathéodory's extension theorem</e-title>
         <p>The measure $m$ defined in Equation~$\eqref{eq:measure}$ satisfies conditions (a) and (b), and additionally
           satisfies condition (c) when applied to Borel sets.</p>
-      </thoerem->
+      </theorem->
 
       <proof->
         <proof-label>Proof of conditions (a) and (b) only</proof-label>
@@ -661,7 +661,7 @@
       <theorem->
         <e-title>Cantor</e-title>
         <p>If $A$ is any set, then $|A|\lt|\mathcal P(A)|$.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>It is clear that $|A|\leq|\mathcal P(A)|$, since the map $i(a)=\{a\}$ is an injection from $A$ into
@@ -704,11 +704,11 @@
           reflexivity holds because the identity function is an injection from $A$ into itself, and transitivity holds
           because the composition of two injections is an injection. The following result establishes antisymmetry.</p>
 
-        <thoerem- id="thm-csb">
+        <theorem- id="thm-csb">
           <e-title>Cantor--Schröder--Bernstein</e-title>
           <p>If there are injections $i\colon A\to B$ and $j\colon B\to A$ then there is a bijection $f\colon A\to B$.
           </p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>Replacing $B$ with $j(B)$, we may suppose that that $B\subset A$. Then we have</p>
@@ -755,10 +755,10 @@
           then $P$ has at least one maximal element. Zorn's lemma is used perennially in analysis, and it is a
           consequence of the axiom of choice.</p>
 
-        <thoerem- id="thm-card-total">
+        <theorem- id="thm-card-total">
           <p>If $A,B$ are sets then either there is an injective function from $A$ to $B$ or an injective function from
             $B$ to $A$.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>Consider the family $\mathcal F$ of all injective functions whose domain is a subset of $A$ and whose range
@@ -774,10 +774,10 @@
           sets has a minimal element, and that collection need not itself be a set. (Remember: the set of all sets isn't
           a set!)</p>
 
-        <thoerem- id="thm-card-well">
+        <theorem- id="thm-card-well">
           <p>Let $\mathcal A$ be a class of sets. Then there exists $A\in\mathcal A$ that injects into all other sets
             $B\in\mathcal A$.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>We argue very similarly to <ref- target="thm-card-total"></ref->, but in order to apply Zorn's lemma we
@@ -886,13 +886,13 @@
       <p>The following fundamental facts about ordinals together imply that <ref- target="defn-ordinals"></ref->
         achieves our initial goals in defining the ordinals.</p>
 
-      <thoerem- id="thm-ordinals">
+      <theorem- id="thm-ordinals">
         <ul>
           <li>The class of all ordinals is itself transitive and well-ordered by $\leq$.</li>
           <li>If $A$ is a well-ordered set then there exists a unique ordinal $\alpha$ such that $A$ is isomorphic to
             $\alpha$.\qed</li> <!-- TODO: \qed  -->
         </ul>
-      </thoerem->
+      </theorem->
 
       <p>An ordinal $\alpha$ is said to be <dfn>successor</dfn> ordinal if it is of the form $\beta+1$ for some ordinal
         $\beta$. Otherwise $\alpha$ is said to be <dfn>limit</dfn> ordinal. The first part of <ref-
@@ -1098,7 +1098,7 @@ the continuum has uncountable cofinality
         <e-title>Baire category theorem</e-title>
         <p>If $X$ is a complete metric space then $X$ is not meager. Moreover if $O$ is a nonempty open subset of $X$
           then $O$ is not meager.\qed</p>
-        </thoerem->
+        </theorem->
 
         In particular the notions of meager and comeager sets make perfect sense in both $2^\omega$ and $\omega^\omega$.
         The proof of this general Baire category theorem is nearly identical to the proof of <ref-
@@ -1191,9 +1191,9 @@ the continuum has uncountable cofinality
           subsequence, contradicting that $A$ was compact.</p>
       </proof->
 
-      <thoerem- id="thm:k-sigma">
+      <theorem- id="thm:k-sigma">
         <p>We have $\aleph_1\leq\non(\Ksigma)\leq\mathfrak c$ and $\aleph_1\leq\cov(\Ksigma)\leq\mathfrak c$.</p>
-      </thoerem->
+      </theorem->
 
       <proof->
         <p>It is clear that $\aleph_1\leq\non(\Ksigma)$ because every countable set is $\Ksigma$, being the union of its
@@ -1268,9 +1268,9 @@ the continuum has uncountable cofinality
 
       <p>We are now ready to state the connection between $\Ksigma$ sets and the eventual domination ordering.</p>
 
-      <thoerem- id="thm:bd-vs-ksigma">
+      <theorem- id="thm:bd-vs-ksigma">
         <p>We have $\mathfrak b=\non(\Ksigma)$ and $\mathfrak d=\cov(\Ksigma)$.</p>
-      </thoerem->
+      </theorem->
 
       <proof->
         <p>Let us say that a family $\mathcal F\subset\omega^\omega$ is $\leq$-bounded if there is an
@@ -1525,11 +1525,11 @@ the continuum has uncountable cofinality
         place provides an intricate structure of relationships between category and measure. This result is what we came
         all this way to see.</p>
 
-      <thoerem- id="thm:cichon">
+      <theorem- id="thm:cichon">
         <p>The cardinal characteristics defined in the previous sections exhibit the pattern of inequalities known as
           <dfn>Cichoń's diagram</dfn>, which is depicted in <ref- target="fig:cichon"></ref->.
         </p>
-      </thoerem->
+      </theorem->
 
       <figure id="fig:cichon">
         <!-- <tikzpicture\gt 1every node/.style={minimum size=20pt},->]
@@ -1990,7 +1990,7 @@ the continuum has uncountable cofinality
 
       <theorem->
         <p>We have $\add(\Meager)=\min\{\mathfrak b,\cov(\Meager)\}$.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>We have already shown that $\add(\Meager)\leq\mathfrak b$ and $\add(\Meager)\leq\cov(\Meager)$. Hence it
@@ -2463,7 +2463,7 @@ the continuum has uncountable cofinality
 
       <theorem->
         <p>There is a model $V$ of set theory which satisfies both MA and $\neg$CH.</p>
-        </thoerem->
+        </theorem->
 
         <p>We say that a set of axioms is <dfn>consistent</dfn>, or consistent with ZFC, if there is a model of ZFC
           which satisfying those axioms. Thus the above result can be rephrased: MA+$\neg$CH is consistent.</p>
@@ -2514,10 +2514,10 @@ the continuum has uncountable cofinality
           Baire category theorem states that the set of all real numbers is not meager, that is, $\cov(\Meager)$ is
           uncountable. It turns out that MA implies $\cov(\Meager)$ is as large is possible.</p>
 
-        <thoerem- id="thm:ma-covm">
+        <theorem- id="thm:ma-covm">
           <p>MA implies that the Baire category theorem holds for unions of length less than $\mathfrak c$, that is,
             $\cov(\Meager)=\mathfrak c$.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>Let $\mathcal F$ be a family of nowhere dense subsets of $\RR$ of cardinality less than continuum. We will
@@ -2574,9 +2574,9 @@ the continuum has uncountable cofinality
         Although this already follows from <ref- target="thm:ma-covm"></ref-> together with all we have proved about
         Cichoń's diagram, here we give a direct proof.</p>
 
-      <thoerem- id="thm:ma-d">
+      <theorem- id="thm:ma-d">
         <p>Assuming MA, we have $\mathfrak d=\mathfrak c$.</p>
-      </thoerem->
+      </theorem->
 
       <proof->
         <p>Suppose towards a contradiction that $\mathfrak d\lt \mathfrak c$, and fix a dominating family $\mathcal
@@ -2619,7 +2619,7 @@ the continuum has uncountable cofinality
 
       <theorem->
         <p>Assuming MA, we have $\mathfrak b=\mathfrak c$.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>Suppose towards a contradiction that $\mathcal F$ is an unbounded family of size $\lt \mathfrak c$, and let
@@ -2667,10 +2667,10 @@ the continuum has uncountable cofinality
           important outside of the MA context.
         </p>
 
-        <thoerem- id="thm:ma-addn">
+        <theorem- id="thm:ma-addn">
           <p>Assuming MA, we have $\add(\Null)=\mathfrak c$. In particular, all the cardinal characteristics in Cichoń's
             diagram (except possibly for $\aleph_1$) have the same value.</p>
-        </thoerem->
+        </theorem->
 
         <p>For this proof, we once again introduce a new and special notion of forcing. The <dfn>amoeba</dfn> partial
           ordering $\mathbb A_\epsilon$ with parameter $\epsilon\gt 0$ consists of all open subsets $O\subset\RR$ such
@@ -2975,7 +2975,7 @@ For the metamathematics of forcing see Kunen sec IV.5
       <p>The following three results are the fundamental tools used in the development of the theory of forcing.
         Essentially all further facts about forcing will be derived from these properties of the forcing machinery.</p>
 
-      <thoerem- id="thm:forcing">
+      <theorem- id="thm:forcing">
         <h->The forcing theorems</h->
         <ol>
           <li><em>Definability theorem</em>: The relation $\forces$ is definable in $V$.</li>
@@ -2983,7 +2983,7 @@ For the metamathematics of forcing see Kunen sec IV.5
             there exists $p\in G$ such that $p\forces\phi$.</li>
           <li>If $V$ is a model of ZFC then $V[G]$ is a model of ZFC.</li>
         </ol>
-      </thoerem->
+      </theorem->
 
       <remark->
         <p>The exact sense in which $\forces$ is ``definable'' is somewhat technical. Specifically, we mean that for
@@ -3004,7 +3004,7 @@ For the metamathematics of forcing see Kunen sec IV.5
 
       <theorem->
         <p>Assume the definability and forcing theorems are true. Then $V[G]$ satisfies the comprehension axiom.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>If $\phi(x,y)$ and $a,b\in V[G]$ are as above, we need to cook up a name for the set $a_0=\set{x\in
@@ -3291,10 +3291,10 @@ For the metamathematics of forcing see Kunen sec IV.5
         uncountable cardinal, in $V[G]$ it could be that $\kappa$ is just a countable ordinal! This is where the ccc
         property comes to our rescue, as we shall now see see see.</p>
 
-      <thoerem- id="thm:ccc-preserve">
+      <theorem- id="thm:ccc-preserve">
         <p>If $\PP$ is ccc, then $\PP$ preserves cardinals. That is, if in $V$ we have $\kappa=\aleph_\alpha$, then in
           $V[G]$ we have $\kappa=\aleph_\alpha$ too.</p>
-      </thoerem->
+      </theorem->
 
       <p>The key reason for this is the following property of ccc partial orders, which allows us to predict function
         values in a forcing extension with a countable degree of accuracy.</p>
@@ -3421,9 +3421,9 @@ For the metamathematics of forcing see Kunen sec IV.5
         thing, $\Fn(\kappa,\omega)$ adds many new elements to $\omega^\omega$, but if $\kappa$ is uncountable
         $\Fn_{\aleph_0}(\kappa,\omega)$ adds no new elements to $\omega^\omega$.</p>
 
-      <thoerem- id="thm:force-ch">
+      <theorem- id="thm:force-ch">
         <p>Let $\PP=\Fn_{\aleph_0}(\omega_1,\omega)$ and let $G$ be a $V$-generic filter. Then $V[G]$ satisfies CH.</p>
-      </thoerem->
+      </theorem->
 
       <p>In a moment we will prove that forcing with $\Fn_{\aleph_0}(\omega_1,\omega)$ adds a surjection from $\omega_1$
         onto $\omega^\omega$. However, once again we have to be careful: we have to check that the $\omega^\omega$ of
@@ -3491,11 +3491,11 @@ For the metamathematics of forcing see Kunen sec IV.5
         results in the continuum having value $\geq\kappa$. With a slightly more careful argument, we can actually show
         that in fact the continuum has size exactly $\kappa$.</p>
 
-      <thoerem- id="thm:ch-exact">
+      <theorem- id="thm:ch-exact">
         <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal such that $k^{\aleph_0}=\kappa$. Let
           $\PP=\Fn(\kappa,\omega)$ and let $G$ be a $V$-generic filter. Then in $V[G]$, we have $\mathfrak c=\kappa$.
         </p>
-      </thoerem->
+      </theorem->
 
       <proof->
         <p>We have already shown that in $V[G]$ we have $\mathfrak c\geq\kappa$. To show that $\mathfrak c\leq\kappa$,
@@ -3652,11 +3652,11 @@ For the metamathematics of forcing see Kunen sec IV.5
       <p>We are now ready to state the effect of forcing with $\Fn(\kappa,\omega)$ on the cardinals $\mathfrak b$ and
         $\mathfrak d$.</p>
 
-      <thoerem- id="thm:cohen-bd">
+      <theorem- id="thm:cohen-bd">
         <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal such that $\kappa^{\aleph_0}=\kappa$.
           Let $\PP=\Fn(\kappa,\omega)$ and $G$ be a $V$-generic filter. Then in $V[G]$, we have $\mathfrak b=\aleph_1$
           and $\mathfrak d=\kappa$.</p>
-      </thoerem->
+      </theorem->
 
       <proof->
         <p>We first show that $\mathfrak d=\kappa$. Recall that we already know that $\mathfrak d\leq\mathfrak
@@ -3716,12 +3716,12 @@ For the metamathematics of forcing see Kunen sec IV.5
       <p>In the previous section we began to study the effect of Cohen forcing on the values of the cardinals in
         Cichoń's diagram. In this section we complete this study by establishing the following result.</p>
 
-      <thoerem- id="thm:cohen-cichon">
+      <theorem- id="thm:cohen-cichon">
         <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal with $\kappa^{\aleph_0}=\kappa$. Then
           forcing with $\Fn(\kappa,\omega)$ results in all cardinals in the left half of Cichoń's diagram equal to
           $\aleph_1$, and all cardinals in the right half of Cichoń's diagram equal to $\mathfrak c=\kappa$ (see <ref-
             target="fig:cichon-cohen"></ref->).</p>
-      </thoerem->
+      </theorem->
 
       <figure id="fig:cichon-cohen">
         <!--
@@ -3800,10 +3800,10 @@ For the metamathematics of forcing see Kunen sec IV.5
         ZFC-provable inequalities of <ref- target="fig:cichon"></ref->, to establish this result it suffices to prove
         that just the following two equalities in $V[G]$.</p>
 
-      <thoerem- id="thm:cohen-meager">
+      <theorem- id="thm:cohen-meager">
         Under the hypotheses of <ref- target="thm:cohen-cichon"></ref->, in $V[G]$ we have $\non(\Meager)=\aleph_1$ and
         $\cov(\Meager)=\kappa$.
-      </thoerem->
+      </theorem->
 
       <proof->
         <p>Once again, the proofs of these two statements are similar to the arguments of <ref-
@@ -3940,7 +3940,7 @@ For the metamathematics of forcing see Kunen sec IV.5
         <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal such that $\kappa^{\aleph_0}=\kappa$.
           Let $\PP=\Nonnull(2^\kappa)$ and let $G$ be a $V$-generic filter. Then in $V[G]$, we have $\mathfrak
           c=\kappa$.</p>
-        </thoerem->
+        </theorem->
 
         <proof->
           <p>We first claim that $\PP$ is ccc, and hence $\kappa$ remains a cardinal in $V[G]$. To see this, first note
@@ -3997,12 +3997,12 @@ Monk, ch 22
         notions are not the same. In fact the effect random forcing on the characteristics of $\Null$. is analogous to
         the effect of Cohen forcing on the characteristics of $\Meager$</p>
 
-      <thoerem- id="thm:random-cichon">
+      <theorem- id="thm:random-cichon">
         <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal. Then forcing with
           $\Nonnull(2^\kappa)$ results in all cardinals in the bottom two lines of Cichoń's diagram equal to $\aleph_1$
           and all cadrinals in the top line of Cichoń's diagram equal to $\mathfrak c=\kappa$ (see <ref-
             target="fig:cichon-random"></ref->).</p>
-      </thoerem->
+      </theorem->
 
       <figure id="fig:cichon-random">
         <!-- <tikzpicture\gt 1every node/.style={minimum size=20pt},->]
@@ -4059,10 +4059,10 @@ Monk, ch 22
       <p>We can use this result directly to compute the values of $\mathfrak b$ and $\mathfrak d$ in the random forcing
         extension.</p>
 
-      <thoerem- id="thm:random-bd">
+      <theorem- id="thm:random-bd">
         <p>Suppose that in $V$, CH is true and $\kappa$ is an uncountable cardinal. Let $\PP=\Nonnull(2^\kappa)$ and let
           $G$ be a $V$-generic filter. Then in $V[G]$, we have $\mathfrak b=\mathfrak d=\aleph_1$.</p>
-      </thoerem->
+      </theorem->
 
       <proof->
         <p>By the previous lemma, the ground model $V\cap\omega^\omega$ is a dominating family of size $\aleph_1$ in
@@ -4072,10 +4072,10 @@ Monk, ch 22
       <p>We now continue the proof of Theorem`<ref- target="thm:random-cichon"></ref->. Referring to the known
         inequalities in <ref- target="thm:cichon"></ref->, it remains only to show the following two equalities.</p>
 
-      <thoerem- id="thm:random-null">
+      <theorem- id="thm:random-null">
         <p>Under the hypotheses of <ref- target="thm:random-cichon"></ref->, in $V[G]$ we have $\non(\Null)=\aleph_1$
           and $\cov(\Null)=\kappa$.</p>
-      </thoerem->
+      </theorem->
       <!--
 As was the case with <ref- target="lem:random-conull"></ref->, the following result can be stated for Borel sets.
 
