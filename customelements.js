@@ -15,7 +15,7 @@ class heading extends HTMLElement {
   connectedCallback() {
     this.setAttribute('role', 'heading');
     let level = 1;
-    let parentTagName = this.parentNode.tagName;
+    let parentTagName = this.parentNode.tagName.toLowerCase();
     if (parentTagName === 'chapter-') level = 2;
     if (parentTagName === 'section') level = 3;
     this.setAttribute('aria-level', level);
