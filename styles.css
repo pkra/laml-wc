@@ -411,12 +411,17 @@ a[href^='#'] {
   background-color: #efefef;
   color: black;
   border-bottom: 1px solid #d0d0d0;
-  /*separator for multi-references*/
-  /*NOTE #FFFFFF not ideal for a11y (e.g., nightmode)*/
-  border-right: 1px solid #ffffff;
 }
 
 a[href^='#']:hover {
   background-color: #d0d0d0;
   outline: 0;
+}
+
+@media print {
+  a[href^='#'] {
+    background-color: #ffffff;
+    border-color: black;
+    padding: 0;
+  }
 }
