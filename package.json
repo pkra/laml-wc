@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "linkedom": "^0.16.1",
+    "mathjax-full": "^4.0.0-beta.4",
+    "mathjax-modern-font": "^4.0.0-beta.4"
+  }
+}
