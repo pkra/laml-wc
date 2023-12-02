@@ -130,3 +130,14 @@ class crossreference extends HTMLElement {
   }
 }
 customElements.define('ref-', crossreference);
+
+class eqn extends HTMLElement {
+  constructor() {
+    super()
+  }
+  connectedCallback() {
+    this.insertAdjacentHTML('afterbegin', '\\[');
+    this.insertAdjacentHTML('beforeend', '\\]');
+  }
+}
+customElements.define('eqn-', eqn);
