@@ -52,7 +52,7 @@ chapter- {
   counter-increment: chapter;
 }
 
-section {
+section > h- {
   counter-increment: section;
 }
 
