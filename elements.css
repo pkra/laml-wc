@@ -191,17 +191,18 @@ proof-label::after {
 
   chapter- {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
     gap: 3rem;
   }
   chapter- {
     font-size: 1.33rem;
   }
   section {
-    display: contents;
+    display: grid;
+    grid-template-columns: 1;
   }
   chapter- * {
-    grid-column: 4/5;
+    grid-column: 2/3;
   }
   chapter- h- {
     grid-column: 1/2;
@@ -214,25 +215,26 @@ proof-label::after {
     position: sticky;
     top: 0;
     z-index: 1;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    text-align: end;
-    max-height: 100dvh;
-    width: fit-content;
     /* later: try https://kizu.dev/fit-to-width-text/ */
   }
   h-[aria-level="2"] {
     font-size: 5rem;
     grid-column: 1/2;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: end;
+    max-height: 100dvh;
+    width: fit-content;
+    grid-row: 1/4; /* NOTE: guesstimate to get near 100vh and prevent gaps in second column */
   }
   h-[aria-level="3"] {
     font-size: 4rem;
     margin-block-end: auto;
     grid-column: 2/3;
   }
-  h-[aria-level="4"] {
-    grid-column: 3/4;
-  }
+  /* h-[aria-level="4"] {
+    grid-column: 2/3;
+  } */
   chapter-,
   theorem-,
   lemma-,
