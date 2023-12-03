@@ -241,6 +241,7 @@ proof-label::after {
     font-size: 4rem;
     margin-block-end: auto;
     grid-column: 2/3;
+    box-shadow: 0 0 0 6px #000; /* TODO: hack to match custom element box shadows below */
   }
   /* h-[aria-level="4"] {
     grid-column: 2/3;
