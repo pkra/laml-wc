@@ -12,6 +12,19 @@ proof-,
 h- {
   display: block;
 }
+enunciation-,
+chapter-,
+theorem-,
+lemma-,
+definition-,
+exercise-,
+remark-,
+corollary-,
+proposition-,
+example- {
+  scroll-margin-top: 25vh;
+}
+
 p {
   margin: 1rem 0;
 }
