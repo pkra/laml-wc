@@ -208,6 +208,16 @@ proof-label::after {
     grid-column: 1/2;
   }
 
+  h1 {
+    font-size: 5.2rem;
+    width: 100%;
+    text-align: center;
+    text-wrap: pretty;
+    background-color: var(--color-mossGreen);
+    margin: 0rem;
+    padding: 1rem;
+    font-weight: bold;
+  }
   h- {
     background-color: #000;
     color: white;
