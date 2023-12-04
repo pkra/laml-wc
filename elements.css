@@ -259,6 +259,32 @@ proof-label::after {
   /* h-[aria-level="4"] {
     grid-column: 2/3;
   } */
+
+  @media (max-width: 1100px) {
+    chapter- {
+      grid-template-columns: 1fr;
+    }
+    chapter- * {
+      grid-column: 1/2;
+    }
+    chapter- h- {
+      grid-column: 1/2;
+    }
+    h-[aria-level="2"] {
+      writing-mode: initial;
+      transform: none;
+      text-align: center;
+      max-height: 100%;
+      max-width: 80ch;
+      grid-row: 1/1;
+      position: static;
+    }
+    h-[aria-level="3"] {
+      grid-column: 1/2;
+      width: 100%;
+    }  
+  }
+
   chapter-,
   theorem-,
   lemma-,
