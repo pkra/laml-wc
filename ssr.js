@@ -16,6 +16,11 @@ globalThis.document =  document;
 // upgrade/render our elements
 await import('./customelements.js');
 
+// hack cichon's diagram
+document.querySelector('table').removeAttribute('hidden');
+document.querySelector('.codepen').remove();
+
+// remove scripts
 document.querySelectorAll('script').forEach(node => node.remove());
 
 // save
