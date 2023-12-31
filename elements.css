@@ -312,6 +312,7 @@ proof-label::after {
     margin: 0 1rem 1rem 0;
     font-size: 3rem;
     background-color: white;
+    color: black;
   }
   e-title {
     display: block;
