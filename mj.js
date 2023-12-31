@@ -14,7 +14,7 @@ const {
     window, document, customElements,
     HTMLElement,
     Event, CustomEvent
-} = parseHTML(fs.readFileSync('./m522.html').toString());
+} = parseHTML(fs.readFileSync('./m522-ssr.html').toString());
 
 
 // mathjax needs this for TeX pre-processing
@@ -74,4 +74,8 @@ if (Array.from(html.math).length === 0) {
 //
 // console.log(adaptor.doctype(html.document));
 // console.log(adaptor.outerHTML(adaptor.root(html.document)));
-console.log(document.toString())
+fs.writeFileSync('m522-ssr.html', document.toString().replace('stroke-width: 3;','stroke-width: 0;'));
+
+
+// save print version
+// fs.writeFileSync('print.html', document.toString().replace('</body>', '<script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script></body>'));

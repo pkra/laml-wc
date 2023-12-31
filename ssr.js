@@ -16,12 +16,7 @@ globalThis.document =  document;
 // upgrade/render our elements
 await import('./customelements.js');
 
-// MathJax SSR
-// triggers custom elements twice but will trigger them if run alone (how??)
-// await import('./mj.js');
-
-// add pagedjs
-// document.querySelector('script[src="customelements.js"]').setAttribute('src', 'https://unpkg.com/pagedjs/dist/paged.polyfill.js');
+document.querySelectorAll('script').forEach(node => node.remove());
 
 // save
-console.log(document.toString())
+fs.writeFileSync('m522-ssr.html', document.toString());

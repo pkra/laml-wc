@@ -1,5 +1,10 @@
 {
   "type": "module",
+  "scripts": {
+    "build:ssr": "node ssr.js",
+    "build:mj": "node mj.js",
+    "build": "npm run build:ssr && npm run build:mj"
+  },
   "dependencies": {
     "linkedom": "^0.16.1",
     "mathjax-full": "^4.0.0-beta.4",
