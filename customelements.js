@@ -141,3 +141,16 @@ class eqn extends HTMLElement {
   }
 }
 customElements.define('eqn-', eqn);
+
+class toc extends HTMLElement {
+  constructor() {
+    super()
+  }
+  connectedCallback() {
+    document.querySelectorAll('h-').forEach(node => { if (!node.id) node.id = node.textContent.trim().replace(/\s/g,'') })
+    let headings = document.querySelectorAll('h-[aria-level="2"]');
+    this.insertAdjacentHTML('beforeend',
+      `<nav aria-label="table of contents"><ul style="list-style:none">${[...headings].map(node => `<li><a href="#${node.id}">${node.innerHTML}</a> <ul style="list-style:none">${[...node.parentNode.querySelectorAll('h-[aria-level="3"]')].map(nested => `<li><a href="#${nested.id}">${nested.innerHTML}</li>`).join('')}</ul></li>`).join('')}</ul></nav>`)
+  }
+}
+customElements.define('toc-', toc);
